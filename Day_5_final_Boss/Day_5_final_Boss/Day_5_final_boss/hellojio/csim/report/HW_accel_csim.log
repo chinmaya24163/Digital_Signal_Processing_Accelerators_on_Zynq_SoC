@@ -1,0 +1,10 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../codes_lab5/HLS_sources_final/design.cpp in debug mode
+   Generating csim.exe
+-3.957463	-0.865852	1.631912	1.570909	-8.315239	-3.206361	-16.562754	13.615960	-2.783394	-3.543148	
+===== Diff =======
+0.000003	0.000021	-0.000012	0.000008	0.000027	-0.000001	0.000008	0.000025	-0.000028	0.000006	
+Success!!!
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

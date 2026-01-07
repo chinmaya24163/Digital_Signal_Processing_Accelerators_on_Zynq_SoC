@@ -1,0 +1,734 @@
+
+
+================================================================
+== Vitis HLS Report for 'conv1'
+================================================================
+* Date:           Thu Dec 25 17:04:36 2025
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        Day_5_final_boss
+* Solution:       hellojio (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.290 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   105521|   121745|  1.055 ms|  1.217 ms|  105521|  121745|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+---------------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) |   Iteration   |  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |    Latency    |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+---------------+-----------+-----------+------+----------+
+        |- C1_fil_load  |   105520|   121744|  26380 ~ 30436|          -|          -|     4|        no|
+        | + VS_HS       |    26364|    30420|        39 ~ 45|          -|          -|   676|        no|
+        +---------------+---------+---------+---------------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 38
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 2 
+6 --> 7 
+7 --> 8 
+8 --> 9 11 
+9 --> 10 
+10 --> 12 
+11 --> 10 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 5 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%phi_mul = alloca i32 1"   --->   Operation 39 'alloca' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%n_f = alloca i32 1"   --->   Operation 40 'alloca' 'n_f' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%kernel_i_1_1_promoted152 = alloca i32 1"   --->   Operation 41 'alloca' 'kernel_i_1_1_promoted152' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%kernel_i_1_0_promoted154 = alloca i32 1"   --->   Operation 42 'alloca' 'kernel_i_1_0_promoted154' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%kernel_i_1_2_promoted156 = alloca i32 1"   --->   Operation 43 'alloca' 'kernel_i_1_2_promoted156' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%kernel_i_0_1_promoted158 = alloca i32 1"   --->   Operation 44 'alloca' 'kernel_i_0_1_promoted158' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%kernel_i_0_0_promoted160 = alloca i32 1"   --->   Operation 45 'alloca' 'kernel_i_0_0_promoted160' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%kernel_i_0_2_promoted162 = alloca i32 1"   --->   Operation 46 'alloca' 'kernel_i_0_2_promoted162' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%kernel_i_2_1_promoted164 = alloca i32 1"   --->   Operation 47 'alloca' 'kernel_i_2_1_promoted164' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%kernel_i_2_0_promoted166 = alloca i32 1"   --->   Operation 48 'alloca' 'kernel_i_2_0_promoted166' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%kernel_i_2_2_promoted168 = alloca i32 1"   --->   Operation 49 'alloca' 'kernel_i_2_2_promoted168' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%mux_case_090 = alloca i32 1"   --->   Operation 50 'alloca' 'mux_case_090' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%mux_case_1100 = alloca i32 1"   --->   Operation 51 'alloca' 'mux_case_1100' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%mux_case_2110 = alloca i32 1"   --->   Operation 52 'alloca' 'mux_case_2110' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%mux_case_077120 = alloca i32 1"   --->   Operation 53 'alloca' 'mux_case_077120' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%mux_case_179130 = alloca i32 1"   --->   Operation 54 'alloca' 'mux_case_179130' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%mux_case_281140 = alloca i32 1"   --->   Operation 55 'alloca' 'mux_case_281140' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%window_i_1_1_promoted179211 = alloca i32 1"   --->   Operation 56 'alloca' 'window_i_1_1_promoted179211' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%window_i_1_0_promoted181217 = alloca i32 1"   --->   Operation 57 'alloca' 'window_i_1_0_promoted181217' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%window_i_1_2_promoted183223 = alloca i32 1"   --->   Operation 58 'alloca' 'window_i_1_2_promoted183223' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%window_i_0_1_promoted185229 = alloca i32 1"   --->   Operation 59 'alloca' 'window_i_0_1_promoted185229' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%window_i_0_0_promoted187235 = alloca i32 1"   --->   Operation 60 'alloca' 'window_i_0_0_promoted187235' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%window_i_0_2_promoted189241 = alloca i32 1"   --->   Operation 61 'alloca' 'window_i_0_2_promoted189241' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%window_i_2_1_promoted191247 = alloca i32 1"   --->   Operation 62 'alloca' 'window_i_2_1_promoted191247' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%window_i_2_0_promoted193253 = alloca i32 1"   --->   Operation 63 'alloca' 'window_i_2_0_promoted193253' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%window_i_2_2_promoted195259 = alloca i32 1"   --->   Operation 64 'alloca' 'window_i_2_2_promoted195259' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%window1627 = alloca i32 1"   --->   Operation 65 'alloca' 'window1627' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%window_11733 = alloca i32 1"   --->   Operation 66 'alloca' 'window_11733' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%window_21839 = alloca i32 1"   --->   Operation 67 'alloca' 'window_21839' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%window_31945 = alloca i32 1"   --->   Operation 68 'alloca' 'window_31945' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%window_42051 = alloca i32 1"   --->   Operation 69 'alloca' 'window_42051' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%window_52157 = alloca i32 1"   --->   Operation 70 'alloca' 'window_52157' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%window_62263 = alloca i32 1"   --->   Operation 71 'alloca' 'window_62263' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%window_72369 = alloca i32 1"   --->   Operation 72 'alloca' 'window_72369' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%window_82475 = alloca i32 1"   --->   Operation 73 'alloca' 'window_82475' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%mux_case_0_loc = alloca i64 1"   --->   Operation 74 'alloca' 'mux_case_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%mux_case_1_loc = alloca i64 1"   --->   Operation 75 'alloca' 'mux_case_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%mux_case_2_loc = alloca i64 1"   --->   Operation 76 'alloca' 'mux_case_2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%mux_case_077_loc = alloca i64 1"   --->   Operation 77 'alloca' 'mux_case_077_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%mux_case_179_loc = alloca i64 1"   --->   Operation 78 'alloca' 'mux_case_179_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%mux_case_281_loc = alloca i64 1"   --->   Operation 79 'alloca' 'mux_case_281_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%window_i_1_1_promoted179208_loc = alloca i64 1"   --->   Operation 80 'alloca' 'window_i_1_1_promoted179208_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%window_i_1_0_promoted181214_loc = alloca i64 1"   --->   Operation 81 'alloca' 'window_i_1_0_promoted181214_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%window_i_1_2_promoted183220_loc = alloca i64 1"   --->   Operation 82 'alloca' 'window_i_1_2_promoted183220_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%window_i_0_1_promoted185226_loc = alloca i64 1"   --->   Operation 83 'alloca' 'window_i_0_1_promoted185226_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%window_i_0_0_promoted187232_loc = alloca i64 1"   --->   Operation 84 'alloca' 'window_i_0_0_promoted187232_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%window_i_0_2_promoted189238_loc = alloca i64 1"   --->   Operation 85 'alloca' 'window_i_0_2_promoted189238_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%window_i_2_1_promoted191244_loc = alloca i64 1"   --->   Operation 86 'alloca' 'window_i_2_1_promoted191244_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%window_i_2_0_promoted193250_loc = alloca i64 1"   --->   Operation 87 'alloca' 'window_i_2_0_promoted193250_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%window_i_2_2_promoted195256_loc = alloca i64 1"   --->   Operation 88 'alloca' 'window_i_2_2_promoted195256_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%window1626_loc = alloca i64 1"   --->   Operation 89 'alloca' 'window1626_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%window_11732_loc = alloca i64 1"   --->   Operation 90 'alloca' 'window_11732_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%window_21838_loc = alloca i64 1"   --->   Operation 91 'alloca' 'window_21838_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%window_31944_loc = alloca i64 1"   --->   Operation 92 'alloca' 'window_31944_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%window_42050_loc = alloca i64 1"   --->   Operation 93 'alloca' 'window_42050_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%window_52156_loc = alloca i64 1"   --->   Operation 94 'alloca' 'window_52156_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%window_62262_loc = alloca i64 1"   --->   Operation 95 'alloca' 'window_62262_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%window_72368_loc = alloca i64 1"   --->   Operation 96 'alloca' 'window_72368_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%window_82474_loc = alloca i64 1"   --->   Operation 97 'alloca' 'window_82474_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%mux_case_086_loc = alloca i64 1"   --->   Operation 98 'alloca' 'mux_case_086_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%mux_case_196_loc = alloca i64 1"   --->   Operation 99 'alloca' 'mux_case_196_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%mux_case_2106_loc = alloca i64 1"   --->   Operation 100 'alloca' 'mux_case_2106_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%mux_case_077116_loc = alloca i64 1"   --->   Operation 101 'alloca' 'mux_case_077116_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%mux_case_179126_loc = alloca i64 1"   --->   Operation 102 'alloca' 'mux_case_179126_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%mux_case_281136_loc = alloca i64 1"   --->   Operation 103 'alloca' 'mux_case_281136_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%p_loc57 = alloca i64 1"   --->   Operation 104 'alloca' 'p_loc57' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%p_loc56 = alloca i64 1"   --->   Operation 105 'alloca' 'p_loc56' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%p_loc55 = alloca i64 1"   --->   Operation 106 'alloca' 'p_loc55' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%p_loc54 = alloca i64 1"   --->   Operation 107 'alloca' 'p_loc54' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%p_loc53 = alloca i64 1"   --->   Operation 108 'alloca' 'p_loc53' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%p_loc52 = alloca i64 1"   --->   Operation 109 'alloca' 'p_loc52' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%p_loc51 = alloca i64 1"   --->   Operation 110 'alloca' 'p_loc51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%p_loc50 = alloca i64 1"   --->   Operation 111 'alloca' 'p_loc50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%p_loc49 = alloca i64 1"   --->   Operation 112 'alloca' 'p_loc49' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%p_loc39 = alloca i64 1"   --->   Operation 113 'alloca' 'p_loc39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%p_loc38 = alloca i64 1"   --->   Operation 114 'alloca' 'p_loc38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%p_loc37 = alloca i64 1"   --->   Operation 115 'alloca' 'p_loc37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%p_loc36 = alloca i64 1"   --->   Operation 116 'alloca' 'p_loc36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%p_loc35 = alloca i64 1"   --->   Operation 117 'alloca' 'p_loc35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%p_loc34 = alloca i64 1"   --->   Operation 118 'alloca' 'p_loc34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%p_loc33 = alloca i64 1"   --->   Operation 119 'alloca' 'p_loc33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%p_loc32 = alloca i64 1"   --->   Operation 120 'alloca' 'p_loc32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%p_loc = alloca i64 1"   --->   Operation 121 'alloca' 'p_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (1.58ns)   --->   "%store_ln133 = store i3 0, i3 %n_f" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 122 'store' 'store_ln133' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 123 [1/1] (1.58ns)   --->   "%store_ln133 = store i7 0, i7 %phi_mul" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 123 'store' 'store_ln133' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%br_ln133 = br void %inCh.i" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 124 'br' 'br_ln133' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.95>
+ST_2 : Operation 125 [1/1] (0.00ns)   --->   "%phi_mul_load = load i7 %phi_mul" [codes_lab5/HLS_sources_final/templatedFuncs.h:150]   --->   Operation 125 'load' 'phi_mul_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 126 [1/1] (0.00ns)   --->   "%n_f_1 = load i3 %n_f" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 126 'load' 'n_f_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 127 [1/1] (1.87ns)   --->   "%add_ln133_1 = add i7 %phi_mul_load, i7 26" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 127 'add' 'add_ln133_1' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 128 [1/1] (1.13ns)   --->   "%icmp_ln133 = icmp_eq  i3 %n_f_1, i3 4" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 128 'icmp' 'icmp_ln133' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 129 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4"   --->   Operation 129 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 130 [1/1] (1.65ns)   --->   "%add_ln133 = add i3 %n_f_1, i3 1" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 130 'add' 'add_ln133' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 131 [1/1] (0.00ns)   --->   "%br_ln133 = br i1 %icmp_ln133, void %inCh.i.split, void %_Z9Conv_funcILi1ELi28ELi4ELi26EEvPAT0__AT0__fPAT2__AT2__fPAmlmlT_Li3ELi3E_KfPS6_.exit" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 131 'br' 'br_ln133' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 132 [1/1] (0.00ns)   --->   "%kernel_i_1_1_promoted152_load = load i32 %kernel_i_1_1_promoted152"   --->   Operation 132 'load' 'kernel_i_1_1_promoted152_load' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_2 : Operation 133 [1/1] (0.00ns)   --->   "%kernel_i_1_0_promoted154_load = load i32 %kernel_i_1_0_promoted154"   --->   Operation 133 'load' 'kernel_i_1_0_promoted154_load' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_2 : Operation 134 [1/1] (0.00ns)   --->   "%kernel_i_1_2_promoted156_load = load i32 %kernel_i_1_2_promoted156"   --->   Operation 134 'load' 'kernel_i_1_2_promoted156_load' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_2 : Operation 135 [1/1] (0.00ns)   --->   "%kernel_i_0_1_promoted158_load = load i32 %kernel_i_0_1_promoted158"   --->   Operation 135 'load' 'kernel_i_0_1_promoted158_load' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_2 : Operation 136 [1/1] (0.00ns)   --->   "%kernel_i_0_0_promoted160_load = load i32 %kernel_i_0_0_promoted160"   --->   Operation 136 'load' 'kernel_i_0_0_promoted160_load' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_2 : Operation 137 [1/1] (0.00ns)   --->   "%kernel_i_0_2_promoted162_load = load i32 %kernel_i_0_2_promoted162"   --->   Operation 137 'load' 'kernel_i_0_2_promoted162_load' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_2 : Operation 138 [1/1] (0.00ns)   --->   "%kernel_i_2_1_promoted164_load = load i32 %kernel_i_2_1_promoted164"   --->   Operation 138 'load' 'kernel_i_2_1_promoted164_load' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_2 : Operation 139 [1/1] (0.00ns)   --->   "%kernel_i_2_0_promoted166_load = load i32 %kernel_i_2_0_promoted166"   --->   Operation 139 'load' 'kernel_i_2_0_promoted166_load' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_2 : Operation 140 [1/1] (0.00ns)   --->   "%kernel_i_2_2_promoted168_load = load i32 %kernel_i_2_2_promoted168"   --->   Operation 140 'load' 'kernel_i_2_2_promoted168_load' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_2 : Operation 141 [1/1] (0.00ns)   --->   "%or_ln = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i3.i3, i3 %n_f_1, i3 %n_f_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:26]   --->   Operation 141 'bitconcatenate' 'or_ln' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_2 : Operation 142 [2/2] (1.82ns)   --->   "%call_ln26 = call void @conv1_Pipeline_Fil_load_r_Fil_load_c, i32 %kernel_i_2_2_promoted168_load, i32 %kernel_i_2_0_promoted166_load, i32 %kernel_i_2_1_promoted164_load, i32 %kernel_i_0_2_promoted162_load, i32 %kernel_i_0_0_promoted160_load, i32 %kernel_i_0_1_promoted158_load, i32 %kernel_i_1_2_promoted156_load, i32 %kernel_i_1_0_promoted154_load, i32 %kernel_i_1_1_promoted152_load, i6 %or_ln, i32 %p_loc, i32 %p_loc32, i32 %p_loc33, i32 %p_loc34, i32 %p_loc35, i32 %p_loc36, i32 %p_loc37, i32 %p_loc38, i32 %p_loc39, i32 %conv1_weight" [codes_lab5/HLS_sources_final/templatedFuncs.h:26]   --->   Operation 142 'call' 'call_ln26' <Predicate = (!icmp_ln133)> <Delay = 1.82> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 143 [1/1] (0.00ns)   --->   "%ret_ln30 = ret" [codes_lab5/HLS_sources_final/design.cpp:30]   --->   Operation 143 'ret' 'ret_ln30' <Predicate = (icmp_ln133)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 144 [1/1] (0.00ns)   --->   "%zext_ln133 = zext i3 %n_f_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 144 'zext' 'zext_ln133' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 145 [1/2] (0.00ns)   --->   "%call_ln26 = call void @conv1_Pipeline_Fil_load_r_Fil_load_c, i32 %kernel_i_2_2_promoted168_load, i32 %kernel_i_2_0_promoted166_load, i32 %kernel_i_2_1_promoted164_load, i32 %kernel_i_0_2_promoted162_load, i32 %kernel_i_0_0_promoted160_load, i32 %kernel_i_0_1_promoted158_load, i32 %kernel_i_1_2_promoted156_load, i32 %kernel_i_1_0_promoted154_load, i32 %kernel_i_1_1_promoted152_load, i6 %or_ln, i32 %p_loc, i32 %p_loc32, i32 %p_loc33, i32 %p_loc34, i32 %p_loc35, i32 %p_loc36, i32 %p_loc37, i32 %p_loc38, i32 %p_loc39, i32 %conv1_weight" [codes_lab5/HLS_sources_final/templatedFuncs.h:26]   --->   Operation 145 'call' 'call_ln26' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 146 [1/1] (0.00ns)   --->   "%conv1_bias_addr = getelementptr i32 %conv1_bias, i64 0, i64 %zext_ln133" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 146 'getelementptr' 'conv1_bias_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 147 [2/2] (2.32ns)   --->   "%prev_sum = load i2 %conv1_bias_addr" [codes_lab5/HLS_sources_final/templatedFuncs.h:146]   --->   Operation 147 'load' 'prev_sum' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 4> <ROM>
+
+State 4 <SV = 3> <Delay = 2.32>
+ST_4 : Operation 148 [1/1] (0.00ns)   --->   "%specloopname_ln133 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 148 'specloopname' 'specloopname_ln133' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 149 [1/1] (0.00ns)   --->   "%p_loc_load = load i32 %p_loc"   --->   Operation 149 'load' 'p_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 150 [1/1] (0.00ns)   --->   "%p_loc32_load = load i32 %p_loc32"   --->   Operation 150 'load' 'p_loc32_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 151 [1/1] (0.00ns)   --->   "%p_loc33_load = load i32 %p_loc33"   --->   Operation 151 'load' 'p_loc33_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 152 [1/1] (0.00ns)   --->   "%p_loc34_load = load i32 %p_loc34"   --->   Operation 152 'load' 'p_loc34_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 153 [1/1] (0.00ns)   --->   "%p_loc35_load = load i32 %p_loc35"   --->   Operation 153 'load' 'p_loc35_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 154 [1/1] (0.00ns)   --->   "%p_loc36_load = load i32 %p_loc36"   --->   Operation 154 'load' 'p_loc36_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 155 [1/1] (0.00ns)   --->   "%p_loc37_load = load i32 %p_loc37"   --->   Operation 155 'load' 'p_loc37_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 156 [1/1] (0.00ns)   --->   "%p_loc38_load = load i32 %p_loc38"   --->   Operation 156 'load' 'p_loc38_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 157 [1/1] (0.00ns)   --->   "%p_loc39_load = load i32 %p_loc39"   --->   Operation 157 'load' 'p_loc39_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 158 [1/2] (2.32ns)   --->   "%prev_sum = load i2 %conv1_bias_addr" [codes_lab5/HLS_sources_final/templatedFuncs.h:146]   --->   Operation 158 'load' 'prev_sum' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 4> <ROM>
+ST_4 : Operation 159 [1/1] (1.58ns)   --->   "%br_ln139 = br void %for.body13.i" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 159 'br' 'br_ln139' <Predicate = true> <Delay = 1.58>
+
+State 5 <SV = 4> <Delay = 5.69>
+ST_5 : Operation 160 [1/1] (0.00ns)   --->   "%indvar_flatten34 = phi i10 0, void %inCh.i.split, i10 %add_ln139_1, void %cond.true.i" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 160 'phi' 'indvar_flatten34' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 161 [1/1] (0.00ns)   --->   "%oh = phi i5 0, void %inCh.i.split, i5 %select_ln139_1, void %cond.true.i" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 161 'phi' 'oh' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 162 [1/1] (0.00ns)   --->   "%ow = phi i5 0, void %inCh.i.split, i5 %add_ln141, void %cond.true.i" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 162 'phi' 'ow' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 163 [1/1] (1.77ns)   --->   "%icmp_ln139 = icmp_eq  i10 %indvar_flatten34, i10 676" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 163 'icmp' 'icmp_ln139' <Predicate = true> <Delay = 1.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 164 [1/1] (1.73ns)   --->   "%add_ln139_1 = add i10 %indvar_flatten34, i10 1" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 164 'add' 'add_ln139_1' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 165 [1/1] (0.00ns)   --->   "%br_ln139 = br i1 %icmp_ln139, void %for.inc42.i, void %for.inc48.i" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 165 'br' 'br_ln139' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 166 [1/1] (1.78ns)   --->   "%add_ln139 = add i5 %oh, i5 1" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 166 'add' 'add_ln139' <Predicate = (!icmp_ln139)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 167 [1/1] (1.36ns)   --->   "%icmp_ln141 = icmp_eq  i5 %ow, i5 26" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 167 'icmp' 'icmp_ln141' <Predicate = (!icmp_ln139)> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 168 [1/1] (1.21ns)   --->   "%select_ln139 = select i1 %icmp_ln141, i5 0, i5 %ow" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 168 'select' 'select_ln139' <Predicate = (!icmp_ln139)> <Delay = 1.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 169 [1/1] (1.21ns)   --->   "%select_ln139_1 = select i1 %icmp_ln141, i5 %add_ln139, i5 %oh" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 169 'select' 'select_ln139_1' <Predicate = (!icmp_ln139)> <Delay = 1.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 170 [1/1] (0.00ns)   --->   "%zext_ln150 = zext i5 %select_ln139_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:150]   --->   Operation 170 'zext' 'zext_ln150' <Predicate = (!icmp_ln139)> <Delay = 0.00>
+ST_5 : Operation 171 [1/1] (1.65ns) (grouped into DSP with root node add_ln150_1)   --->   "%add_ln150 = add i7 %phi_mul_load, i7 %zext_ln150" [codes_lab5/HLS_sources_final/templatedFuncs.h:150]   --->   Operation 171 'add' 'add_ln150' <Predicate = (!icmp_ln139)> <Delay = 1.65> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 172 [1/1] (0.00ns) (grouped into DSP with root node add_ln150_1)   --->   "%zext_ln150_1 = zext i7 %add_ln150" [codes_lab5/HLS_sources_final/templatedFuncs.h:150]   --->   Operation 172 'zext' 'zext_ln150_1' <Predicate = (!icmp_ln139)> <Delay = 0.00>
+ST_5 : Operation 173 [3/3] (1.05ns) (grouped into DSP with root node add_ln150_1)   --->   "%mul_ln150 = mul i12 %zext_ln150_1, i12 26" [codes_lab5/HLS_sources_final/templatedFuncs.h:150]   --->   Operation 173 'mul' 'mul_ln150' <Predicate = (!icmp_ln139)> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 174 [1/1] (0.00ns)   --->   "%store_ln133 = store i32 %p_loc_load, i32 %kernel_i_2_2_promoted168" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 174 'store' 'store_ln133' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_5 : Operation 175 [1/1] (0.00ns)   --->   "%store_ln133 = store i32 %p_loc32_load, i32 %kernel_i_2_0_promoted166" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 175 'store' 'store_ln133' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_5 : Operation 176 [1/1] (0.00ns)   --->   "%store_ln133 = store i32 %p_loc33_load, i32 %kernel_i_2_1_promoted164" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 176 'store' 'store_ln133' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_5 : Operation 177 [1/1] (0.00ns)   --->   "%store_ln133 = store i32 %p_loc34_load, i32 %kernel_i_0_2_promoted162" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 177 'store' 'store_ln133' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_5 : Operation 178 [1/1] (0.00ns)   --->   "%store_ln133 = store i32 %p_loc35_load, i32 %kernel_i_0_0_promoted160" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 178 'store' 'store_ln133' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_5 : Operation 179 [1/1] (0.00ns)   --->   "%store_ln133 = store i32 %p_loc36_load, i32 %kernel_i_0_1_promoted158" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 179 'store' 'store_ln133' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_5 : Operation 180 [1/1] (0.00ns)   --->   "%store_ln133 = store i32 %p_loc37_load, i32 %kernel_i_1_2_promoted156" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 180 'store' 'store_ln133' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_5 : Operation 181 [1/1] (0.00ns)   --->   "%store_ln133 = store i32 %p_loc38_load, i32 %kernel_i_1_0_promoted154" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 181 'store' 'store_ln133' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_5 : Operation 182 [1/1] (0.00ns)   --->   "%store_ln133 = store i32 %p_loc39_load, i32 %kernel_i_1_1_promoted152" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 182 'store' 'store_ln133' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_5 : Operation 183 [1/1] (1.58ns)   --->   "%store_ln133 = store i3 %add_ln133, i3 %n_f" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 183 'store' 'store_ln133' <Predicate = (icmp_ln139)> <Delay = 1.58>
+ST_5 : Operation 184 [1/1] (1.58ns)   --->   "%store_ln133 = store i7 %add_ln133_1, i7 %phi_mul" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 184 'store' 'store_ln133' <Predicate = (icmp_ln139)> <Delay = 1.58>
+ST_5 : Operation 185 [1/1] (0.00ns)   --->   "%br_ln133 = br void %inCh.i" [codes_lab5/HLS_sources_final/templatedFuncs.h:133]   --->   Operation 185 'br' 'br_ln133' <Predicate = (icmp_ln139)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 1.05>
+ST_6 : Operation 186 [2/3] (1.05ns) (grouped into DSP with root node add_ln150_1)   --->   "%mul_ln150 = mul i12 %zext_ln150_1, i12 26" [codes_lab5/HLS_sources_final/templatedFuncs.h:150]   --->   Operation 186 'mul' 'mul_ln150' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 7 <SV = 6> <Delay = 2.10>
+ST_7 : Operation 187 [1/3] (0.00ns) (grouped into DSP with root node add_ln150_1)   --->   "%mul_ln150 = mul i12 %zext_ln150_1, i12 26" [codes_lab5/HLS_sources_final/templatedFuncs.h:150]   --->   Operation 187 'mul' 'mul_ln150' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 188 [1/1] (0.00ns)   --->   "%zext_ln150_2 = zext i5 %select_ln139" [codes_lab5/HLS_sources_final/templatedFuncs.h:150]   --->   Operation 188 'zext' 'zext_ln150_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 189 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln150_1 = add i12 %mul_ln150, i12 %zext_ln150_2" [codes_lab5/HLS_sources_final/templatedFuncs.h:150]   --->   Operation 189 'add' 'add_ln150_1' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 8 <SV = 7> <Delay = 3.56>
+ST_8 : Operation 190 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VS_HS_str"   --->   Operation 190 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 191 [1/1] (0.00ns)   --->   "%empty_56 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 676, i64 676, i64 676"   --->   Operation 191 'speclooptripcount' 'empty_56' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 192 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln150_1 = add i12 %mul_ln150, i12 %zext_ln150_2" [codes_lab5/HLS_sources_final/templatedFuncs.h:150]   --->   Operation 192 'add' 'add_ln150_1' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 193 [1/1] (0.00ns)   --->   "%zext_ln150_3 = zext i12 %add_ln150_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:150]   --->   Operation 193 'zext' 'zext_ln150_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 194 [1/1] (0.00ns)   --->   "%mem_2_addr = getelementptr i32 %mem_2, i64 0, i64 %zext_ln150_3" [codes_lab5/HLS_sources_final/templatedFuncs.h:150]   --->   Operation 194 'getelementptr' 'mem_2_addr' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 195 [1/1] (0.00ns)   --->   "%specloopname_ln40 = specloopname void @_ssdm_op_SpecLoopName, void @empty" [codes_lab5/HLS_sources_final/templatedFuncs.h:40]   --->   Operation 195 'specloopname' 'specloopname_ln40' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 196 [1/1] (1.36ns)   --->   "%icmp_ln46 = icmp_eq  i5 %select_ln139, i5 0" [codes_lab5/HLS_sources_final/templatedFuncs.h:46]   --->   Operation 196 'icmp' 'icmp_ln46' <Predicate = true> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 197 [1/1] (0.00ns)   --->   "%mux_case_090_load = load i32 %mux_case_090"   --->   Operation 197 'load' 'mux_case_090_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 198 [1/1] (0.00ns)   --->   "%mux_case_1100_load = load i32 %mux_case_1100"   --->   Operation 198 'load' 'mux_case_1100_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 199 [1/1] (0.00ns)   --->   "%mux_case_2110_load = load i32 %mux_case_2110"   --->   Operation 199 'load' 'mux_case_2110_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 200 [1/1] (0.00ns)   --->   "%mux_case_077120_load = load i32 %mux_case_077120"   --->   Operation 200 'load' 'mux_case_077120_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 201 [1/1] (0.00ns)   --->   "%mux_case_179130_load = load i32 %mux_case_179130"   --->   Operation 201 'load' 'mux_case_179130_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 202 [1/1] (0.00ns)   --->   "%mux_case_281140_load = load i32 %mux_case_281140"   --->   Operation 202 'load' 'mux_case_281140_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 203 [1/1] (0.00ns)   --->   "%window_i_1_1_promoted179211_load = load i32 %window_i_1_1_promoted179211"   --->   Operation 203 'load' 'window_i_1_1_promoted179211_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 204 [1/1] (0.00ns)   --->   "%window_i_1_0_promoted181217_load = load i32 %window_i_1_0_promoted181217"   --->   Operation 204 'load' 'window_i_1_0_promoted181217_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 205 [1/1] (0.00ns)   --->   "%window_i_1_2_promoted183223_load = load i32 %window_i_1_2_promoted183223"   --->   Operation 205 'load' 'window_i_1_2_promoted183223_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 206 [1/1] (0.00ns)   --->   "%window_i_0_1_promoted185229_load = load i32 %window_i_0_1_promoted185229"   --->   Operation 206 'load' 'window_i_0_1_promoted185229_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 207 [1/1] (0.00ns)   --->   "%window_i_0_0_promoted187235_load = load i32 %window_i_0_0_promoted187235"   --->   Operation 207 'load' 'window_i_0_0_promoted187235_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 208 [1/1] (0.00ns)   --->   "%window_i_0_2_promoted189241_load = load i32 %window_i_0_2_promoted189241"   --->   Operation 208 'load' 'window_i_0_2_promoted189241_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 209 [1/1] (0.00ns)   --->   "%window_i_2_1_promoted191247_load = load i32 %window_i_2_1_promoted191247"   --->   Operation 209 'load' 'window_i_2_1_promoted191247_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 210 [1/1] (0.00ns)   --->   "%window_i_2_0_promoted193253_load = load i32 %window_i_2_0_promoted193253"   --->   Operation 210 'load' 'window_i_2_0_promoted193253_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 211 [1/1] (0.00ns)   --->   "%window_i_2_2_promoted195259_load = load i32 %window_i_2_2_promoted195259"   --->   Operation 211 'load' 'window_i_2_2_promoted195259_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 212 [1/1] (0.00ns)   --->   "%br_ln46 = br i1 %icmp_ln46, void %if.else.i.i, void %for.body5.i.i.preheader" [codes_lab5/HLS_sources_final/templatedFuncs.h:46]   --->   Operation 212 'br' 'br_ln46' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 213 [1/1] (0.00ns)   --->   "%window1627_load = load i32 %window1627"   --->   Operation 213 'load' 'window1627_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_8 : Operation 214 [1/1] (0.00ns)   --->   "%window_11733_load = load i32 %window_11733"   --->   Operation 214 'load' 'window_11733_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_8 : Operation 215 [1/1] (0.00ns)   --->   "%window_21839_load = load i32 %window_21839"   --->   Operation 215 'load' 'window_21839_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_8 : Operation 216 [1/1] (0.00ns)   --->   "%window_31945_load = load i32 %window_31945"   --->   Operation 216 'load' 'window_31945_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_8 : Operation 217 [1/1] (0.00ns)   --->   "%window_42051_load = load i32 %window_42051"   --->   Operation 217 'load' 'window_42051_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_8 : Operation 218 [1/1] (0.00ns)   --->   "%window_52157_load = load i32 %window_52157"   --->   Operation 218 'load' 'window_52157_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_8 : Operation 219 [1/1] (0.00ns)   --->   "%window_62263_load = load i32 %window_62263"   --->   Operation 219 'load' 'window_62263_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_8 : Operation 220 [1/1] (0.00ns)   --->   "%window_72369_load = load i32 %window_72369"   --->   Operation 220 'load' 'window_72369_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_8 : Operation 221 [1/1] (0.00ns)   --->   "%window_82475_load = load i32 %window_82475"   --->   Operation 221 'load' 'window_82475_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_8 : Operation 222 [1/1] (1.78ns)   --->   "%empty_55 = add i5 %select_ln139, i5 2" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 222 'add' 'empty_55' <Predicate = (!icmp_ln46)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 223 [2/2] (1.78ns)   --->   "%call_ln139 = call void @conv1_Pipeline_loadWinShift, i32 %window_82475_load, i32 %window_72369_load, i32 %window_62263_load, i32 %window_52157_load, i32 %window_42051_load, i32 %window_31945_load, i32 %window_21839_load, i32 %window_11733_load, i32 %window1627_load, i32 %window_i_2_2_promoted195259_load, i32 %window_i_2_0_promoted193253_load, i32 %window_i_2_1_promoted191247_load, i32 %window_i_0_2_promoted189241_load, i32 %window_i_0_0_promoted187235_load, i32 %window_i_0_1_promoted185229_load, i32 %window_i_1_2_promoted183223_load, i32 %window_i_1_0_promoted181217_load, i32 %window_i_1_1_promoted179211_load, i32 %mux_case_281140_load, i32 %mux_case_179130_load, i32 %mux_case_077120_load, i32 %mux_case_2110_load, i32 %mux_case_1100_load, i32 %mux_case_090_load, i5 %select_ln139_1, i5 %empty_55, i32 %mem_1_0, i32 %window_82474_loc, i32 %window_72368_loc, i32 %window_62262_loc, i32 %window_52156_loc, i32 %window_42050_loc, i32 %window_31944_loc, i32 %window_21838_loc, i32 %window_11732_loc, i32 %window1626_loc, i32 %window_i_2_2_promoted195256_loc, i32 %window_i_2_0_promoted193250_loc, i32 %window_i_2_1_promoted191244_loc, i32 %window_i_0_2_promoted189238_loc, i32 %window_i_0_0_promoted187232_loc, i32 %window_i_0_1_promoted185226_loc, i32 %window_i_1_2_promoted183220_loc, i32 %window_i_1_0_promoted181214_loc, i32 %window_i_1_1_promoted179208_loc, i32 %mux_case_281_loc, i32 %mux_case_179_loc, i32 %mux_case_077_loc, i32 %mux_case_2_loc, i32 %mux_case_1_loc, i32 %mux_case_0_loc" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 223 'call' 'call_ln139' <Predicate = (!icmp_ln46)> <Delay = 1.78> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 224 [2/2] (1.58ns)   --->   "%call_ln139 = call void @conv1_Pipeline_loadWinFull_VITIS_LOOP_50_1, i32 %window_i_2_2_promoted195259_load, i32 %window_i_2_0_promoted193253_load, i32 %window_i_2_1_promoted191247_load, i32 %window_i_0_2_promoted189241_load, i32 %window_i_0_0_promoted187235_load, i32 %window_i_0_1_promoted185229_load, i32 %window_i_1_2_promoted183223_load, i32 %window_i_1_0_promoted181217_load, i32 %window_i_1_1_promoted179211_load, i32 %mux_case_281140_load, i32 %mux_case_179130_load, i32 %mux_case_077120_load, i32 %mux_case_2110_load, i32 %mux_case_1100_load, i32 %mux_case_090_load, i5 %select_ln139_1, i32 %mem_1_0, i32 %p_loc49, i32 %p_loc50, i32 %p_loc51, i32 %p_loc52, i32 %p_loc53, i32 %p_loc54, i32 %p_loc55, i32 %p_loc56, i32 %p_loc57, i32 %mux_case_281136_loc, i32 %mux_case_179126_loc, i32 %mux_case_077116_loc, i32 %mux_case_2106_loc, i32 %mux_case_196_loc, i32 %mux_case_086_loc" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 224 'call' 'call_ln139' <Predicate = (icmp_ln46)> <Delay = 1.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 225 [1/2] (0.00ns)   --->   "%call_ln139 = call void @conv1_Pipeline_loadWinShift, i32 %window_82475_load, i32 %window_72369_load, i32 %window_62263_load, i32 %window_52157_load, i32 %window_42051_load, i32 %window_31945_load, i32 %window_21839_load, i32 %window_11733_load, i32 %window1627_load, i32 %window_i_2_2_promoted195259_load, i32 %window_i_2_0_promoted193253_load, i32 %window_i_2_1_promoted191247_load, i32 %window_i_0_2_promoted189241_load, i32 %window_i_0_0_promoted187235_load, i32 %window_i_0_1_promoted185229_load, i32 %window_i_1_2_promoted183223_load, i32 %window_i_1_0_promoted181217_load, i32 %window_i_1_1_promoted179211_load, i32 %mux_case_281140_load, i32 %mux_case_179130_load, i32 %mux_case_077120_load, i32 %mux_case_2110_load, i32 %mux_case_1100_load, i32 %mux_case_090_load, i5 %select_ln139_1, i5 %empty_55, i32 %mem_1_0, i32 %window_82474_loc, i32 %window_72368_loc, i32 %window_62262_loc, i32 %window_52156_loc, i32 %window_42050_loc, i32 %window_31944_loc, i32 %window_21838_loc, i32 %window_11732_loc, i32 %window1626_loc, i32 %window_i_2_2_promoted195256_loc, i32 %window_i_2_0_promoted193250_loc, i32 %window_i_2_1_promoted191244_loc, i32 %window_i_0_2_promoted189238_loc, i32 %window_i_0_0_promoted187232_loc, i32 %window_i_0_1_promoted185226_loc, i32 %window_i_1_2_promoted183220_loc, i32 %window_i_1_0_promoted181214_loc, i32 %window_i_1_1_promoted179208_loc, i32 %mux_case_281_loc, i32 %mux_case_179_loc, i32 %mux_case_077_loc, i32 %mux_case_2_loc, i32 %mux_case_1_loc, i32 %mux_case_0_loc" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 225 'call' 'call_ln139' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 7.29>
+ST_10 : Operation 226 [1/1] (0.00ns)   --->   "%window_82474_loc_load = load i32 %window_82474_loc"   --->   Operation 226 'load' 'window_82474_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 227 [1/1] (0.00ns)   --->   "%window_72368_loc_load = load i32 %window_72368_loc"   --->   Operation 227 'load' 'window_72368_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 228 [1/1] (0.00ns)   --->   "%window_62262_loc_load = load i32 %window_62262_loc"   --->   Operation 228 'load' 'window_62262_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 229 [1/1] (0.00ns)   --->   "%window_52156_loc_load = load i32 %window_52156_loc"   --->   Operation 229 'load' 'window_52156_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 230 [1/1] (0.00ns)   --->   "%window_42050_loc_load = load i32 %window_42050_loc"   --->   Operation 230 'load' 'window_42050_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 231 [1/1] (0.00ns)   --->   "%window_31944_loc_load = load i32 %window_31944_loc"   --->   Operation 231 'load' 'window_31944_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 232 [1/1] (0.00ns)   --->   "%window_21838_loc_load = load i32 %window_21838_loc"   --->   Operation 232 'load' 'window_21838_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 233 [1/1] (0.00ns)   --->   "%window_11732_loc_load = load i32 %window_11732_loc"   --->   Operation 233 'load' 'window_11732_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 234 [1/1] (0.00ns)   --->   "%window1626_loc_load = load i32 %window1626_loc"   --->   Operation 234 'load' 'window1626_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 235 [1/1] (0.00ns)   --->   "%window_i_2_2_promoted195256_loc_load = load i32 %window_i_2_2_promoted195256_loc"   --->   Operation 235 'load' 'window_i_2_2_promoted195256_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 236 [1/1] (0.00ns)   --->   "%window_i_2_0_promoted193250_loc_load = load i32 %window_i_2_0_promoted193250_loc"   --->   Operation 236 'load' 'window_i_2_0_promoted193250_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 237 [1/1] (0.00ns)   --->   "%window_i_2_1_promoted191244_loc_load = load i32 %window_i_2_1_promoted191244_loc"   --->   Operation 237 'load' 'window_i_2_1_promoted191244_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 238 [1/1] (0.00ns)   --->   "%window_i_0_2_promoted189238_loc_load = load i32 %window_i_0_2_promoted189238_loc"   --->   Operation 238 'load' 'window_i_0_2_promoted189238_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 239 [1/1] (0.00ns)   --->   "%window_i_0_0_promoted187232_loc_load = load i32 %window_i_0_0_promoted187232_loc"   --->   Operation 239 'load' 'window_i_0_0_promoted187232_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 240 [1/1] (0.00ns)   --->   "%window_i_0_1_promoted185226_loc_load = load i32 %window_i_0_1_promoted185226_loc"   --->   Operation 240 'load' 'window_i_0_1_promoted185226_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 241 [1/1] (0.00ns)   --->   "%window_i_1_2_promoted183220_loc_load = load i32 %window_i_1_2_promoted183220_loc"   --->   Operation 241 'load' 'window_i_1_2_promoted183220_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 242 [1/1] (0.00ns)   --->   "%window_i_1_0_promoted181214_loc_load = load i32 %window_i_1_0_promoted181214_loc"   --->   Operation 242 'load' 'window_i_1_0_promoted181214_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 243 [1/1] (0.00ns)   --->   "%window_i_1_1_promoted179208_loc_load = load i32 %window_i_1_1_promoted179208_loc"   --->   Operation 243 'load' 'window_i_1_1_promoted179208_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 244 [1/1] (0.00ns)   --->   "%mux_case_281_loc_load = load i32 %mux_case_281_loc"   --->   Operation 244 'load' 'mux_case_281_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 245 [1/1] (0.00ns)   --->   "%mux_case_179_loc_load = load i32 %mux_case_179_loc"   --->   Operation 245 'load' 'mux_case_179_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 246 [1/1] (0.00ns)   --->   "%mux_case_077_loc_load = load i32 %mux_case_077_loc"   --->   Operation 246 'load' 'mux_case_077_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 247 [1/1] (0.00ns)   --->   "%mux_case_2_loc_load = load i32 %mux_case_2_loc"   --->   Operation 247 'load' 'mux_case_2_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 248 [1/1] (0.00ns)   --->   "%mux_case_1_loc_load = load i32 %mux_case_1_loc"   --->   Operation 248 'load' 'mux_case_1_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 249 [1/1] (0.00ns)   --->   "%mux_case_0_loc_load = load i32 %mux_case_0_loc"   --->   Operation 249 'load' 'mux_case_0_loc_load' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 250 [1/1] (1.58ns)   --->   "%br_ln0 = br void %cond.true.i"   --->   Operation 250 'br' 'br_ln0' <Predicate = (!icmp_ln46)> <Delay = 1.58>
+ST_10 : Operation 251 [1/1] (0.00ns)   --->   "%p_loc49_load = load i32 %p_loc49"   --->   Operation 251 'load' 'p_loc49_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 252 [1/1] (0.00ns)   --->   "%p_loc50_load = load i32 %p_loc50"   --->   Operation 252 'load' 'p_loc50_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 253 [1/1] (0.00ns)   --->   "%p_loc51_load = load i32 %p_loc51"   --->   Operation 253 'load' 'p_loc51_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 254 [1/1] (0.00ns)   --->   "%p_loc52_load = load i32 %p_loc52"   --->   Operation 254 'load' 'p_loc52_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 255 [1/1] (0.00ns)   --->   "%p_loc53_load = load i32 %p_loc53"   --->   Operation 255 'load' 'p_loc53_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 256 [1/1] (0.00ns)   --->   "%p_loc54_load = load i32 %p_loc54"   --->   Operation 256 'load' 'p_loc54_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 257 [1/1] (0.00ns)   --->   "%p_loc55_load = load i32 %p_loc55"   --->   Operation 257 'load' 'p_loc55_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 258 [1/1] (0.00ns)   --->   "%p_loc56_load = load i32 %p_loc56"   --->   Operation 258 'load' 'p_loc56_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 259 [1/1] (0.00ns)   --->   "%p_loc57_load = load i32 %p_loc57"   --->   Operation 259 'load' 'p_loc57_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 260 [1/1] (0.00ns)   --->   "%mux_case_281136_loc_load = load i32 %mux_case_281136_loc"   --->   Operation 260 'load' 'mux_case_281136_loc_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 261 [1/1] (0.00ns)   --->   "%mux_case_179126_loc_load = load i32 %mux_case_179126_loc"   --->   Operation 261 'load' 'mux_case_179126_loc_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 262 [1/1] (0.00ns)   --->   "%mux_case_077116_loc_load = load i32 %mux_case_077116_loc"   --->   Operation 262 'load' 'mux_case_077116_loc_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 263 [1/1] (0.00ns)   --->   "%mux_case_2106_loc_load = load i32 %mux_case_2106_loc"   --->   Operation 263 'load' 'mux_case_2106_loc_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 264 [1/1] (0.00ns)   --->   "%mux_case_196_loc_load = load i32 %mux_case_196_loc"   --->   Operation 264 'load' 'mux_case_196_loc_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 265 [1/1] (0.00ns)   --->   "%mux_case_086_loc_load = load i32 %mux_case_086_loc"   --->   Operation 265 'load' 'mux_case_086_loc_load' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_10 : Operation 266 [1/1] (1.58ns)   --->   "%br_ln0 = br void %cond.true.i"   --->   Operation 266 'br' 'br_ln0' <Predicate = (icmp_ln46)> <Delay = 1.58>
+ST_10 : Operation 267 [1/1] (0.00ns)   --->   "%window_824 = phi i32 %window_82474_loc_load, void %if.else.i.i, i32 %p_loc49_load, void %for.body5.i.i.preheader"   --->   Operation 267 'phi' 'window_824' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 268 [1/1] (0.00ns)   --->   "%window_723 = phi i32 %window_72368_loc_load, void %if.else.i.i, i32 %p_loc51_load, void %for.body5.i.i.preheader"   --->   Operation 268 'phi' 'window_723' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 269 [1/1] (0.00ns)   --->   "%window_622 = phi i32 %window_62262_loc_load, void %if.else.i.i, i32 %p_loc50_load, void %for.body5.i.i.preheader"   --->   Operation 269 'phi' 'window_622' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 270 [1/1] (0.00ns)   --->   "%window_521 = phi i32 %window_52156_loc_load, void %if.else.i.i, i32 %p_loc55_load, void %for.body5.i.i.preheader"   --->   Operation 270 'phi' 'window_521' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 271 [1/1] (0.00ns)   --->   "%window_420 = phi i32 %window_42050_loc_load, void %if.else.i.i, i32 %p_loc57_load, void %for.body5.i.i.preheader"   --->   Operation 271 'phi' 'window_420' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 272 [1/1] (0.00ns)   --->   "%window_319 = phi i32 %window_31944_loc_load, void %if.else.i.i, i32 %p_loc56_load, void %for.body5.i.i.preheader"   --->   Operation 272 'phi' 'window_319' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 273 [1/1] (0.00ns)   --->   "%window_218 = phi i32 %window_21838_loc_load, void %if.else.i.i, i32 %p_loc52_load, void %for.body5.i.i.preheader"   --->   Operation 273 'phi' 'window_218' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 274 [1/1] (0.00ns)   --->   "%window_117 = phi i32 %window_11732_loc_load, void %if.else.i.i, i32 %p_loc54_load, void %for.body5.i.i.preheader"   --->   Operation 274 'phi' 'window_117' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 275 [1/1] (0.00ns)   --->   "%window16 = phi i32 %window1626_loc_load, void %if.else.i.i, i32 %p_loc53_load, void %for.body5.i.i.preheader"   --->   Operation 275 'phi' 'window16' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 276 [25/25] (5.70ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 276 'call' 'sum' <Predicate = true> <Delay = 5.70> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 277 [1/1] (1.78ns)   --->   "%add_ln141 = add i5 %select_ln139, i5 1" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 277 'add' 'add_ln141' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 278 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_824, i32 %window_82475" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 278 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 279 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_723, i32 %window_72369" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 279 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 280 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_622, i32 %window_62263" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 280 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 281 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_521, i32 %window_52157" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 281 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 282 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_420, i32 %window_42051" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 282 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 283 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_319, i32 %window_31945" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 283 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 284 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_218, i32 %window_21839" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 284 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 285 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_117, i32 %window_11733" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 285 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 286 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window16, i32 %window1627" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 286 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 8> <Delay = 0.00>
+ST_11 : Operation 287 [1/2] (0.00ns)   --->   "%call_ln139 = call void @conv1_Pipeline_loadWinFull_VITIS_LOOP_50_1, i32 %window_i_2_2_promoted195259_load, i32 %window_i_2_0_promoted193253_load, i32 %window_i_2_1_promoted191247_load, i32 %window_i_0_2_promoted189241_load, i32 %window_i_0_0_promoted187235_load, i32 %window_i_0_1_promoted185229_load, i32 %window_i_1_2_promoted183223_load, i32 %window_i_1_0_promoted181217_load, i32 %window_i_1_1_promoted179211_load, i32 %mux_case_281140_load, i32 %mux_case_179130_load, i32 %mux_case_077120_load, i32 %mux_case_2110_load, i32 %mux_case_1100_load, i32 %mux_case_090_load, i5 %select_ln139_1, i32 %mem_1_0, i32 %p_loc49, i32 %p_loc50, i32 %p_loc51, i32 %p_loc52, i32 %p_loc53, i32 %p_loc54, i32 %p_loc55, i32 %p_loc56, i32 %p_loc57, i32 %mux_case_281136_loc, i32 %mux_case_179126_loc, i32 %mux_case_077116_loc, i32 %mux_case_2106_loc, i32 %mux_case_196_loc, i32 %mux_case_086_loc" [codes_lab5/HLS_sources_final/templatedFuncs.h:139]   --->   Operation 287 'call' 'call_ln139' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 10> <Delay = 7.25>
+ST_12 : Operation 288 [1/1] (0.00ns)   --->   "%window_i_2_2_promoted195254 = phi i32 %window_i_2_2_promoted195256_loc_load, void %if.else.i.i, i32 %p_loc49_load, void %for.body5.i.i.preheader"   --->   Operation 288 'phi' 'window_i_2_2_promoted195254' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 289 [1/1] (0.00ns)   --->   "%window_i_2_0_promoted193248 = phi i32 %window_i_2_0_promoted193250_loc_load, void %if.else.i.i, i32 %p_loc50_load, void %for.body5.i.i.preheader"   --->   Operation 289 'phi' 'window_i_2_0_promoted193248' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 290 [1/1] (0.00ns)   --->   "%window_i_2_1_promoted191242 = phi i32 %window_i_2_1_promoted191244_loc_load, void %if.else.i.i, i32 %p_loc51_load, void %for.body5.i.i.preheader"   --->   Operation 290 'phi' 'window_i_2_1_promoted191242' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 291 [1/1] (0.00ns)   --->   "%window_i_0_2_promoted189236 = phi i32 %window_i_0_2_promoted189238_loc_load, void %if.else.i.i, i32 %p_loc52_load, void %for.body5.i.i.preheader"   --->   Operation 291 'phi' 'window_i_0_2_promoted189236' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 292 [1/1] (0.00ns)   --->   "%window_i_0_0_promoted187230 = phi i32 %window_i_0_0_promoted187232_loc_load, void %if.else.i.i, i32 %p_loc53_load, void %for.body5.i.i.preheader"   --->   Operation 292 'phi' 'window_i_0_0_promoted187230' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 293 [1/1] (0.00ns)   --->   "%window_i_0_1_promoted185224 = phi i32 %window_i_0_1_promoted185226_loc_load, void %if.else.i.i, i32 %p_loc54_load, void %for.body5.i.i.preheader"   --->   Operation 293 'phi' 'window_i_0_1_promoted185224' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 294 [1/1] (0.00ns)   --->   "%window_i_1_2_promoted183218 = phi i32 %window_i_1_2_promoted183220_loc_load, void %if.else.i.i, i32 %p_loc55_load, void %for.body5.i.i.preheader"   --->   Operation 294 'phi' 'window_i_1_2_promoted183218' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 295 [1/1] (0.00ns)   --->   "%window_i_1_0_promoted181212 = phi i32 %window_i_1_0_promoted181214_loc_load, void %if.else.i.i, i32 %p_loc56_load, void %for.body5.i.i.preheader"   --->   Operation 295 'phi' 'window_i_1_0_promoted181212' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 296 [1/1] (0.00ns)   --->   "%window_i_1_1_promoted179206 = phi i32 %window_i_1_1_promoted179208_loc_load, void %if.else.i.i, i32 %p_loc57_load, void %for.body5.i.i.preheader"   --->   Operation 296 'phi' 'window_i_1_1_promoted179206' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 297 [1/1] (0.00ns)   --->   "%mux_case_281133 = phi i32 %mux_case_281_loc_load, void %if.else.i.i, i32 %mux_case_281136_loc_load, void %for.body5.i.i.preheader"   --->   Operation 297 'phi' 'mux_case_281133' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 298 [1/1] (0.00ns)   --->   "%mux_case_179123 = phi i32 %mux_case_179_loc_load, void %if.else.i.i, i32 %mux_case_179126_loc_load, void %for.body5.i.i.preheader"   --->   Operation 298 'phi' 'mux_case_179123' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 299 [1/1] (0.00ns)   --->   "%mux_case_077113 = phi i32 %mux_case_077_loc_load, void %if.else.i.i, i32 %mux_case_077116_loc_load, void %for.body5.i.i.preheader"   --->   Operation 299 'phi' 'mux_case_077113' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 300 [1/1] (0.00ns)   --->   "%mux_case_2103 = phi i32 %mux_case_2_loc_load, void %if.else.i.i, i32 %mux_case_2106_loc_load, void %for.body5.i.i.preheader"   --->   Operation 300 'phi' 'mux_case_2103' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 301 [1/1] (0.00ns)   --->   "%mux_case_193 = phi i32 %mux_case_1_loc_load, void %if.else.i.i, i32 %mux_case_196_loc_load, void %for.body5.i.i.preheader"   --->   Operation 301 'phi' 'mux_case_193' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 302 [1/1] (0.00ns)   --->   "%mux_case_083 = phi i32 %mux_case_0_loc_load, void %if.else.i.i, i32 %mux_case_086_loc_load, void %for.body5.i.i.preheader"   --->   Operation 302 'phi' 'mux_case_083' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 303 [24/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 303 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 304 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_i_2_2_promoted195254, i32 %window_i_2_2_promoted195259" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 304 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 305 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_i_2_0_promoted193248, i32 %window_i_2_0_promoted193253" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 305 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 306 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_i_2_1_promoted191242, i32 %window_i_2_1_promoted191247" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 306 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 307 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_i_0_2_promoted189236, i32 %window_i_0_2_promoted189241" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 307 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 308 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_i_0_0_promoted187230, i32 %window_i_0_0_promoted187235" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 308 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 309 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_i_0_1_promoted185224, i32 %window_i_0_1_promoted185229" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 309 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 310 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_i_1_2_promoted183218, i32 %window_i_1_2_promoted183223" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 310 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 311 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_i_1_0_promoted181212, i32 %window_i_1_0_promoted181217" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 311 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 312 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %window_i_1_1_promoted179206, i32 %window_i_1_1_promoted179211" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 312 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 313 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %mux_case_281133, i32 %mux_case_281140" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 313 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 314 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %mux_case_179123, i32 %mux_case_179130" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 314 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 315 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %mux_case_077113, i32 %mux_case_077120" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 315 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 316 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %mux_case_2103, i32 %mux_case_2110" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 316 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 317 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %mux_case_193, i32 %mux_case_1100" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 317 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 318 [1/1] (0.00ns)   --->   "%store_ln141 = store i32 %mux_case_083, i32 %mux_case_090" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 318 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 11> <Delay = 7.25>
+ST_13 : Operation 319 [23/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 319 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 12> <Delay = 7.25>
+ST_14 : Operation 320 [22/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 320 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 13> <Delay = 7.25>
+ST_15 : Operation 321 [21/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 321 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 14> <Delay = 7.25>
+ST_16 : Operation 322 [20/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 322 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 15> <Delay = 7.25>
+ST_17 : Operation 323 [19/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 323 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 16> <Delay = 7.25>
+ST_18 : Operation 324 [18/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 324 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 17> <Delay = 7.25>
+ST_19 : Operation 325 [17/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 325 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 18> <Delay = 7.25>
+ST_20 : Operation 326 [16/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 326 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 19> <Delay = 7.25>
+ST_21 : Operation 327 [15/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 327 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 20> <Delay = 7.25>
+ST_22 : Operation 328 [14/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 328 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 21> <Delay = 7.25>
+ST_23 : Operation 329 [13/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 329 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 22> <Delay = 7.25>
+ST_24 : Operation 330 [12/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 330 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 23> <Delay = 7.25>
+ST_25 : Operation 331 [11/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 331 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 26 <SV = 24> <Delay = 7.25>
+ST_26 : Operation 332 [10/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 332 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 27 <SV = 25> <Delay = 7.25>
+ST_27 : Operation 333 [9/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 333 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 28 <SV = 26> <Delay = 7.25>
+ST_28 : Operation 334 [8/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 334 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 29 <SV = 27> <Delay = 7.25>
+ST_29 : Operation 335 [7/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 335 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 30 <SV = 28> <Delay = 7.25>
+ST_30 : Operation 336 [6/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 336 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 31 <SV = 29> <Delay = 7.25>
+ST_31 : Operation 337 [5/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 337 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 32 <SV = 30> <Delay = 7.25>
+ST_32 : Operation 338 [4/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 338 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 33 <SV = 31> <Delay = 7.25>
+ST_33 : Operation 339 [3/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 339 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 34 <SV = 32> <Delay = 7.25>
+ST_34 : Operation 340 [2/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 340 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 35 <SV = 33> <Delay = 7.25>
+ST_35 : Operation 341 [1/25] (7.25ns)   --->   "%sum = call i32 @conv2D<1>, i32 %p_loc35_load, i32 %p_loc36_load, i32 %p_loc34_load, i32 %p_loc38_load, i32 %p_loc39_load, i32 %p_loc37_load, i32 %p_loc32_load, i32 %p_loc33_load, i32 %p_loc_load, i32 %window16, i32 %window_117, i32 %window_218, i32 %window_319, i32 %window_420, i32 %window_521, i32 %window_622, i32 %window_723, i32 %window_824, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:147]   --->   Operation 341 'call' 'sum' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 36 <SV = 34> <Delay = 5.43>
+ST_36 : Operation 342 [2/2] (5.43ns)   --->   "%tmp_s = fcmp_olt  i32 %sum, i32 0" [codes_lab5/HLS_sources_final/templatedFuncs.h:73]   --->   Operation 342 'fcmp' 'tmp_s' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 35> <Delay = 6.40>
+ST_37 : Operation 343 [1/1] (0.00ns)   --->   "%bitcast_ln73 = bitcast i32 %sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:73]   --->   Operation 343 'bitcast' 'bitcast_ln73' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 344 [1/1] (0.00ns)   --->   "%tmp = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln73, i32 23, i32 30" [codes_lab5/HLS_sources_final/templatedFuncs.h:73]   --->   Operation 344 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 345 [1/1] (0.00ns)   --->   "%trunc_ln73 = trunc i32 %bitcast_ln73" [codes_lab5/HLS_sources_final/templatedFuncs.h:73]   --->   Operation 345 'trunc' 'trunc_ln73' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 346 [1/1] (1.55ns)   --->   "%icmp_ln73 = icmp_ne  i8 %tmp, i8 255" [codes_lab5/HLS_sources_final/templatedFuncs.h:73]   --->   Operation 346 'icmp' 'icmp_ln73' <Predicate = true> <Delay = 1.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 347 [1/1] (2.44ns)   --->   "%icmp_ln73_1 = icmp_eq  i23 %trunc_ln73, i23 0" [codes_lab5/HLS_sources_final/templatedFuncs.h:73]   --->   Operation 347 'icmp' 'icmp_ln73_1' <Predicate = true> <Delay = 2.44> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 348 [1/1] (0.00ns) (grouped into LUT with out node select_ln73)   --->   "%or_ln73 = or i1 %icmp_ln73_1, i1 %icmp_ln73" [codes_lab5/HLS_sources_final/templatedFuncs.h:73]   --->   Operation 348 'or' 'or_ln73' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 349 [1/2] (5.43ns)   --->   "%tmp_s = fcmp_olt  i32 %sum, i32 0" [codes_lab5/HLS_sources_final/templatedFuncs.h:73]   --->   Operation 349 'fcmp' 'tmp_s' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 350 [1/1] (0.00ns) (grouped into LUT with out node select_ln73)   --->   "%and_ln73 = and i1 %or_ln73, i1 %tmp_s" [codes_lab5/HLS_sources_final/templatedFuncs.h:73]   --->   Operation 350 'and' 'and_ln73' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 351 [1/1] (0.97ns) (out node of the LUT)   --->   "%select_ln73 = select i1 %and_ln73, i32 0, i32 %sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:73]   --->   Operation 351 'select' 'select_ln73' <Predicate = true> <Delay = 0.97> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 38 <SV = 36> <Delay = 3.25>
+ST_38 : Operation 352 [1/1] (3.25ns)   --->   "%store_ln150 = store i32 %select_ln73, i12 %mem_2_addr" [codes_lab5/HLS_sources_final/templatedFuncs.h:150]   --->   Operation 352 'store' 'store_ln150' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2704> <RAM>
+ST_38 : Operation 353 [1/1] (0.00ns)   --->   "%br_ln141 = br void %for.body13.i" [codes_lab5/HLS_sources_final/templatedFuncs.h:141]   --->   Operation 353 'br' 'br_ln141' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	'alloca' operation ('n_f') [6]  (0 ns)
+	'store' operation ('store_ln133', codes_lab5/HLS_sources_final/templatedFuncs.h:133) of constant 0 on local variable 'n_f' [88]  (1.59 ns)
+
+ <State 2>: 2.96ns
+The critical path consists of the following:
+	'load' operation ('phi_mul_load', codes_lab5/HLS_sources_final/templatedFuncs.h:150) on local variable 'phi_mul' [92]  (0 ns)
+	'add' operation ('add_ln133_1', codes_lab5/HLS_sources_final/templatedFuncs.h:133) [94]  (1.87 ns)
+	blocking operation 1.09 ns on control path)
+
+ <State 3>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('conv1_bias_addr', codes_lab5/HLS_sources_final/templatedFuncs.h:133) [122]  (0 ns)
+	'load' operation ('prev_sum', codes_lab5/HLS_sources_final/templatedFuncs.h:146) on array 'conv1_bias' [123]  (2.32 ns)
+
+ <State 4>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('prev_sum', codes_lab5/HLS_sources_final/templatedFuncs.h:146) on array 'conv1_bias' [123]  (2.32 ns)
+
+ <State 5>: 5.69ns
+The critical path consists of the following:
+	'phi' operation ('oh', codes_lab5/HLS_sources_final/templatedFuncs.h:139) with incoming values : ('select_ln139_1', codes_lab5/HLS_sources_final/templatedFuncs.h:139) [127]  (0 ns)
+	'add' operation ('add_ln139', codes_lab5/HLS_sources_final/templatedFuncs.h:139) [133]  (1.78 ns)
+	'select' operation ('select_ln139_1', codes_lab5/HLS_sources_final/templatedFuncs.h:139) [138]  (1.22 ns)
+	'add' operation of DSP[144] ('add_ln150', codes_lab5/HLS_sources_final/templatedFuncs.h:150) [140]  (1.65 ns)
+	'mul' operation of DSP[144] ('mul_ln150', codes_lab5/HLS_sources_final/templatedFuncs.h:150) [142]  (1.05 ns)
+
+ <State 6>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[144] ('mul_ln150', codes_lab5/HLS_sources_final/templatedFuncs.h:150) [142]  (1.05 ns)
+
+ <State 7>: 2.1ns
+The critical path consists of the following:
+	'mul' operation of DSP[144] ('mul_ln150', codes_lab5/HLS_sources_final/templatedFuncs.h:150) [142]  (0 ns)
+	'add' operation of DSP[144] ('add_ln150_1', codes_lab5/HLS_sources_final/templatedFuncs.h:150) [144]  (2.1 ns)
+
+ <State 8>: 3.56ns
+The critical path consists of the following:
+	'add' operation ('empty_55', codes_lab5/HLS_sources_final/templatedFuncs.h:139) [175]  (1.78 ns)
+	'call' operation ('call_ln139', codes_lab5/HLS_sources_final/templatedFuncs.h:139) to 'conv1_Pipeline_loadWinShift' [176]  (1.78 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 7.29ns
+The critical path consists of the following:
+	'load' operation ('window_82474_loc_load') on local variable 'window_82474_loc' [177]  (0 ns)
+	multiplexor before 'phi' operation ('window_824') with incoming values : ('window_82474_loc_load') ('p_loc49_load') [221]  (1.59 ns)
+	'phi' operation ('window_824') with incoming values : ('window_82474_loc_load') ('p_loc49_load') [221]  (0 ns)
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (5.7 ns)
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 13>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 14>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 15>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 16>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 17>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 18>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 19>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 20>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 21>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 22>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 23>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 24>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 25>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 26>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 27>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 28>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 29>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 30>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 31>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 32>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 33>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 34>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 35>: 7.26ns
+The critical path consists of the following:
+	'call' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:147) to 'conv2D<1>' [245]  (7.26 ns)
+
+ <State 36>: 5.43ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_s', codes_lab5/HLS_sources_final/templatedFuncs.h:73) [252]  (5.43 ns)
+
+ <State 37>: 6.41ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_s', codes_lab5/HLS_sources_final/templatedFuncs.h:73) [252]  (5.43 ns)
+	'and' operation ('and_ln73', codes_lab5/HLS_sources_final/templatedFuncs.h:73) [253]  (0 ns)
+	'select' operation ('select_ln73', codes_lab5/HLS_sources_final/templatedFuncs.h:73) [254]  (0.978 ns)
+
+ <State 38>: 3.25ns
+The critical path consists of the following:
+	'store' operation ('store_ln150', codes_lab5/HLS_sources_final/templatedFuncs.h:150) of variable 'select_ln73', codes_lab5/HLS_sources_final/templatedFuncs.h:73 on array 'mem_2' [255]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="HW_accel" xd:componentRef="HW_accel" xd:initiationInterval="x" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="inputPort" xd:originalName="inputPort" xd:direction="in" xd:interfaceRef="inputPort" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="outputPort" xd:originalName="outputPort" xd:direction="out" xd:interfaceRef="outputPort" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="538530" xd:worst-case="547746" xd:average-case="547746"/>
+  <xd:resourceEstimates xd:LUT="38757" xd:FF="35460" xd:BRAM="0" xd:DSP="202"/>
+</xd:acceleratorMap>

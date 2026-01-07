@@ -1,0 +1,78 @@
+<stg><name>fc_layer117</name>
+
+
+<trans_list>
+
+<trans id="6" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="512" op_0_bw="512" op_1_bw="32" op_2_bw="32" op_3_bw="32">
+<![CDATA[
+entry:0 %tmp1 = call i512 @FC_layer<100, 16, true>, i32 %input_r, i32 %fc1_bias, i32 %fc1_weight
+
+]]></Node>
+<StgValue><ssdm name="tmp1"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="4" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="512" op_0_bw="512" op_1_bw="32" op_2_bw="32" op_3_bw="32">
+<![CDATA[
+entry:0 %tmp1 = call i512 @FC_layer<100, 16, true>, i32 %input_r, i32 %fc1_bias, i32 %fc1_weight
+
+]]></Node>
+<StgValue><ssdm name="tmp1"/></StgValue>
+</operation>
+
+<operation id="5" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="0" op_0_bw="512">
+<![CDATA[
+entry:1 %ret_ln41 = ret i512 %tmp1
+
+]]></Node>
+<StgValue><ssdm name="ret_ln41"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

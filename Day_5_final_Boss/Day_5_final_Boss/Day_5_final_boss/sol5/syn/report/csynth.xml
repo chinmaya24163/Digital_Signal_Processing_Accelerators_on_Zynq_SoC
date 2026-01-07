@@ -1,0 +1,1865 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z020-clg400-1</Part>
+        <TopModelName>HW_accel</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>dataflow</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>538530</Best-caseLatency>
+            <Average-caseLatency>547746</Average-caseLatency>
+            <Worst-caseLatency>547746</Worst-caseLatency>
+            <Best-caseRealTimeLatency>5.385 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>5.477 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>5.477 ms</Worst-caseRealTimeLatency>
+            <DataflowPipelineThroughput>
+                <range>
+                    <min>424110</min>
+                    <max>433326</max>
+                </range>
+            </DataflowPipelineThroughput>
+            <Interval-min>424110</Interval-min>
+            <Interval-max>433326</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>88</BRAM_18K>
+            <DSP>202</DSP>
+            <FF>35460</FF>
+            <LUT>38753</LUT>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>280</BRAM_18K>
+            <DSP>220</DSP>
+            <FF>106400</FF>
+            <LUT>53200</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>HW_accel</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>HW_accel</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>inputPort_TDATA</name>
+            <Object>inputPort_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>inputPort_TKEEP</name>
+            <Object>inputPort_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>inputPort_TSTRB</name>
+            <Object>inputPort_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>inputPort_TLAST</name>
+            <Object>inputPort_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>inputPort_TVALID</name>
+            <Object>inputPort_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>inputPort_TREADY</name>
+            <Object>inputPort_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>outputPort_TDATA</name>
+            <Object>outputPort_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>outputPort_TKEEP</name>
+            <Object>outputPort_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>outputPort_TSTRB</name>
+            <Object>outputPort_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>outputPort_TLAST</name>
+            <Object>outputPort_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>outputPort_TVALID</name>
+            <Object>outputPort_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>outputPort_TREADY</name>
+            <Object>outputPort_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="4">
+            <ModuleName>HW_accel</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>read_input_U0</InstName>
+                    <ModuleName>read_input</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>116</ID>
+                    <BindInstances>add_ln7_1_fu_119_p2 add_ln7_fu_131_p2 add_ln8_fu_163_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>conv1_U0</InstName>
+                    <ModuleName>conv1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>129</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_conv1_Pipeline_Fil_load_r_Fil_load_c_fu_283</InstName>
+                            <ModuleName>conv1_Pipeline_Fil_load_r_Fil_load_c</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>283</ID>
+                            <BindInstances>empty_146_fu_348_p2 add_ln23_3_fu_360_p2 add_ln23_fu_369_p2 p_mid1_fu_405_p2 add_ln29_fu_431_p2 add_ln30_fu_441_p2 add_ln26_fu_447_p2 conv1_weight_U</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_conv1_Pipeline_loadWin1_VITIS_LOOP_50_1_fu_308</InstName>
+                            <ModuleName>conv1_Pipeline_loadWin1_VITIS_LOOP_50_1</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>308</ID>
+                            <BindInstances>add_ln49_6_fu_347_p2 add_ln49_fu_359_p2 add_ln49_5_fu_391_p2 add_ln52_fu_401_p2 add_ln50_fu_407_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_conv2D_1_s_fu_334</InstName>
+                            <ModuleName>conv2D_1_s</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>334</ID>
+                            <BindInstances>fmul_32ns_32ns_32_4_max_dsp_1_U60 fmul_32ns_32ns_32_4_max_dsp_1_U61 fmul_32ns_32ns_32_4_max_dsp_1_U62 fmul_32ns_32ns_32_4_max_dsp_1_U63 fmul_32ns_32ns_32_4_max_dsp_1_U64 fmul_32ns_32ns_32_4_max_dsp_1_U65 fmul_32ns_32ns_32_4_max_dsp_1_U66 fmul_32ns_32ns_32_4_max_dsp_1_U67 fmul_32ns_32ns_32_4_max_dsp_1_U68 fadd_32ns_32ns_32_5_full_dsp_1_U51 fadd_32ns_32ns_32_5_full_dsp_1_U52 fadd_32ns_32ns_32_5_full_dsp_1_U53 fadd_32ns_32ns_32_5_full_dsp_1_U54 fadd_32ns_32ns_32_5_full_dsp_1_U55 fadd_32ns_32ns_32_5_full_dsp_1_U56 fadd_32ns_32ns_32_5_full_dsp_1_U57 fadd_32ns_32ns_32_5_full_dsp_1_U58 fadd_32ns_32ns_32_5_full_dsp_1_U59</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>add_ln144_1_fu_378_p2 add_ln144_fu_390_p2 add_ln150_3_fu_478_p2 add_ln150_fu_520_p2 ama_addmuladd_7ns_5ns_5ns_5ns_12_4_1_U91 ama_addmuladd_7ns_5ns_5ns_5ns_12_4_1_U91 ama_addmuladd_7ns_5ns_5ns_5ns_12_4_1_U91 add_ln152_fu_554_p2 conv1_bias_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>conv2_U0</InstName>
+                    <ModuleName>conv2</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>139</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_conv2_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c_fu_560</InstName>
+                            <ModuleName>conv2_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>560</ID>
+                            <BindInstances>empty_124_fu_1088_p2 add_ln19_2_fu_1100_p2 add_ln19_fu_1115_p2 add_ln23_fu_1201_p2 p_mid1_fu_1237_p2 add_ln29_2_fu_1255_p2 add_ln29_fu_1328_p2 add_ln30_fu_1338_p2 add_ln26_fu_1264_p2 add_ln23_2_fu_1270_p2 conv2_weight_U</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_conv2_Pipeline_loadWin1_VITIS_LOOP_50_1_fu_639</InstName>
+                            <ModuleName>conv2_Pipeline_loadWin1_VITIS_LOOP_50_1</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>639</ID>
+                            <BindInstances>add_ln49_4_fu_353_p2 add_ln49_fu_365_p2 add_ln49_3_fu_397_p2 ama_addmuladd_8ns_5ns_5ns_5ns_12_4_1_U171 ama_addmuladd_8ns_5ns_5ns_5ns_12_4_1_U171 add_ln52_fu_431_p2 ama_addmuladd_8ns_5ns_5ns_5ns_12_4_1_U171 add_ln50_fu_407_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_conv2D_4_s_fu_666</InstName>
+                            <ModuleName>conv2D_4_s</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>666</ID>
+                            <BindInstances>fmul_32ns_32ns_32_4_max_dsp_1_U204 fmul_32ns_32ns_32_4_max_dsp_1_U205 fmul_32ns_32ns_32_4_max_dsp_1_U206 fmul_32ns_32ns_32_4_max_dsp_1_U207 fmul_32ns_32ns_32_4_max_dsp_1_U208 fmul_32ns_32ns_32_4_max_dsp_1_U209 fmul_32ns_32ns_32_4_max_dsp_1_U210 fmul_32ns_32ns_32_4_max_dsp_1_U211 fmul_32ns_32ns_32_4_max_dsp_1_U212 fadd_32ns_32ns_32_5_full_dsp_1_U195 fadd_32ns_32ns_32_5_full_dsp_1_U196 fadd_32ns_32ns_32_5_full_dsp_1_U197 fadd_32ns_32ns_32_5_full_dsp_1_U198 fadd_32ns_32ns_32_5_full_dsp_1_U199 fadd_32ns_32ns_32_5_full_dsp_1_U200 fadd_32ns_32ns_32_5_full_dsp_1_U201 fadd_32ns_32ns_32_5_full_dsp_1_U202 fadd_32ns_32ns_32_5_full_dsp_1_U203</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>add_ln144_fu_736_p2 sub_ln156_fu_923_p2 add_ln148_2_fu_1047_p2 add_ln148_fu_1053_p2 mul_3ns_6ns_8_1_1_U271 add_ln150_fu_1145_p2 add_ln156_fu_1359_p2 add_ln152_fu_1528_p2 add_ln150_2_fu_1533_p2 conv2_bias_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>maxPool_4_24_12_U0</InstName>
+                    <ModuleName>maxPool_4_24_12_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>150</ID>
+                    <BindInstances>add_ln181_1_fu_217_p2 add_ln181_fu_281_p2 sub_ln185_fu_332_p2 sub_ln188_fu_366_p2 add_ln182_fu_401_p2 add_ln185_fu_427_p2 add_ln186_fu_459_p2 add_ln188_fu_495_p2 add_ln183_fu_519_p2 add_ln182_1_fu_232_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>conv3_U0</InstName>
+                    <ModuleName>conv3</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>157</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_conv3_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c_fu_560</InstName>
+                            <ModuleName>conv3_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>560</ID>
+                            <BindInstances>empty_75_fu_1088_p2 add_ln19_1_fu_1100_p2 add_ln19_fu_1115_p2 add_ln23_fu_1201_p2 p_mid1_fu_1237_p2 add_ln29_1_fu_1255_p2 add_ln29_fu_1328_p2 add_ln30_fu_1338_p2 add_ln26_fu_1264_p2 add_ln23_1_fu_1270_p2 conv3_weight_U</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_conv3_Pipeline_loadWin1_VITIS_LOOP_50_1_fu_639</InstName>
+                            <ModuleName>conv3_Pipeline_loadWin1_VITIS_LOOP_50_1</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>639</ID>
+                            <BindInstances>add_ln49_2_fu_359_p2 add_ln49_fu_371_p2 add_ln49_1_fu_403_p2 add_ln52_1_fu_413_p2 add_ln52_fu_431_p2 add_ln50_fu_437_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_conv2D_4_s_fu_666</InstName>
+                            <ModuleName>conv2D_4_s</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>666</ID>
+                            <BindInstances>fmul_32ns_32ns_32_4_max_dsp_1_U204 fmul_32ns_32ns_32_4_max_dsp_1_U205 fmul_32ns_32ns_32_4_max_dsp_1_U206 fmul_32ns_32ns_32_4_max_dsp_1_U207 fmul_32ns_32ns_32_4_max_dsp_1_U208 fmul_32ns_32ns_32_4_max_dsp_1_U209 fmul_32ns_32ns_32_4_max_dsp_1_U210 fmul_32ns_32ns_32_4_max_dsp_1_U211 fmul_32ns_32ns_32_4_max_dsp_1_U212 fadd_32ns_32ns_32_5_full_dsp_1_U195 fadd_32ns_32ns_32_5_full_dsp_1_U196 fadd_32ns_32ns_32_5_full_dsp_1_U197 fadd_32ns_32ns_32_5_full_dsp_1_U198 fadd_32ns_32ns_32_5_full_dsp_1_U199 fadd_32ns_32ns_32_5_full_dsp_1_U200 fadd_32ns_32ns_32_5_full_dsp_1_U201 fadd_32ns_32ns_32_5_full_dsp_1_U202 fadd_32ns_32ns_32_5_full_dsp_1_U203</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>add_ln144_fu_736_p2 add_ln156_fu_923_p2 add_ln148_1_fu_1043_p2 add_ln148_fu_1049_p2 sub_ln52_fu_1356_p2 add_ln150_fu_1087_p2 add_ln156_1_fu_1119_p2 add_ln152_fu_1532_p2 add_ln150_1_fu_1537_p2 conv3_bias_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>maxPool_4_10_5_U0</InstName>
+                    <ModuleName>maxPool_4_10_5_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>168</ID>
+                    <BindInstances>add_ln181_2_fu_230_p2 add_ln181_fu_245_p2 add_ln185_fu_305_p2 add_ln182_fu_339_p2 add_ln185_2_fu_365_p2 add_ln186_fu_393_p2 add_ln183_fu_431_p2 add_ln182_2_fu_437_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>fc_layer117_U0</InstName>
+                    <ModuleName>fc_layer117</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>175</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_FC_layer_100_16_true_s_fu_8</InstName>
+                            <ModuleName>FC_layer_100_16_true_s</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>8</ID>
+                            <BindInstances>add_ln213_fu_586_p2 mul_4ns_8ns_11_1_1_U417 mul_4ns_8ns_11_1_1_U418 mul_4ns_8ns_11_1_1_U419 mul_4ns_8ns_11_1_1_U420 mul_4ns_8ns_11_1_1_U421 mul_4ns_8ns_11_1_1_U422 mul_4ns_8ns_11_1_1_U423 mul_4ns_8ns_11_1_1_U424 add_ln230_fu_863_p2 add_ln230_5_fu_873_p2 add_ln230_6_fu_883_p2 add_ln230_7_fu_893_p2 add_ln230_8_fu_903_p2 add_ln230_9_fu_913_p2 add_ln230_10_fu_923_p2 add_ln230_11_fu_933_p2 add_ln216_fu_949_p2 fmul_32ns_32ns_32_4_max_dsp_1_U401 fadd_32ns_32ns_32_5_full_dsp_1_U393 fmul_32ns_32ns_32_4_max_dsp_1_U402 fadd_32ns_32ns_32_5_full_dsp_1_U394 fmul_32ns_32ns_32_4_max_dsp_1_U403 fadd_32ns_32ns_32_5_full_dsp_1_U395 fmul_32ns_32ns_32_4_max_dsp_1_U404 fadd_32ns_32ns_32_5_full_dsp_1_U396 fmul_32ns_32ns_32_4_max_dsp_1_U405 fadd_32ns_32ns_32_5_full_dsp_1_U397 fmul_32ns_32ns_32_4_max_dsp_1_U406 fadd_32ns_32ns_32_5_full_dsp_1_U398 fmul_32ns_32ns_32_4_max_dsp_1_U407 fadd_32ns_32ns_32_5_full_dsp_1_U399 fmul_32ns_32ns_32_4_max_dsp_1_U408 fadd_32ns_32ns_32_5_full_dsp_1_U400 fc1_bias_U fc1_weight_U</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                </Instance>
+                <Instance>
+                    <InstName>fc_layer2_U0</InstName>
+                    <ModuleName>fc_layer2</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>184</ID>
+                    <BindInstances>add_ln213_fu_464_p2 empty_26_fu_491_p2 empty_27_fu_502_p2 empty_28_fu_513_p2 empty_29_fu_524_p2 add_ln230_fu_587_p2 add_ln230_1_fu_597_p2 add_ln230_2_fu_607_p2 add_ln230_3_fu_617_p2 add_ln230_4_fu_627_p2 add_ln216_fu_643_p2 fmul_32ns_32ns_32_4_max_dsp_1_U435 fadd_32ns_32ns_32_5_full_dsp_1_U430 fmul_32ns_32ns_32_4_max_dsp_1_U436 fadd_32ns_32ns_32_5_full_dsp_1_U431 fmul_32ns_32ns_32_4_max_dsp_1_U437 fadd_32ns_32ns_32_5_full_dsp_1_U432 fmul_32ns_32ns_32_4_max_dsp_1_U438 fadd_32ns_32ns_32_5_full_dsp_1_U433 fmul_32ns_32ns_32_4_max_dsp_1_U439 fadd_32ns_32ns_32_5_full_dsp_1_U434 fc2_bias_U fc2_weight_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>write_output_U0</InstName>
+                    <ModuleName>write_output</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>209</ID>
+                    <BindInstances>add_ln19_fu_99_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>mem_1_0_U mem_2_U mem_3_U mem_3_1_U mem_4_U mem_5_U mem_5_1_U mem_6_U fc2_output_U fc1_output_U fc1_output_1_U fc1_output_2_U fc1_output_3_U fc1_output_4_U fc1_output_5_U fc1_output_6_U fc1_output_7_U fc1_output_8_U fc1_output_9_U fc1_output_10_U fc1_output_11_U fc1_output_12_U fc1_output_13_U fc1_output_14_U fc1_output_15_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>read_input</Name>
+            <Loops>
+                <readLoop_row_readLoop_col/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.982</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>786</Best-caseLatency>
+                    <Average-caseLatency>786</Average-caseLatency>
+                    <Worst-caseLatency>786</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>7.860 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>7.860 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>7.860 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>786</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <readLoop_row_readLoop_col>
+                        <Name>readLoop_row_readLoop_col</Name>
+                        <TripCount>784</TripCount>
+                        <Latency>784</Latency>
+                        <AbsoluteTimeLatency>7.840 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </readLoop_row_readLoop_col>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>65</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>180</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="readLoop_row_readLoop_col" OPTYPE="add" PRAGMA="" RTLNAME="add_ln7_1_fu_119_p2" SOURCE="codes_lab5/HLS_sources_final/design.cpp:7" URAM="0" VARIABLE="add_ln7_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="readLoop_row_readLoop_col" OPTYPE="add" PRAGMA="" RTLNAME="add_ln7_fu_131_p2" SOURCE="codes_lab5/HLS_sources_final/design.cpp:7" URAM="0" VARIABLE="add_ln7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="readLoop_row_readLoop_col" OPTYPE="add" PRAGMA="" RTLNAME="add_ln8_fu_163_p2" SOURCE="codes_lab5/HLS_sources_final/design.cpp:8" URAM="0" VARIABLE="add_ln8"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv1_Pipeline_Fil_load_r_Fil_load_c</Name>
+            <Loops>
+                <Fil_load_r_Fil_load_c/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.905</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>12</Best-caseLatency>
+                    <Average-caseLatency>12</Average-caseLatency>
+                    <Worst-caseLatency>12</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.120 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.120 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.120 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>12</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Fil_load_r_Fil_load_c>
+                        <Name>Fil_load_r_Fil_load_c</Name>
+                        <TripCount>9</TripCount>
+                        <Latency>10</Latency>
+                        <AbsoluteTimeLatency>0.100 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Fil_load_r_Fil_load_c>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>1</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <FF>316</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>285</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_r_Fil_load_c" OPTYPE="sub" PRAGMA="" RTLNAME="empty_146_fu_348_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:23" URAM="0" VARIABLE="empty_146"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_3_fu_360_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:23" URAM="0" VARIABLE="add_ln23_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_fu_369_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:23" URAM="0" VARIABLE="add_ln23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_r_Fil_load_c" OPTYPE="sub" PRAGMA="" RTLNAME="p_mid1_fu_405_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:23" URAM="0" VARIABLE="p_mid1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_fu_431_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:29" URAM="0" VARIABLE="add_ln29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln30_fu_441_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:30" URAM="0" VARIABLE="add_ln30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln26_fu_447_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:26" URAM="0" VARIABLE="add_ln26"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="conv1_weight_U" SOURCE="" URAM="0" VARIABLE="conv1_weight"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv1_Pipeline_loadWin1_VITIS_LOOP_50_1</Name>
+            <Loops>
+                <loadWin1_VITIS_LOOP_50_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.982</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>12</Best-caseLatency>
+                    <Average-caseLatency>12</Average-caseLatency>
+                    <Worst-caseLatency>12</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.120 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.120 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.120 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>12</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loadWin1_VITIS_LOOP_50_1>
+                        <Name>loadWin1_VITIS_LOOP_50_1</Name>
+                        <TripCount>9</TripCount>
+                        <Latency>10</Latency>
+                        <AbsoluteTimeLatency>0.100 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </loadWin1_VITIS_LOOP_50_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>320</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>273</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_6_fu_347_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:49" URAM="0" VARIABLE="add_ln49_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_fu_359_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:49" URAM="0" VARIABLE="add_ln49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_5_fu_391_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:49" URAM="0" VARIABLE="add_ln49_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln52_fu_401_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:52" URAM="0" VARIABLE="add_ln52"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln50_fu_407_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:50" URAM="0" VARIABLE="add_ln50"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv2D_1_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>4294967295</TargetInitiationInterval>
+                    <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>23</Best-caseLatency>
+                    <Average-caseLatency>23</Average-caseLatency>
+                    <Worst-caseLatency>23</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.230 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.230 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.230 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>24</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>45</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>20</UTIL_DSP>
+                    <FF>4444</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>4</UTIL_FF>
+                    <LUT>6463</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>12</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U60" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U61" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U62" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U63" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U64" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_1_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U65" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_1_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U66" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U67" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_2_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U68" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_2_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U51" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:99" URAM="0" VARIABLE="s0"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U52" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:100" URAM="0" VARIABLE="s1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U53" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:101" URAM="0" VARIABLE="s2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U54" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:102" URAM="0" VARIABLE="s3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U55" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:104" URAM="0" VARIABLE="s4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U56" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:106" URAM="0" VARIABLE="s5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U57" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:107" URAM="0" VARIABLE="s6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U58" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:109" URAM="0" VARIABLE="s7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U59" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:110" URAM="0" VARIABLE="sum"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv1</Name>
+            <Loops>
+                <C1_fil_load>
+                    <VS_HS/>
+                </C1_fil_load>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>113633</Best-caseLatency>
+                    <Average-caseLatency>113633</Average-caseLatency>
+                    <Worst-caseLatency>113633</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.136 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.136 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.136 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>113633</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <C1_fil_load>
+                        <Name>C1_fil_load</Name>
+                        <TripCount>4</TripCount>
+                        <Latency>113632</Latency>
+                        <AbsoluteTimeLatency>1.136 ms</AbsoluteTimeLatency>
+                        <IterationLatency>28408</IterationLatency>
+                        <PipelineDepth>28408</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_conv1_Pipeline_Fil_load_r_Fil_load_c_fu_283</Instance>
+                        </InstanceList>
+                        <VS_HS>
+                            <Name>VS_HS</Name>
+                            <TripCount>676</TripCount>
+                            <Latency>28392</Latency>
+                            <AbsoluteTimeLatency>0.284 ms</AbsoluteTimeLatency>
+                            <IterationLatency>42</IterationLatency>
+                            <PipelineDepth>42</PipelineDepth>
+                            <PipelineType>no</PipelineType>
+                            <InstanceList>
+                                <Instance>grp_conv1_Pipeline_loadWin1_VITIS_LOOP_50_1_fu_308</Instance>
+                                <Instance>grp_conv2D_1_s_fu_334</Instance>
+                            </InstanceList>
+                        </VS_HS>
+                    </C1_fil_load>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>1</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>46</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>20</UTIL_DSP>
+                    <FF>5904</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>5</UTIL_FF>
+                    <LUT>7399</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>13</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="C1_fil_load" OPTYPE="add" PRAGMA="" RTLNAME="add_ln144_1_fu_378_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:144" URAM="0" VARIABLE="add_ln144_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="C1_fil_load" OPTYPE="add" PRAGMA="" RTLNAME="add_ln144_fu_390_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:144" URAM="0" VARIABLE="add_ln144"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln150_3_fu_478_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:150" URAM="0" VARIABLE="add_ln150_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln150_fu_520_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:150" URAM="0" VARIABLE="add_ln150"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="ama_addmuladd_7ns_5ns_5ns_5ns_12_4_1_U91" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:160" URAM="0" VARIABLE="add_ln160"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VS_HS" OPTYPE="mul" PRAGMA="" RTLNAME="ama_addmuladd_7ns_5ns_5ns_5ns_12_4_1_U91" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:160" URAM="0" VARIABLE="mul_ln160"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="ama_addmuladd_7ns_5ns_5ns_5ns_12_4_1_U91" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:160" URAM="0" VARIABLE="add_ln160_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln152_fu_554_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:152" URAM="0" VARIABLE="add_ln152"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="conv1_bias_U" SOURCE="" URAM="0" VARIABLE="conv1_bias"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv2_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c</Name>
+            <Loops>
+                <Fil_load_ch_Fil_load_r_Fil_load_c/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.994</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>39</Best-caseLatency>
+                    <Average-caseLatency>39</Average-caseLatency>
+                    <Worst-caseLatency>39</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.390 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.390 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.390 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>39</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Fil_load_ch_Fil_load_r_Fil_load_c>
+                        <Name>Fil_load_ch_Fil_load_r_Fil_load_c</Name>
+                        <TripCount>36</TripCount>
+                        <Latency>37</Latency>
+                        <AbsoluteTimeLatency>0.370 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Fil_load_ch_Fil_load_r_Fil_load_c>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>1</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <FF>1205</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>703</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="sub" PRAGMA="" RTLNAME="empty_124_fu_1088_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:23" URAM="0" VARIABLE="empty_124"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln19_2_fu_1100_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:19" URAM="0" VARIABLE="add_ln19_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln19_fu_1115_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:19" URAM="0" VARIABLE="add_ln19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_fu_1201_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:23" URAM="0" VARIABLE="add_ln23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="sub" PRAGMA="" RTLNAME="p_mid1_fu_1237_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:23" URAM="0" VARIABLE="p_mid1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_2_fu_1255_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:29" URAM="0" VARIABLE="add_ln29_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_fu_1328_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:29" URAM="0" VARIABLE="add_ln29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln30_fu_1338_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:30" URAM="0" VARIABLE="add_ln30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln26_fu_1264_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:26" URAM="0" VARIABLE="add_ln26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_2_fu_1270_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:23" URAM="0" VARIABLE="add_ln23_2"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="conv2_weight_U" SOURCE="" URAM="0" VARIABLE="conv2_weight"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv2_Pipeline_loadWin1_VITIS_LOOP_50_1</Name>
+            <Loops>
+                <loadWin1_VITIS_LOOP_50_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.038</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>14</Best-caseLatency>
+                    <Average-caseLatency>14</Average-caseLatency>
+                    <Worst-caseLatency>14</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.140 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.140 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.140 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>14</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loadWin1_VITIS_LOOP_50_1>
+                        <Name>loadWin1_VITIS_LOOP_50_1</Name>
+                        <TripCount>9</TripCount>
+                        <Latency>12</Latency>
+                        <AbsoluteTimeLatency>0.120 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>5</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </loadWin1_VITIS_LOOP_50_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>1</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>502</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>349</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_4_fu_353_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:49" URAM="0" VARIABLE="add_ln49_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_fu_365_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:49" URAM="0" VARIABLE="add_ln49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_3_fu_397_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:49" URAM="0" VARIABLE="add_ln49_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="ama_addmuladd_8ns_5ns_5ns_5ns_12_4_1_U171" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:52" URAM="0" VARIABLE="add_ln52_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="mul" PRAGMA="" RTLNAME="ama_addmuladd_8ns_5ns_5ns_5ns_12_4_1_U171" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:50" URAM="0" VARIABLE="mul_ln50"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln52_fu_431_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:52" URAM="0" VARIABLE="add_ln52"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="ama_addmuladd_8ns_5ns_5ns_5ns_12_4_1_U171" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:52" URAM="0" VARIABLE="add_ln52_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln50_fu_407_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:50" URAM="0" VARIABLE="add_ln50"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv2D_4_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>4294967295</TargetInitiationInterval>
+                    <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>24</Best-caseLatency>
+                    <Average-caseLatency>24</Average-caseLatency>
+                    <Worst-caseLatency>24</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.240 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.240 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.240 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>25</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>45</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>20</UTIL_DSP>
+                    <FF>5886</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>5</UTIL_FF>
+                    <LUT>6643</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>12</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U204" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U205" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U206" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U207" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U208" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_1_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U209" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_1_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U210" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U211" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_2_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U212" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:94" URAM="0" VARIABLE="mul_2_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U195" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:99" URAM="0" VARIABLE="s0"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U196" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:100" URAM="0" VARIABLE="s1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U197" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:101" URAM="0" VARIABLE="s2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U198" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:102" URAM="0" VARIABLE="s3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U199" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:104" URAM="0" VARIABLE="s4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U200" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:106" URAM="0" VARIABLE="s5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U201" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:107" URAM="0" VARIABLE="s6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U202" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:109" URAM="0" VARIABLE="s7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U203" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:110" URAM="0" VARIABLE="sum"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv2</Name>
+            <Loops>
+                <C1_fil_load>
+                    <inCh_VS_HS/>
+                </C1_fil_load>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>424109</Best-caseLatency>
+                    <Average-caseLatency>433325</Average-caseLatency>
+                    <Worst-caseLatency>433325</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>4.241 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>4.333 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>4.333 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>424109 ~ 433325</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <C1_fil_load>
+                        <Name>C1_fil_load</Name>
+                        <TripCount>4</TripCount>
+                        <Latency>424108 ~ 433324</Latency>
+                        <AbsoluteTimeLatency>4.241 ms ~ 4.333 ms</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>106027</min>
+                                <max>108331</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>106027 ~ 108331</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_conv2_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c_fu_560</Instance>
+                        </InstanceList>
+                        <inCh_VS_HS>
+                            <Name>inCh_VS_HS</Name>
+                            <TripCount>2304</TripCount>
+                            <Latency>105984 ~ 108288</Latency>
+                            <AbsoluteTimeLatency>1.060 ms ~ 1.083 ms</AbsoluteTimeLatency>
+                            <IterationLatency>
+                                <range>
+                                    <min>46</min>
+                                    <max>47</max>
+                                </range>
+                            </IterationLatency>
+                            <PipelineDepth>46 ~ 47</PipelineDepth>
+                            <PipelineType>no</PipelineType>
+                            <InstanceList>
+                                <Instance>grp_conv2_Pipeline_loadWin1_VITIS_LOOP_50_1_fu_639</Instance>
+                                <Instance>grp_conv2D_4_s_fu_666</Instance>
+                            </InstanceList>
+                        </inCh_VS_HS>
+                    </C1_fil_load>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>1</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>46</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>20</UTIL_DSP>
+                    <FF>9362</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>8</UTIL_FF>
+                    <LUT>8352</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>15</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="C1_fil_load" OPTYPE="add" PRAGMA="" RTLNAME="add_ln144_fu_736_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:144" URAM="0" VARIABLE="add_ln144"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="C1_fil_load" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln156_fu_923_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:156" URAM="0" VARIABLE="sub_ln156"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln148_2_fu_1047_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:148" URAM="0" VARIABLE="add_ln148_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln148_fu_1053_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:148" URAM="0" VARIABLE="add_ln148"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="mul" PRAGMA="" RTLNAME="mul_3ns_6ns_8_1_1_U271" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:52" URAM="0" VARIABLE="mul_ln52"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln150_fu_1145_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:150" URAM="0" VARIABLE="add_ln150"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln156_fu_1359_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:156" URAM="0" VARIABLE="add_ln156"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln152_fu_1528_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:152" URAM="0" VARIABLE="add_ln152"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln150_2_fu_1533_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:150" URAM="0" VARIABLE="add_ln150_2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="conv2_bias_U" SOURCE="" URAM="0" VARIABLE="conv2_bias"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>maxPool_4_24_12_s</Name>
+            <Loops>
+                <MP_ch_MP_r_MP_c/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.107</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>585</Best-caseLatency>
+                    <Average-caseLatency>585</Average-caseLatency>
+                    <Worst-caseLatency>585</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.850 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.850 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.850 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>585</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <MP_ch_MP_r_MP_c>
+                        <Name>MP_ch_MP_r_MP_c</Name>
+                        <TripCount>576</TripCount>
+                        <Latency>583</Latency>
+                        <AbsoluteTimeLatency>5.830 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>9</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </MP_ch_MP_r_MP_c>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>589</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>716</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln181_1_fu_217_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:181" URAM="0" VARIABLE="add_ln181_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln181_fu_281_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:181" URAM="0" VARIABLE="add_ln181"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln185_fu_332_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:185" URAM="0" VARIABLE="sub_ln185"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln188_fu_366_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:188" URAM="0" VARIABLE="sub_ln188"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln182_fu_401_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:182" URAM="0" VARIABLE="add_ln182"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln185_fu_427_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:185" URAM="0" VARIABLE="add_ln185"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln186_fu_459_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:186" URAM="0" VARIABLE="add_ln186"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln188_fu_495_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:188" URAM="0" VARIABLE="add_ln188"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln183_fu_519_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:183" URAM="0" VARIABLE="add_ln183"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln182_1_fu_232_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:182" URAM="0" VARIABLE="add_ln182_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv3_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c</Name>
+            <Loops>
+                <Fil_load_ch_Fil_load_r_Fil_load_c/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.994</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>39</Best-caseLatency>
+                    <Average-caseLatency>39</Average-caseLatency>
+                    <Worst-caseLatency>39</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.390 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.390 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.390 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>39</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Fil_load_ch_Fil_load_r_Fil_load_c>
+                        <Name>Fil_load_ch_Fil_load_r_Fil_load_c</Name>
+                        <TripCount>36</TripCount>
+                        <Latency>37</Latency>
+                        <AbsoluteTimeLatency>0.370 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Fil_load_ch_Fil_load_r_Fil_load_c>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>1</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <FF>1205</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>703</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="sub" PRAGMA="" RTLNAME="empty_75_fu_1088_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:23" URAM="0" VARIABLE="empty_75"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln19_1_fu_1100_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:19" URAM="0" VARIABLE="add_ln19_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln19_fu_1115_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:19" URAM="0" VARIABLE="add_ln19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_fu_1201_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:23" URAM="0" VARIABLE="add_ln23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="sub" PRAGMA="" RTLNAME="p_mid1_fu_1237_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:23" URAM="0" VARIABLE="p_mid1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_1_fu_1255_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:29" URAM="0" VARIABLE="add_ln29_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_fu_1328_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:29" URAM="0" VARIABLE="add_ln29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln30_fu_1338_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:30" URAM="0" VARIABLE="add_ln30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln26_fu_1264_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:26" URAM="0" VARIABLE="add_ln26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Fil_load_ch_Fil_load_r_Fil_load_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_1_fu_1270_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:23" URAM="0" VARIABLE="add_ln23_1"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="conv3_weight_U" SOURCE="" URAM="0" VARIABLE="conv3_weight"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv3_Pipeline_loadWin1_VITIS_LOOP_50_1</Name>
+            <Loops>
+                <loadWin1_VITIS_LOOP_50_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.982</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>12</Best-caseLatency>
+                    <Average-caseLatency>12</Average-caseLatency>
+                    <Worst-caseLatency>12</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.120 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.120 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.120 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>12</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loadWin1_VITIS_LOOP_50_1>
+                        <Name>loadWin1_VITIS_LOOP_50_1</Name>
+                        <TripCount>9</TripCount>
+                        <Latency>10</Latency>
+                        <AbsoluteTimeLatency>0.100 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </loadWin1_VITIS_LOOP_50_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>328</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>287</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_2_fu_359_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:49" URAM="0" VARIABLE="add_ln49_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_fu_371_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:49" URAM="0" VARIABLE="add_ln49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_1_fu_403_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:49" URAM="0" VARIABLE="add_ln49_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln52_1_fu_413_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:52" URAM="0" VARIABLE="add_ln52_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln52_fu_431_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:52" URAM="0" VARIABLE="add_ln52"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="loadWin1_VITIS_LOOP_50_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln50_fu_437_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:50" URAM="0" VARIABLE="add_ln50"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv3</Name>
+            <Loops>
+                <C1_fil_load>
+                    <inCh_VS_HS/>
+                </C1_fil_load>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>68973</Best-caseLatency>
+                    <Average-caseLatency>70573</Average-caseLatency>
+                    <Worst-caseLatency>70573</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.690 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.706 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.706 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>68973 ~ 70573</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <C1_fil_load>
+                        <Name>C1_fil_load</Name>
+                        <TripCount>4</TripCount>
+                        <Latency>68972 ~ 70572</Latency>
+                        <AbsoluteTimeLatency>0.690 ms ~ 0.706 ms</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>17243</min>
+                                <max>17643</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>17243 ~ 17643</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_conv3_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c_fu_560</Instance>
+                        </InstanceList>
+                        <inCh_VS_HS>
+                            <Name>inCh_VS_HS</Name>
+                            <TripCount>400</TripCount>
+                            <Latency>17200 ~ 17600</Latency>
+                            <AbsoluteTimeLatency>0.172 ms ~ 0.176 ms</AbsoluteTimeLatency>
+                            <IterationLatency>
+                                <range>
+                                    <min>43</min>
+                                    <max>44</max>
+                                </range>
+                            </IterationLatency>
+                            <PipelineDepth>43 ~ 44</PipelineDepth>
+                            <PipelineType>no</PipelineType>
+                            <InstanceList>
+                                <Instance>grp_conv3_Pipeline_loadWin1_VITIS_LOOP_50_1_fu_639</Instance>
+                                <Instance>grp_conv2D_4_s_fu_666</Instance>
+                            </InstanceList>
+                        </inCh_VS_HS>
+                    </C1_fil_load>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>1</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>45</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>20</UTIL_DSP>
+                    <FF>9173</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>8</UTIL_FF>
+                    <LUT>8268</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>15</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="C1_fil_load" OPTYPE="add" PRAGMA="" RTLNAME="add_ln144_fu_736_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:144" URAM="0" VARIABLE="add_ln144"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="C1_fil_load" OPTYPE="add" PRAGMA="" RTLNAME="add_ln156_fu_923_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:156" URAM="0" VARIABLE="add_ln156"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln148_1_fu_1043_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:148" URAM="0" VARIABLE="add_ln148_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln148_fu_1049_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:148" URAM="0" VARIABLE="add_ln148"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln52_fu_1356_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:52" URAM="0" VARIABLE="sub_ln52"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln150_fu_1087_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:150" URAM="0" VARIABLE="add_ln150"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln156_1_fu_1119_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:156" URAM="0" VARIABLE="add_ln156_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln152_fu_1532_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:152" URAM="0" VARIABLE="add_ln152"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inCh_VS_HS" OPTYPE="add" PRAGMA="" RTLNAME="add_ln150_1_fu_1537_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:150" URAM="0" VARIABLE="add_ln150_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="conv3_bias_U" SOURCE="" URAM="0" VARIABLE="conv3_bias"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>maxPool_4_10_5_s</Name>
+            <Loops>
+                <MP_ch_MP_r_MP_c/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.107</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>108</Best-caseLatency>
+                    <Average-caseLatency>108</Average-caseLatency>
+                    <Worst-caseLatency>108</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.080 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.080 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.080 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>108</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <MP_ch_MP_r_MP_c>
+                        <Name>MP_ch_MP_r_MP_c</Name>
+                        <TripCount>100</TripCount>
+                        <Latency>106</Latency>
+                        <AbsoluteTimeLatency>1.060 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>8</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </MP_ch_MP_r_MP_c>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>559</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>669</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln181_2_fu_230_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:181" URAM="0" VARIABLE="add_ln181_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln181_fu_245_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:181" URAM="0" VARIABLE="add_ln181"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln185_fu_305_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:185" URAM="0" VARIABLE="add_ln185"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln182_fu_339_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:182" URAM="0" VARIABLE="add_ln182"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln185_2_fu_365_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:185" URAM="0" VARIABLE="add_ln185_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln186_fu_393_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:186" URAM="0" VARIABLE="add_ln186"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln183_fu_431_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:183" URAM="0" VARIABLE="add_ln183"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MP_ch_MP_r_MP_c" OPTYPE="add" PRAGMA="" RTLNAME="add_ln182_2_fu_437_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:182" URAM="0" VARIABLE="add_ln182_2"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>FC_layer_100_16_true_s</Name>
+            <Loops>
+                <out_loop>
+                    <VITIS_LOOP_216_1/>
+                </out_loop>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>2209</Best-caseLatency>
+                    <Average-caseLatency>2209</Average-caseLatency>
+                    <Worst-caseLatency>2209</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>22.090 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>22.090 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>22.090 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2209</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <out_loop>
+                        <Name>out_loop</Name>
+                        <TripCount>2</TripCount>
+                        <Latency>2208</Latency>
+                        <AbsoluteTimeLatency>22.080 us</AbsoluteTimeLatency>
+                        <IterationLatency>1104</IterationLatency>
+                        <PipelineDepth>1104</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList/>
+                        <VITIS_LOOP_216_1>
+                            <Name>VITIS_LOOP_216_1</Name>
+                            <TripCount>100</TripCount>
+                            <Latency>1100</Latency>
+                            <AbsoluteTimeLatency>11.000 us</AbsoluteTimeLatency>
+                            <IterationLatency>11</IterationLatency>
+                            <PipelineDepth>11</PipelineDepth>
+                            <PipelineType>no</PipelineType>
+                            <InstanceList/>
+                        </VITIS_LOOP_216_1>
+                    </out_loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>28</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>10</UTIL_BRAM>
+                    <DSP>40</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>18</UTIL_DSP>
+                    <FF>5250</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>4</UTIL_FF>
+                    <LUT>7556</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>14</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="out_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln213_fu_586_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:213" URAM="0" VARIABLE="add_ln213"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="out_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_4ns_8ns_11_1_1_U417" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul_ln230"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="out_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_4ns_8ns_11_1_1_U418" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul_ln230_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="out_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_4ns_8ns_11_1_1_U419" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul_ln230_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="out_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_4ns_8ns_11_1_1_U420" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul_ln230_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="out_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_4ns_8ns_11_1_1_U421" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul_ln230_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="out_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_4ns_8ns_11_1_1_U422" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul_ln230_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="out_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_4ns_8ns_11_1_1_U423" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul_ln230_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="out_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_4ns_8ns_11_1_1_U424" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul_ln230_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_fu_863_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add_ln230"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_5_fu_873_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add_ln230_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_6_fu_883_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add_ln230_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_7_fu_893_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add_ln230_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_8_fu_903_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add_ln230_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_9_fu_913_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add_ln230_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_10_fu_923_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add_ln230_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_11_fu_933_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add_ln230_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln216_fu_949_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:216" URAM="0" VARIABLE="add_ln216"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_216_1" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U401" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_216_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U393" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="input_assign"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_216_1" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U402" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul31_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_216_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U394" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="input_assign_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_216_1" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U403" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul31_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_216_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U395" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="input_assign_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_216_1" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U404" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul31_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_216_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U396" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="input_assign_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_216_1" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U405" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul31_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_216_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U397" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="input_assign_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_216_1" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U406" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul31_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_216_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U398" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="input_assign_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_216_1" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U407" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul31_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_216_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U399" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="input_assign_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_216_1" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U408" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul31_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_216_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U400" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="input_assign_7"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="fc1_bias_U" SOURCE="" URAM="0" VARIABLE="fc1_bias"/>
+                <BindNode BINDTYPE="storage" BRAM="28" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="fc1_weight_U" SOURCE="" URAM="0" VARIABLE="fc1_weight"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>fc_layer117</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>2210</Best-caseLatency>
+                    <Average-caseLatency>2210</Average-caseLatency>
+                    <Worst-caseLatency>2210</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>22.100 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>22.100 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>22.100 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2210</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>28</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>10</UTIL_BRAM>
+                    <DSP>40</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>18</UTIL_DSP>
+                    <FF>5254</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>4</UTIL_FF>
+                    <LUT>7581</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>14</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>fc_layer2</Name>
+            <Loops>
+                <out_loop>
+                    <VITIS_LOOP_216_1/>
+                </out_loop>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>363</Best-caseLatency>
+                    <Average-caseLatency>363</Average-caseLatency>
+                    <Worst-caseLatency>363</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>3.630 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>3.630 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>3.630 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>363</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <out_loop>
+                        <Name>out_loop</Name>
+                        <TripCount>2</TripCount>
+                        <Latency>362</Latency>
+                        <AbsoluteTimeLatency>3.620 us</AbsoluteTimeLatency>
+                        <IterationLatency>181</IterationLatency>
+                        <PipelineDepth>181</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList/>
+                        <VITIS_LOOP_216_1>
+                            <Name>VITIS_LOOP_216_1</Name>
+                            <TripCount>16</TripCount>
+                            <Latency>176</Latency>
+                            <AbsoluteTimeLatency>1.760 us</AbsoluteTimeLatency>
+                            <IterationLatency>11</IterationLatency>
+                            <PipelineDepth>11</PipelineDepth>
+                            <PipelineType>no</PipelineType>
+                            <InstanceList/>
+                        </VITIS_LOOP_216_1>
+                    </out_loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>8</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>2</UTIL_BRAM>
+                    <DSP>25</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>11</UTIL_DSP>
+                    <FF>2812</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>2</UTIL_FF>
+                    <LUT>4136</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>7</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="out_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln213_fu_464_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:213" URAM="0" VARIABLE="add_ln213"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="out_loop" OPTYPE="add" PRAGMA="" RTLNAME="empty_26_fu_491_p2" SOURCE="" URAM="0" VARIABLE="empty_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="out_loop" OPTYPE="add" PRAGMA="" RTLNAME="empty_27_fu_502_p2" SOURCE="" URAM="0" VARIABLE="empty_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="out_loop" OPTYPE="add" PRAGMA="" RTLNAME="empty_28_fu_513_p2" SOURCE="" URAM="0" VARIABLE="empty_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="out_loop" OPTYPE="add" PRAGMA="" RTLNAME="empty_29_fu_524_p2" SOURCE="" URAM="0" VARIABLE="empty_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_fu_587_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add_ln230"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_1_fu_597_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add_ln230_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_2_fu_607_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add_ln230_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_3_fu_617_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add_ln230_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln230_4_fu_627_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add_ln230_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_216_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln216_fu_643_p2" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:216" URAM="0" VARIABLE="add_ln216"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_216_1" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U435" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul31_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_216_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U430" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add32_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_216_1" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U436" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul31_1_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_216_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U431" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add32_1_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_216_1" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U437" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul31_2_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_216_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U432" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add32_2_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_216_1" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U438" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul31_3_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_216_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U433" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add32_3_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_216_1" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U439" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="mul31_4_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_216_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U434" SOURCE="codes_lab5/HLS_sources_final/templatedFuncs.h:230" URAM="0" VARIABLE="add32_4_i"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="fc2_bias_U" SOURCE="" URAM="0" VARIABLE="fc2_bias"/>
+                <BindNode BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="fc2_weight_U" SOURCE="" URAM="0" VARIABLE="fc2_weight"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>write_output</Name>
+            <Loops>
+                <write_col/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>3.323</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>13</Best-caseLatency>
+                    <Average-caseLatency>13</Average-caseLatency>
+                    <Worst-caseLatency>13</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.130 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.130 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.130 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>13</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <write_col>
+                        <Name>write_col</Name>
+                        <TripCount>10</TripCount>
+                        <Latency>11</Latency>
+                        <AbsoluteTimeLatency>0.110 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </write_col>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>10</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>86</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="write_col" OPTYPE="add" PRAGMA="" RTLNAME="add_ln19_fu_99_p2" SOURCE="codes_lab5/HLS_sources_final/design.cpp:19" URAM="0" VARIABLE="add_ln19"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>HW_accel</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>538530</Best-caseLatency>
+                    <Average-caseLatency>547746</Average-caseLatency>
+                    <Worst-caseLatency>547746</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.385 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.477 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.477 ms</Worst-caseRealTimeLatency>
+                    <DataflowPipelineThroughput>
+                        <range>
+                            <min>424110</min>
+                            <max>433326</max>
+                        </range>
+                    </DataflowPipelineThroughput>
+                    <PipelineInitiationInterval>424110 ~ 433326</PipelineInitiationInterval>
+                    <PipelineType>dataflow</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>88</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>31</UTIL_BRAM>
+                    <DSP>202</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>91</UTIL_DSP>
+                    <FF>35460</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>33</UTIL_FF>
+                    <LUT>38757</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>72</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="mem_1_0_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:54" URAM="0" VARIABLE="mem_1_0"/>
+                <BindNode BINDTYPE="storage" BRAM="16" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="mem_2_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:55" URAM="0" VARIABLE="mem_2"/>
+                <BindNode BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="mem_3_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:56" URAM="0" VARIABLE="mem_3"/>
+                <BindNode BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="mem_3_1_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:56" URAM="0" VARIABLE="mem_3_1"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="mem_4_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:58" URAM="0" VARIABLE="mem_4"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="mem_5_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:59" URAM="0" VARIABLE="mem_5"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="mem_5_1_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:59" URAM="0" VARIABLE="mem_5_1"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="mem_6_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:61" URAM="0" VARIABLE="mem_6"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="fc2_output_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:64" URAM="0" VARIABLE="fc2_output"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_1_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_2_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_3_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_4_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_5_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_6_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_7_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_8_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_9_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_10_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_11_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_12_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_13_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_14_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="fc1_output_15_U" SOURCE="codes_lab5/HLS_sources_final/design.cpp:75" URAM="0" VARIABLE="fc1_output_15"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_op>
+            <ENTRY impl="all mul" latency="-1 mul" op="mul" precision="mul standard"/>
+            <ENTRY impl="all add" latency="-1 add" op="add" precision="add standard"/>
+            <ENTRY impl="all sub" latency="-1 sub" op="sub" precision="sub standard"/>
+            <ENTRY impl="all fadd" latency="-1 fadd" op="fadd" precision="fadd standard"/>
+            <ENTRY impl="all fsub" latency="-1 fsub" op="fsub" precision="fsub standard"/>
+            <ENTRY impl="all fdiv" latency="-1 fdiv" op="fdiv" precision="fdiv standard"/>
+            <ENTRY impl="all fexp" latency="-1 fexp" op="fexp" precision="fexp standard"/>
+            <ENTRY impl="all flog" latency="-1 flog" op="flog" precision="flog standard"/>
+            <ENTRY impl="all fmul" latency="-1 fmul" op="fmul" precision="fmul standard"/>
+            <ENTRY impl="all frsqrt" latency="-1 frsqrt" op="frsqrt" precision="frsqrt standard"/>
+            <ENTRY impl="all frecip" latency="-1 frecip" op="frecip" precision="frecip standard"/>
+            <ENTRY impl="all fsqrt" latency="-1 fsqrt" op="fsqrt" precision="fsqrt standard"/>
+            <ENTRY impl="all dadd" latency="-1 dadd" op="dadd" precision="dadd standard"/>
+            <ENTRY impl="all dsub" latency="-1 dsub" op="dsub" precision="dsub standard"/>
+            <ENTRY impl="all ddiv" latency="-1 ddiv" op="ddiv" precision="ddiv standard"/>
+            <ENTRY impl="all dexp" latency="-1 dexp" op="dexp" precision="dexp standard"/>
+            <ENTRY impl="all dlog" latency="-1 dlog" op="dlog" precision="dlog standard"/>
+            <ENTRY impl="all dmul" latency="-1 dmul" op="dmul" precision="dmul standard"/>
+            <ENTRY impl="all drsqrt" latency="-1 drsqrt" op="drsqrt" precision="drsqrt standard"/>
+            <ENTRY impl="all drecip" latency="-1 drecip" op="drecip" precision="drecip standard"/>
+            <ENTRY impl="all dsqrt" latency="-1 dsqrt" op="dsqrt" precision="dsqrt standard"/>
+            <ENTRY impl="all hadd" latency="-1 hadd" op="hadd" precision="hadd standard"/>
+            <ENTRY impl="all hsub" latency="-1 hsub" op="hsub" precision="hsub standard"/>
+            <ENTRY impl="all hdiv" latency="-1 hdiv" op="hdiv" precision="hdiv standard"/>
+            <ENTRY impl="all hmul" latency="-1 hmul" op="hmul" precision="hmul standard"/>
+            <ENTRY impl="all hsqrt" latency="-1 hsqrt" op="hsqrt" precision="hsqrt standard"/>
+            <ENTRY impl="all facc" latency="-1 facc" op="facc" precision="facc standard"/>
+            <ENTRY impl="all fmacc" latency="-1 fmacc" op="fmacc" precision="fmacc standard"/>
+            <ENTRY impl="all fmadd" latency="-1 fmadd" op="fmadd" precision="fmadd standard"/>
+        </config_op>
+        <config_storage>
+            <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
+        </config_storage>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="inputPort" index="0" direction="in" srcType="stream&lt;hls::axis&lt;float, 0, 0, 0&gt;, 0&gt;&amp;" srcSize="96">
+            <hwRefs>
+                <hwRef type="interface" interface="inputPort" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="outputPort" index="1" direction="out" srcType="stream&lt;hls::axis&lt;float, 0, 0, 0&gt;, 0&gt;&amp;" srcSize="96">
+            <hwRefs>
+                <hwRef type="interface" interface="outputPort" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">inputPort:outputPort</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="inputPort" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="32" portPrefix="inputPort_">
+            <ports>
+                <port>inputPort_TDATA</port>
+                <port>inputPort_TKEEP</port>
+                <port>inputPort_TLAST</port>
+                <port>inputPort_TREADY</port>
+                <port>inputPort_TSTRB</port>
+                <port>inputPort_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="inputPort"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="outputPort" type="axi4stream" busTypeName="axis" mode="master" dataWidth="32" portPrefix="outputPort_">
+            <ports>
+                <port>outputPort_TDATA</port>
+                <port>outputPort_TKEEP</port>
+                <port>outputPort_TLAST</port>
+                <port>outputPort_TREADY</port>
+                <port>outputPort_TSTRB</port>
+                <port>outputPort_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="outputPort"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AXIS">
+                <table isCollapsed="0">
+                    <keys size="8">Interface, Register Mode, TDATA, TKEEP, TLAST, TREADY, TSTRB, TVALID</keys>
+                    <column name="inputPort">both, 32, 4, 1, 1, 4, 1, , , , </column>
+                    <column name="outputPort">both, 32, 4, 1, 1, 4, 1, , , , </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst_n">reset, ap_rst_n, </column>
+                    <column name="ap_ctrl">ap_ctrl_none, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="inputPort">in, stream&lt;hls::axis&lt;float 0 0 0&gt; 0&gt;&amp;</column>
+                    <column name="outputPort">out, stream&lt;hls::axis&lt;float 0 0 0&gt; 0&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="inputPort">inputPort, interface, , </column>
+                    <column name="outputPort">outputPort, interface, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="pipeline" location="codes_lab5/HLS_sources_final/design.cpp:9" status="valid" parentFunction="read_input" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="codes_lab5/HLS_sources_final/design.cpp:20" status="valid" parentFunction="write_output" variable="" isDirective="0" options=""/>
+        <Pragma type="interface" location="codes_lab5/HLS_sources_final/design.cpp:48" status="valid" parentFunction="hw_accel" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="interface" location="codes_lab5/HLS_sources_final/design.cpp:49" status="valid" parentFunction="hw_accel" variable="outputPort" isDirective="0" options="axis register both port=outputPort"/>
+        <Pragma type="interface" location="codes_lab5/HLS_sources_final/design.cpp:50" status="valid" parentFunction="hw_accel" variable="inputPort" isDirective="0" options="axis register both port=inputPort"/>
+        <Pragma type="dataflow" location="codes_lab5/HLS_sources_final/design.cpp:52" status="valid" parentFunction="hw_accel" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="codes_lab5/HLS_sources_final/design.cpp:57" status="valid" parentFunction="hw_accel" variable="mem_3" isDirective="0" options="variable=mem_3 cyclic factor=2 dim=3"/>
+        <Pragma type="array_partition" location="codes_lab5/HLS_sources_final/design.cpp:60" status="valid" parentFunction="hw_accel" variable="mem_5" isDirective="0" options="variable=mem_5 cyclic factor=2 dim=3"/>
+        <Pragma type="array_partition" location="codes_lab5/HLS_sources_final/design.cpp:63" status="valid" parentFunction="hw_accel" variable="fc1_output" isDirective="0" options="variable=fc1_output complete"/>
+        <Pragma type="array_partition" location="codes_lab5/HLS_sources_final/design.cpp:65" status="valid" parentFunction="hw_accel" variable="fc1_output" isDirective="0" options="variable=fc1_output complete"/>
+        <Pragma type="pipeline" location="codes_lab5/HLS_sources_final/templatedFuncs.h:28" status="valid" parentFunction="load_filters" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="codes_lab5/HLS_sources_final/templatedFuncs.h:51" status="valid" parentFunction="load_input_window" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="codes_lab5/HLS_sources_final/templatedFuncs.h:87" status="valid" parentFunction="conv2d" variable="pmul" isDirective="0" options="variable=pmul complete dim=0"/>
+        <Pragma type="pipeline" location="codes_lab5/HLS_sources_final/templatedFuncs.h:89" status="valid" parentFunction="conv2d" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="codes_lab5/HLS_sources_final/templatedFuncs.h:136" status="valid" parentFunction="conv_func" variable="kernel" isDirective="0" options="variable=kernel complete dim=0"/>
+        <Pragma type="array_partition" location="codes_lab5/HLS_sources_final/templatedFuncs.h:139" status="valid" parentFunction="conv_func" variable="window" isDirective="0" options="variable=window complete dim=0"/>
+        <Pragma type="pipeline" location="codes_lab5/HLS_sources_final/templatedFuncs.h:184" status="valid" parentFunction="maxpool" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="codes_lab5/HLS_sources_final/templatedFuncs.h:209" status="valid" parentFunction="fc_layer" variable="pmul" isDirective="0" options="variable=pmul complete"/>
+        <Pragma type="array_partition" location="codes_lab5/HLS_sources_final/templatedFuncs.h:211" status="valid" parentFunction="fc_layer" variable="pmul_prev" isDirective="0" options="variable=pmul_prev complete"/>
+        <Pragma type="pipeline" location="codes_lab5/HLS_sources_final/templatedFuncs.h:214" status="valid" parentFunction="fc_layer" variable="" isDirective="0" options="off"/>
+        <Pragma type="unroll" location="codes_lab5/HLS_sources_final/templatedFuncs.h:219" status="valid" parentFunction="fc_layer" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="codes_lab5/HLS_sources_final/templatedFuncs.h:229" status="valid" parentFunction="fc_layer" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="codes_lab5/HLS_sources_final/templatedFuncs.h:234" status="valid" parentFunction="fc_layer" variable="" isDirective="0" options=""/>
+    </PragmaReport>
+</profile>
+

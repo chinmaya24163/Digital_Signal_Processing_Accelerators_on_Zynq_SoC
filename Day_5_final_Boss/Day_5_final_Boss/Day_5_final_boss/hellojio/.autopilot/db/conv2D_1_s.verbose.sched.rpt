@@ -1,0 +1,395 @@
+
+
+================================================================
+== Vitis HLS Report for 'conv2D_1_s'
+================================================================
+* Date:           Thu Dec 25 17:04:35 2025
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        Day_5_final_boss
+* Solution:       hellojio (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.256 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       23|       23|  0.230 us|  0.230 us|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 24
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 24
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 24, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.70>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%prev_sum_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %prev_sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 25 'read' 'prev_sum_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_read_53 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read17" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 26 'read' 'p_read_53' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%p_read_54 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read16" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 27 'read' 'p_read_54' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%p_read_55 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read15" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 28 'read' 'p_read_55' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_read_56 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read14" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 29 'read' 'p_read_56' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%p_read_57 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read13" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 30 'read' 'p_read_57' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%p_read_58 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read12" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 31 'read' 'p_read_58' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%p_read_59 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read11" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 32 'read' 'p_read_59' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%p_read1028 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read10" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 33 'read' 'p_read1028' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%p_read927 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read9" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 34 'read' 'p_read927' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%p_read826 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read8" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 35 'read' 'p_read826' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%p_read725 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read7" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 36 'read' 'p_read725' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%p_read624 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read6" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 37 'read' 'p_read624' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%p_read523 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read5" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 38 'read' 'p_read523' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%p_read422 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read4" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 39 'read' 'p_read422' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%p_read321 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read3" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 40 'read' 'p_read321' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%p_read220 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read2" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 41 'read' 'p_read220' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%p_read119 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read1" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 42 'read' 'p_read119' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%p_read18 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 43 'read' 'p_read18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [4/4] (5.70ns)   --->   "%mul = fmul i32 %p_read927, i32 %p_read18" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 44 'fmul' 'mul' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 45 [4/4] (5.70ns)   --->   "%mul_s = fmul i32 %p_read1028, i32 %p_read119" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 45 'fmul' 'mul_s' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 46 [4/4] (5.70ns)   --->   "%mul_4 = fmul i32 %p_read_59, i32 %p_read220" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 46 'fmul' 'mul_4' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 47 [4/4] (5.70ns)   --->   "%mul_1 = fmul i32 %p_read_58, i32 %p_read321" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 47 'fmul' 'mul_1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [4/4] (5.70ns)   --->   "%mul_1_1 = fmul i32 %p_read_57, i32 %p_read422" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 48 'fmul' 'mul_1_1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [4/4] (5.70ns)   --->   "%mul_1_2 = fmul i32 %p_read_56, i32 %p_read523" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 49 'fmul' 'mul_1_2' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 50 [4/4] (5.70ns)   --->   "%mul_2 = fmul i32 %p_read_55, i32 %p_read624" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 50 'fmul' 'mul_2' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [4/4] (5.70ns)   --->   "%mul_2_1 = fmul i32 %p_read_54, i32 %p_read725" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 51 'fmul' 'mul_2_1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [4/4] (5.70ns)   --->   "%mul_2_2 = fmul i32 %p_read_53, i32 %p_read826" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 52 'fmul' 'mul_2_2' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 5.70>
+ST_2 : Operation 53 [3/4] (5.70ns)   --->   "%mul = fmul i32 %p_read927, i32 %p_read18" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 53 'fmul' 'mul' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 54 [3/4] (5.70ns)   --->   "%mul_s = fmul i32 %p_read1028, i32 %p_read119" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 54 'fmul' 'mul_s' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 55 [3/4] (5.70ns)   --->   "%mul_4 = fmul i32 %p_read_59, i32 %p_read220" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 55 'fmul' 'mul_4' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [3/4] (5.70ns)   --->   "%mul_1 = fmul i32 %p_read_58, i32 %p_read321" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 56 'fmul' 'mul_1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [3/4] (5.70ns)   --->   "%mul_1_1 = fmul i32 %p_read_57, i32 %p_read422" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 57 'fmul' 'mul_1_1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [3/4] (5.70ns)   --->   "%mul_1_2 = fmul i32 %p_read_56, i32 %p_read523" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 58 'fmul' 'mul_1_2' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 59 [3/4] (5.70ns)   --->   "%mul_2 = fmul i32 %p_read_55, i32 %p_read624" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 59 'fmul' 'mul_2' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [3/4] (5.70ns)   --->   "%mul_2_1 = fmul i32 %p_read_54, i32 %p_read725" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 60 'fmul' 'mul_2_1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 61 [3/4] (5.70ns)   --->   "%mul_2_2 = fmul i32 %p_read_53, i32 %p_read826" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 61 'fmul' 'mul_2_2' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 5.70>
+ST_3 : Operation 62 [2/4] (5.70ns)   --->   "%mul = fmul i32 %p_read927, i32 %p_read18" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 62 'fmul' 'mul' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 63 [2/4] (5.70ns)   --->   "%mul_s = fmul i32 %p_read1028, i32 %p_read119" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 63 'fmul' 'mul_s' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 64 [2/4] (5.70ns)   --->   "%mul_4 = fmul i32 %p_read_59, i32 %p_read220" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 64 'fmul' 'mul_4' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 65 [2/4] (5.70ns)   --->   "%mul_1 = fmul i32 %p_read_58, i32 %p_read321" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 65 'fmul' 'mul_1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 66 [2/4] (5.70ns)   --->   "%mul_1_1 = fmul i32 %p_read_57, i32 %p_read422" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 66 'fmul' 'mul_1_1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 67 [2/4] (5.70ns)   --->   "%mul_1_2 = fmul i32 %p_read_56, i32 %p_read523" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 67 'fmul' 'mul_1_2' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 68 [2/4] (5.70ns)   --->   "%mul_2 = fmul i32 %p_read_55, i32 %p_read624" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 68 'fmul' 'mul_2' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 69 [2/4] (5.70ns)   --->   "%mul_2_1 = fmul i32 %p_read_54, i32 %p_read725" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 69 'fmul' 'mul_2_1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 70 [2/4] (5.70ns)   --->   "%mul_2_2 = fmul i32 %p_read_53, i32 %p_read826" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 70 'fmul' 'mul_2_2' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 5.70>
+ST_4 : Operation 71 [1/4] (5.70ns)   --->   "%mul = fmul i32 %p_read927, i32 %p_read18" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 71 'fmul' 'mul' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 72 [1/4] (5.70ns)   --->   "%mul_s = fmul i32 %p_read1028, i32 %p_read119" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 72 'fmul' 'mul_s' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 73 [1/4] (5.70ns)   --->   "%mul_4 = fmul i32 %p_read_59, i32 %p_read220" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 73 'fmul' 'mul_4' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 74 [1/4] (5.70ns)   --->   "%mul_1 = fmul i32 %p_read_58, i32 %p_read321" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 74 'fmul' 'mul_1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 75 [1/4] (5.70ns)   --->   "%mul_1_1 = fmul i32 %p_read_57, i32 %p_read422" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 75 'fmul' 'mul_1_1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 76 [1/4] (5.70ns)   --->   "%mul_1_2 = fmul i32 %p_read_56, i32 %p_read523" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 76 'fmul' 'mul_1_2' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 77 [1/4] (5.70ns)   --->   "%mul_2 = fmul i32 %p_read_55, i32 %p_read624" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 77 'fmul' 'mul_2' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 78 [1/4] (5.70ns)   --->   "%mul_2_1 = fmul i32 %p_read_54, i32 %p_read725" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 78 'fmul' 'mul_2_1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 79 [1/4] (5.70ns)   --->   "%mul_2_2 = fmul i32 %p_read_53, i32 %p_read826" [codes_lab5/HLS_sources_final/templatedFuncs.h:96]   --->   Operation 79 'fmul' 'mul_2_2' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.25>
+ST_5 : Operation 80 [5/5] (7.25ns)   --->   "%s0 = fadd i32 %mul, i32 %mul_s" [codes_lab5/HLS_sources_final/templatedFuncs.h:100]   --->   Operation 80 'fadd' 's0' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 81 [5/5] (7.25ns)   --->   "%s1 = fadd i32 %mul_4, i32 %mul_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:101]   --->   Operation 81 'fadd' 's1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 82 [5/5] (7.25ns)   --->   "%s2 = fadd i32 %mul_1_1, i32 %mul_1_2" [codes_lab5/HLS_sources_final/templatedFuncs.h:102]   --->   Operation 82 'fadd' 's2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 83 [5/5] (7.25ns)   --->   "%s3 = fadd i32 %mul_2, i32 %mul_2_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:103]   --->   Operation 83 'fadd' 's3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 84 [5/5] (7.25ns)   --->   "%s4 = fadd i32 %mul_2_2, i32 %prev_sum_read" [codes_lab5/HLS_sources_final/templatedFuncs.h:105]   --->   Operation 84 'fadd' 's4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.25>
+ST_6 : Operation 85 [4/5] (7.25ns)   --->   "%s0 = fadd i32 %mul, i32 %mul_s" [codes_lab5/HLS_sources_final/templatedFuncs.h:100]   --->   Operation 85 'fadd' 's0' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 86 [4/5] (7.25ns)   --->   "%s1 = fadd i32 %mul_4, i32 %mul_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:101]   --->   Operation 86 'fadd' 's1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 87 [4/5] (7.25ns)   --->   "%s2 = fadd i32 %mul_1_1, i32 %mul_1_2" [codes_lab5/HLS_sources_final/templatedFuncs.h:102]   --->   Operation 87 'fadd' 's2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 88 [4/5] (7.25ns)   --->   "%s3 = fadd i32 %mul_2, i32 %mul_2_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:103]   --->   Operation 88 'fadd' 's3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 89 [4/5] (7.25ns)   --->   "%s4 = fadd i32 %mul_2_2, i32 %prev_sum_read" [codes_lab5/HLS_sources_final/templatedFuncs.h:105]   --->   Operation 89 'fadd' 's4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.25>
+ST_7 : Operation 90 [3/5] (7.25ns)   --->   "%s0 = fadd i32 %mul, i32 %mul_s" [codes_lab5/HLS_sources_final/templatedFuncs.h:100]   --->   Operation 90 'fadd' 's0' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 91 [3/5] (7.25ns)   --->   "%s1 = fadd i32 %mul_4, i32 %mul_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:101]   --->   Operation 91 'fadd' 's1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 92 [3/5] (7.25ns)   --->   "%s2 = fadd i32 %mul_1_1, i32 %mul_1_2" [codes_lab5/HLS_sources_final/templatedFuncs.h:102]   --->   Operation 92 'fadd' 's2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 93 [3/5] (7.25ns)   --->   "%s3 = fadd i32 %mul_2, i32 %mul_2_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:103]   --->   Operation 93 'fadd' 's3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 94 [3/5] (7.25ns)   --->   "%s4 = fadd i32 %mul_2_2, i32 %prev_sum_read" [codes_lab5/HLS_sources_final/templatedFuncs.h:105]   --->   Operation 94 'fadd' 's4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.25>
+ST_8 : Operation 95 [2/5] (7.25ns)   --->   "%s0 = fadd i32 %mul, i32 %mul_s" [codes_lab5/HLS_sources_final/templatedFuncs.h:100]   --->   Operation 95 'fadd' 's0' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 96 [2/5] (7.25ns)   --->   "%s1 = fadd i32 %mul_4, i32 %mul_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:101]   --->   Operation 96 'fadd' 's1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 97 [2/5] (7.25ns)   --->   "%s2 = fadd i32 %mul_1_1, i32 %mul_1_2" [codes_lab5/HLS_sources_final/templatedFuncs.h:102]   --->   Operation 97 'fadd' 's2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 98 [2/5] (7.25ns)   --->   "%s3 = fadd i32 %mul_2, i32 %mul_2_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:103]   --->   Operation 98 'fadd' 's3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 99 [2/5] (7.25ns)   --->   "%s4 = fadd i32 %mul_2_2, i32 %prev_sum_read" [codes_lab5/HLS_sources_final/templatedFuncs.h:105]   --->   Operation 99 'fadd' 's4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.25>
+ST_9 : Operation 100 [1/5] (7.25ns)   --->   "%s0 = fadd i32 %mul, i32 %mul_s" [codes_lab5/HLS_sources_final/templatedFuncs.h:100]   --->   Operation 100 'fadd' 's0' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 101 [1/5] (7.25ns)   --->   "%s1 = fadd i32 %mul_4, i32 %mul_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:101]   --->   Operation 101 'fadd' 's1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 102 [1/5] (7.25ns)   --->   "%s2 = fadd i32 %mul_1_1, i32 %mul_1_2" [codes_lab5/HLS_sources_final/templatedFuncs.h:102]   --->   Operation 102 'fadd' 's2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 103 [1/5] (7.25ns)   --->   "%s3 = fadd i32 %mul_2, i32 %mul_2_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:103]   --->   Operation 103 'fadd' 's3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 104 [1/5] (7.25ns)   --->   "%s4 = fadd i32 %mul_2_2, i32 %prev_sum_read" [codes_lab5/HLS_sources_final/templatedFuncs.h:105]   --->   Operation 104 'fadd' 's4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.25>
+ST_10 : Operation 105 [5/5] (7.25ns)   --->   "%s5 = fadd i32 %s0, i32 %s1" [codes_lab5/HLS_sources_final/templatedFuncs.h:107]   --->   Operation 105 'fadd' 's5' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 106 [5/5] (7.25ns)   --->   "%s6 = fadd i32 %s2, i32 %s3" [codes_lab5/HLS_sources_final/templatedFuncs.h:108]   --->   Operation 106 'fadd' 's6' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.25>
+ST_11 : Operation 107 [4/5] (7.25ns)   --->   "%s5 = fadd i32 %s0, i32 %s1" [codes_lab5/HLS_sources_final/templatedFuncs.h:107]   --->   Operation 107 'fadd' 's5' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 108 [4/5] (7.25ns)   --->   "%s6 = fadd i32 %s2, i32 %s3" [codes_lab5/HLS_sources_final/templatedFuncs.h:108]   --->   Operation 108 'fadd' 's6' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.25>
+ST_12 : Operation 109 [3/5] (7.25ns)   --->   "%s5 = fadd i32 %s0, i32 %s1" [codes_lab5/HLS_sources_final/templatedFuncs.h:107]   --->   Operation 109 'fadd' 's5' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 110 [3/5] (7.25ns)   --->   "%s6 = fadd i32 %s2, i32 %s3" [codes_lab5/HLS_sources_final/templatedFuncs.h:108]   --->   Operation 110 'fadd' 's6' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.25>
+ST_13 : Operation 111 [2/5] (7.25ns)   --->   "%s5 = fadd i32 %s0, i32 %s1" [codes_lab5/HLS_sources_final/templatedFuncs.h:107]   --->   Operation 111 'fadd' 's5' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 112 [2/5] (7.25ns)   --->   "%s6 = fadd i32 %s2, i32 %s3" [codes_lab5/HLS_sources_final/templatedFuncs.h:108]   --->   Operation 112 'fadd' 's6' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 7.25>
+ST_14 : Operation 113 [1/5] (7.25ns)   --->   "%s5 = fadd i32 %s0, i32 %s1" [codes_lab5/HLS_sources_final/templatedFuncs.h:107]   --->   Operation 113 'fadd' 's5' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 114 [1/5] (7.25ns)   --->   "%s6 = fadd i32 %s2, i32 %s3" [codes_lab5/HLS_sources_final/templatedFuncs.h:108]   --->   Operation 114 'fadd' 's6' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 7.25>
+ST_15 : Operation 115 [5/5] (7.25ns)   --->   "%s7 = fadd i32 %s5, i32 %s6" [codes_lab5/HLS_sources_final/templatedFuncs.h:110]   --->   Operation 115 'fadd' 's7' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 7.25>
+ST_16 : Operation 116 [4/5] (7.25ns)   --->   "%s7 = fadd i32 %s5, i32 %s6" [codes_lab5/HLS_sources_final/templatedFuncs.h:110]   --->   Operation 116 'fadd' 's7' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 7.25>
+ST_17 : Operation 117 [3/5] (7.25ns)   --->   "%s7 = fadd i32 %s5, i32 %s6" [codes_lab5/HLS_sources_final/templatedFuncs.h:110]   --->   Operation 117 'fadd' 's7' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 7.25>
+ST_18 : Operation 118 [2/5] (7.25ns)   --->   "%s7 = fadd i32 %s5, i32 %s6" [codes_lab5/HLS_sources_final/templatedFuncs.h:110]   --->   Operation 118 'fadd' 's7' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 7.25>
+ST_19 : Operation 119 [1/5] (7.25ns)   --->   "%s7 = fadd i32 %s5, i32 %s6" [codes_lab5/HLS_sources_final/templatedFuncs.h:110]   --->   Operation 119 'fadd' 's7' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 7.25>
+ST_20 : Operation 120 [5/5] (7.25ns)   --->   "%sum = fadd i32 %s7, i32 %s4" [codes_lab5/HLS_sources_final/templatedFuncs.h:111]   --->   Operation 120 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 7.25>
+ST_21 : Operation 121 [4/5] (7.25ns)   --->   "%sum = fadd i32 %s7, i32 %s4" [codes_lab5/HLS_sources_final/templatedFuncs.h:111]   --->   Operation 121 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 7.25>
+ST_22 : Operation 122 [3/5] (7.25ns)   --->   "%sum = fadd i32 %s7, i32 %s4" [codes_lab5/HLS_sources_final/templatedFuncs.h:111]   --->   Operation 122 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 7.25>
+ST_23 : Operation 123 [2/5] (7.25ns)   --->   "%sum = fadd i32 %s7, i32 %s4" [codes_lab5/HLS_sources_final/templatedFuncs.h:111]   --->   Operation 123 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 7.25>
+ST_24 : Operation 124 [1/1] (0.00ns)   --->   "%specpipeline_ln83 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_9" [codes_lab5/HLS_sources_final/templatedFuncs.h:83]   --->   Operation 124 'specpipeline' 'specpipeline_ln83' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 125 [1/5] (7.25ns)   --->   "%sum = fadd i32 %s7, i32 %s4" [codes_lab5/HLS_sources_final/templatedFuncs.h:111]   --->   Operation 125 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 126 [1/1] (0.00ns)   --->   "%ret_ln113 = ret i32 %sum" [codes_lab5/HLS_sources_final/templatedFuncs.h:113]   --->   Operation 126 'ret' 'ret_ln113' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 5.7ns
+The critical path consists of the following:
+	wire read operation ('p_read927', codes_lab5/HLS_sources_final/templatedFuncs.h:96) on port 'p_read9' (codes_lab5/HLS_sources_final/templatedFuncs.h:96) [30]  (0 ns)
+	'fmul' operation ('mul', codes_lab5/HLS_sources_final/templatedFuncs.h:96) [40]  (5.7 ns)
+
+ <State 2>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('mul', codes_lab5/HLS_sources_final/templatedFuncs.h:96) [40]  (5.7 ns)
+
+ <State 3>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('mul', codes_lab5/HLS_sources_final/templatedFuncs.h:96) [40]  (5.7 ns)
+
+ <State 4>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('mul', codes_lab5/HLS_sources_final/templatedFuncs.h:96) [40]  (5.7 ns)
+
+ <State 5>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s0', codes_lab5/HLS_sources_final/templatedFuncs.h:100) [49]  (7.26 ns)
+
+ <State 6>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s0', codes_lab5/HLS_sources_final/templatedFuncs.h:100) [49]  (7.26 ns)
+
+ <State 7>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s0', codes_lab5/HLS_sources_final/templatedFuncs.h:100) [49]  (7.26 ns)
+
+ <State 8>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s0', codes_lab5/HLS_sources_final/templatedFuncs.h:100) [49]  (7.26 ns)
+
+ <State 9>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s0', codes_lab5/HLS_sources_final/templatedFuncs.h:100) [49]  (7.26 ns)
+
+ <State 10>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s5', codes_lab5/HLS_sources_final/templatedFuncs.h:107) [54]  (7.26 ns)
+
+ <State 11>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s5', codes_lab5/HLS_sources_final/templatedFuncs.h:107) [54]  (7.26 ns)
+
+ <State 12>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s5', codes_lab5/HLS_sources_final/templatedFuncs.h:107) [54]  (7.26 ns)
+
+ <State 13>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s5', codes_lab5/HLS_sources_final/templatedFuncs.h:107) [54]  (7.26 ns)
+
+ <State 14>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s5', codes_lab5/HLS_sources_final/templatedFuncs.h:107) [54]  (7.26 ns)
+
+ <State 15>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s7', codes_lab5/HLS_sources_final/templatedFuncs.h:110) [56]  (7.26 ns)
+
+ <State 16>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s7', codes_lab5/HLS_sources_final/templatedFuncs.h:110) [56]  (7.26 ns)
+
+ <State 17>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s7', codes_lab5/HLS_sources_final/templatedFuncs.h:110) [56]  (7.26 ns)
+
+ <State 18>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s7', codes_lab5/HLS_sources_final/templatedFuncs.h:110) [56]  (7.26 ns)
+
+ <State 19>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('s7', codes_lab5/HLS_sources_final/templatedFuncs.h:110) [56]  (7.26 ns)
+
+ <State 20>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:111) [57]  (7.26 ns)
+
+ <State 21>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:111) [57]  (7.26 ns)
+
+ <State 22>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:111) [57]  (7.26 ns)
+
+ <State 23>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:111) [57]  (7.26 ns)
+
+ <State 24>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', codes_lab5/HLS_sources_final/templatedFuncs.h:111) [57]  (7.26 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

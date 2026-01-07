@@ -1,0 +1,340 @@
+
+
+================================================================
+== Vitis HLS Report for 'Conv_func_4_26_4_24_Pipeline_loadWinShift'
+================================================================
+* Date:           Thu Dec 25 17:04:36 2025
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        Day_5_final_boss
+* Solution:       hellojio (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.354 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        8|        8|  80.000 ns|  80.000 ns|    8|    8|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loadWinShift  |        6|        6|         5|          1|          1|     3|       yes|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 5, States = { 1 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.48>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%wi = alloca i32 1"   --->   Operation 8 'alloca' 'wi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%window_28 = alloca i32 1"   --->   Operation 9 'alloca' 'window_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%window_29 = alloca i32 1"   --->   Operation 10 'alloca' 'window_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%window_30 = alloca i32 1"   --->   Operation 11 'alloca' 'window_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%window_31 = alloca i32 1"   --->   Operation 12 'alloca' 'window_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%window_32 = alloca i32 1"   --->   Operation 13 'alloca' 'window_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%window_33 = alloca i32 1"   --->   Operation 14 'alloca' 'window_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%window_34 = alloca i32 1"   --->   Operation 15 'alloca' 'window_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%window_35 = alloca i32 1"   --->   Operation 16 'alloca' 'window_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%window_36 = alloca i32 1"   --->   Operation 17 'alloca' 'window_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%window_37 = alloca i32 1"   --->   Operation 18 'alloca' 'window_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%window_38 = alloca i32 1"   --->   Operation 19 'alloca' 'window_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%window_39 = alloca i32 1"   --->   Operation 20 'alloca' 'window_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%window_40 = alloca i32 1"   --->   Operation 21 'alloca' 'window_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%window_41 = alloca i32 1"   --->   Operation 22 'alloca' 'window_41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%window_42 = alloca i32 1"   --->   Operation 23 'alloca' 'window_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%window_43 = alloca i32 1"   --->   Operation 24 'alloca' 'window_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%window_44 = alloca i32 1"   --->   Operation 25 'alloca' 'window_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%window_45 = alloca i32 1"   --->   Operation 26 'alloca' 'window_45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%window_46 = alloca i32 1"   --->   Operation 27 'alloca' 'window_46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%window_47 = alloca i32 1"   --->   Operation 28 'alloca' 'window_47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%window_48 = alloca i32 1"   --->   Operation 29 'alloca' 'window_48' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%window_49 = alloca i32 1"   --->   Operation 30 'alloca' 'window_49' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%window_50 = alloca i32 1"   --->   Operation 31 'alloca' 'window_50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%window_51 = alloca i32 1"   --->   Operation 32 'alloca' 'window_51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln58_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %zext_ln58"   --->   Operation 33 'read' 'zext_ln58_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%mul_ln52_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %mul_ln52"   --->   Operation 34 'read' 'mul_ln52_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%select_ln139_3_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %select_ln139_3"   --->   Operation 35 'read' 'select_ln139_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%mux_case_05_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_05"   --->   Operation 36 'read' 'mux_case_05_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%mux_case_116_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_116"   --->   Operation 37 'read' 'mux_case_116_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%mux_case_227_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_227"   --->   Operation 38 'read' 'mux_case_227_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%mux_case_08442_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_08442"   --->   Operation 39 'read' 'mux_case_08442_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%mux_case_18553_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_18553"   --->   Operation 40 'read' 'mux_case_18553_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%mux_case_28664_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_28664"   --->   Operation 41 'read' 'mux_case_28664_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%window_1_1_promoted237_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_1_1_promoted237"   --->   Operation 42 'read' 'window_1_1_promoted237_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%window_1_0_promoted239_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_1_0_promoted239"   --->   Operation 43 'read' 'window_1_0_promoted239_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%window_1_2_promoted241_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_1_2_promoted241"   --->   Operation 44 'read' 'window_1_2_promoted241_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%window_0_1_promoted243_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_0_1_promoted243"   --->   Operation 45 'read' 'window_0_1_promoted243_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%window_0_0_promoted245_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_0_0_promoted245"   --->   Operation 46 'read' 'window_0_0_promoted245_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%window_0_2_promoted247_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_0_2_promoted247"   --->   Operation 47 'read' 'window_0_2_promoted247_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%window_2_1_promoted249_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_2_1_promoted249"   --->   Operation 48 'read' 'window_2_1_promoted249_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%window_2_0_promoted251_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_2_0_promoted251"   --->   Operation 49 'read' 'window_2_0_promoted251_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%window_2_2_promoted253_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_2_2_promoted253"   --->   Operation 50 'read' 'window_2_2_promoted253_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%window4156_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window4156"   --->   Operation 51 'read' 'window4156_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%window_214263_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_214263"   --->   Operation 52 'read' 'window_214263_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%window_224370_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_224370"   --->   Operation 53 'read' 'window_224370_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%window_234477_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_234477"   --->   Operation 54 'read' 'window_234477_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%window_244584_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_244584"   --->   Operation 55 'read' 'window_244584_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%window_254691_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_254691"   --->   Operation 56 'read' 'window_254691_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%window_264798_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_264798"   --->   Operation 57 'read' 'window_264798_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%window_2748105_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_2748105"   --->   Operation 58 'read' 'window_2748105_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%window_2849112_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %window_2849112"   --->   Operation 59 'read' 'window_2849112_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%zext_ln58_cast = zext i5 %zext_ln58_read"   --->   Operation 60 'zext' 'zext_ln58_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_2849112_read, i32 %window_51"   --->   Operation 61 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 62 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_2748105_read, i32 %window_50"   --->   Operation 62 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 63 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_264798_read, i32 %window_49"   --->   Operation 63 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 64 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_254691_read, i32 %window_48"   --->   Operation 64 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 65 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_244584_read, i32 %window_47"   --->   Operation 65 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 66 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_234477_read, i32 %window_46"   --->   Operation 66 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 67 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_224370_read, i32 %window_45"   --->   Operation 67 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 68 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_214263_read, i32 %window_44"   --->   Operation 68 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 69 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window4156_read, i32 %window_43"   --->   Operation 69 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 70 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_2_2_promoted253_read, i32 %window_42"   --->   Operation 70 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 71 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_2_0_promoted251_read, i32 %window_41"   --->   Operation 71 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 72 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_2_1_promoted249_read, i32 %window_40"   --->   Operation 72 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 73 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_0_2_promoted247_read, i32 %window_39"   --->   Operation 73 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 74 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_0_0_promoted245_read, i32 %window_38"   --->   Operation 74 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 75 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_0_1_promoted243_read, i32 %window_37"   --->   Operation 75 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 76 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_1_2_promoted241_read, i32 %window_36"   --->   Operation 76 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 77 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_1_0_promoted239_read, i32 %window_35"   --->   Operation 77 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 78 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %window_1_1_promoted237_read, i32 %window_34"   --->   Operation 78 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 79 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %mux_case_28664_read, i32 %window_33"   --->   Operation 79 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 80 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %mux_case_18553_read, i32 %window_32"   --->   Operation 80 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 81 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %mux_case_08442_read, i32 %window_31"   --->   Operation 81 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 82 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %mux_case_227_read, i32 %window_30"   --->   Operation 82 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 83 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %mux_case_116_read, i32 %window_29"   --->   Operation 83 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 84 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %mux_case_05_read, i32 %window_28"   --->   Operation 84 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 85 [1/1] (1.58ns)   --->   "%store_ln0 = store i2 0, i2 %wi"   --->   Operation 85 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body22.i"   --->   Operation 86 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%wi_2 = load i2 %wi" [codes_lab5/HLS_sources_final/templatedFuncs.h:58]   --->   Operation 87 'load' 'wi_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.95ns)   --->   "%icmp_ln58 = icmp_eq  i2 %wi_2, i2 3" [codes_lab5/HLS_sources_final/templatedFuncs.h:58]   --->   Operation 88 'icmp' 'icmp_ln58' <Predicate = true> <Delay = 0.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 3, i64 3, i64 3"   --->   Operation 89 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (1.56ns)   --->   "%add_ln58 = add i2 %wi_2, i2 1" [codes_lab5/HLS_sources_final/templatedFuncs.h:58]   --->   Operation 90 'add' 'add_ln58' <Predicate = true> <Delay = 1.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%br_ln58 = br i1 %icmp_ln58, void %for.body22.i.split, void %_Z17load_input_windowILi4ELi26EEvPA3_fPAT0__AT0__fiii.exit_ifconv.loopexit.exitStub" [codes_lab5/HLS_sources_final/templatedFuncs.h:58]   --->   Operation 91 'br' 'br_ln58' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%zext_ln58_2 = zext i2 %wi_2" [codes_lab5/HLS_sources_final/templatedFuncs.h:58]   --->   Operation 92 'zext' 'zext_ln58_2' <Predicate = (!icmp_ln58)> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (1.78ns)   --->   "%add_ln66 = add i5 %select_ln139_3_read, i5 %zext_ln58_2" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 93 'add' 'add_ln66' <Predicate = (!icmp_ln58)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%zext_ln66 = zext i5 %add_ln66" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 94 'zext' 'zext_ln66' <Predicate = (!icmp_ln58)> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (1.65ns) (grouped into DSP with root node add_ln66_2)   --->   "%add_ln66_1 = add i8 %mul_ln52_read, i8 %zext_ln66" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 95 'add' 'add_ln66_1' <Predicate = (!icmp_ln58)> <Delay = 1.65> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 96 [1/1] (0.00ns) (grouped into DSP with root node add_ln66_2)   --->   "%zext_ln66_2 = zext i8 %add_ln66_1" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 96 'zext' 'zext_ln66_2' <Predicate = (!icmp_ln58)> <Delay = 0.00>
+ST_1 : Operation 97 [3/3] (1.05ns) (grouped into DSP with root node add_ln66_2)   --->   "%mul_ln66 = mul i12 %zext_ln66_2, i12 26" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 97 'mul' 'mul_ln66' <Predicate = (!icmp_ln58)> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 98 [1/1] (0.95ns)   --->   "%switch_ln61 = switch i2 %wi_2, void %arrayidx313.i13.case.2, i2 0, void %for.body22.i.split.arrayidx313.i13.exit_crit_edge, i2 1, void %for.body22.i.split.arrayidx313.i13.exit_crit_edge33" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 98 'switch' 'switch_ln61' <Predicate = (!icmp_ln58)> <Delay = 0.95>
+ST_1 : Operation 99 [1/1] (1.58ns)   --->   "%store_ln58 = store i2 %add_ln58, i2 %wi" [codes_lab5/HLS_sources_final/templatedFuncs.h:58]   --->   Operation 99 'store' 'store_ln58' <Predicate = (!icmp_ln58)> <Delay = 1.58>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%br_ln58 = br void %for.body22.i" [codes_lab5/HLS_sources_final/templatedFuncs.h:58]   --->   Operation 100 'br' 'br_ln58' <Predicate = (!icmp_ln58)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.05>
+ST_2 : Operation 101 [2/3] (1.05ns) (grouped into DSP with root node add_ln66_2)   --->   "%mul_ln66 = mul i12 %zext_ln66_2, i12 26" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 101 'mul' 'mul_ln66' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 3 <SV = 2> <Delay = 2.10>
+ST_3 : Operation 102 [1/3] (0.00ns) (grouped into DSP with root node add_ln66_2)   --->   "%mul_ln66 = mul i12 %zext_ln66_2, i12 26" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 102 'mul' 'mul_ln66' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 103 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln66_2 = add i12 %mul_ln66, i12 %zext_ln58_cast" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 103 'add' 'add_ln66_2' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 4 <SV = 3> <Delay = 5.35>
+ST_4 : Operation 104 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln66_2 = add i12 %mul_ln66, i12 %zext_ln58_cast" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 104 'add' 'add_ln66_2' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 105 [1/1] (0.00ns)   --->   "%zext_ln66_3 = zext i12 %add_ln66_2" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 105 'zext' 'zext_ln66_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 106 [1/1] (0.00ns)   --->   "%ifmap_addr = getelementptr i32 %ifmap, i64 0, i64 %zext_ln66_3" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 106 'getelementptr' 'ifmap_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 107 [2/2] (3.25ns)   --->   "%window_52 = load i12 %ifmap_addr" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 107 'load' 'window_52' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2704> <RAM>
+ST_4 : Operation 146 [1/1] (0.00ns)   --->   "%window_28_load = load i32 %window_28"   --->   Operation 146 'load' 'window_28_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 147 [1/1] (0.00ns)   --->   "%window_29_load = load i32 %window_29"   --->   Operation 147 'load' 'window_29_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 148 [1/1] (0.00ns)   --->   "%window_30_load = load i32 %window_30"   --->   Operation 148 'load' 'window_30_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 149 [1/1] (0.00ns)   --->   "%window_31_load = load i32 %window_31"   --->   Operation 149 'load' 'window_31_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 150 [1/1] (0.00ns)   --->   "%window_32_load = load i32 %window_32"   --->   Operation 150 'load' 'window_32_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 151 [1/1] (0.00ns)   --->   "%window_33_load = load i32 %window_33"   --->   Operation 151 'load' 'window_33_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 152 [1/1] (0.00ns)   --->   "%window_34_load = load i32 %window_34"   --->   Operation 152 'load' 'window_34_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 153 [1/1] (0.00ns)   --->   "%window_35_load = load i32 %window_35"   --->   Operation 153 'load' 'window_35_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 154 [1/1] (0.00ns)   --->   "%window_36_load = load i32 %window_36"   --->   Operation 154 'load' 'window_36_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 155 [1/1] (0.00ns)   --->   "%window_37_load = load i32 %window_37"   --->   Operation 155 'load' 'window_37_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 156 [1/1] (0.00ns)   --->   "%window_38_load = load i32 %window_38"   --->   Operation 156 'load' 'window_38_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 157 [1/1] (0.00ns)   --->   "%window_39_load = load i32 %window_39"   --->   Operation 157 'load' 'window_39_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 158 [1/1] (0.00ns)   --->   "%window_40_load = load i32 %window_40"   --->   Operation 158 'load' 'window_40_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 159 [1/1] (0.00ns)   --->   "%window_41_load = load i32 %window_41"   --->   Operation 159 'load' 'window_41_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 160 [1/1] (0.00ns)   --->   "%window_42_load = load i32 %window_42"   --->   Operation 160 'load' 'window_42_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 161 [1/1] (0.00ns)   --->   "%window_43_load = load i32 %window_43"   --->   Operation 161 'load' 'window_43_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 162 [1/1] (0.00ns)   --->   "%window_44_load = load i32 %window_44"   --->   Operation 162 'load' 'window_44_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 163 [1/1] (0.00ns)   --->   "%window_45_load = load i32 %window_45"   --->   Operation 163 'load' 'window_45_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 164 [1/1] (0.00ns)   --->   "%window_46_load = load i32 %window_46"   --->   Operation 164 'load' 'window_46_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 165 [1/1] (0.00ns)   --->   "%window_47_load = load i32 %window_47"   --->   Operation 165 'load' 'window_47_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 166 [1/1] (0.00ns)   --->   "%window_48_load = load i32 %window_48"   --->   Operation 166 'load' 'window_48_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 167 [1/1] (0.00ns)   --->   "%window_49_load = load i32 %window_49"   --->   Operation 167 'load' 'window_49_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 168 [1/1] (0.00ns)   --->   "%window_50_load = load i32 %window_50"   --->   Operation 168 'load' 'window_50_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 169 [1/1] (0.00ns)   --->   "%window_51_load = load i32 %window_51"   --->   Operation 169 'load' 'window_51_load' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 170 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_2849107_out, i32 %window_51_load"   --->   Operation 170 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 171 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_2748100_out, i32 %window_50_load"   --->   Operation 171 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 172 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_264793_out, i32 %window_49_load"   --->   Operation 172 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 173 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_254686_out, i32 %window_48_load"   --->   Operation 173 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 174 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_244579_out, i32 %window_47_load"   --->   Operation 174 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 175 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_234472_out, i32 %window_46_load"   --->   Operation 175 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 176 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_224365_out, i32 %window_45_load"   --->   Operation 176 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 177 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_214258_out, i32 %window_44_load"   --->   Operation 177 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 178 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window4151_out, i32 %window_43_load"   --->   Operation 178 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 179 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_2_2_promoted253351_out, i32 %window_42_load"   --->   Operation 179 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 180 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_2_0_promoted251344_out, i32 %window_41_load"   --->   Operation 180 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 181 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_2_1_promoted249337_out, i32 %window_40_load"   --->   Operation 181 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 182 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_0_2_promoted247330_out, i32 %window_39_load"   --->   Operation 182 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 183 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_0_0_promoted245323_out, i32 %window_38_load"   --->   Operation 183 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 184 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_0_1_promoted243316_out, i32 %window_37_load"   --->   Operation 184 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 185 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_1_2_promoted241309_out, i32 %window_36_load"   --->   Operation 185 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 186 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_1_0_promoted239302_out, i32 %window_35_load"   --->   Operation 186 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 187 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %window_1_1_promoted237295_out, i32 %window_34_load"   --->   Operation 187 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 188 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %mux_case_286_out, i32 %window_33_load"   --->   Operation 188 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 189 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %mux_case_185_out, i32 %window_32_load"   --->   Operation 189 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 190 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %mux_case_084_out, i32 %window_31_load"   --->   Operation 190 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 191 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %mux_case_2_out, i32 %window_30_load"   --->   Operation 191 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 192 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %mux_case_1_out, i32 %window_29_load"   --->   Operation 192 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 193 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %mux_case_0_out, i32 %window_28_load"   --->   Operation 193 'write' 'write_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+ST_4 : Operation 194 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 194 'ret' 'ret_ln0' <Predicate = (icmp_ln58)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 4.84>
+ST_5 : Operation 108 [1/1] (0.00ns)   --->   "%window_28_load_1 = load i32 %window_28" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 108 'load' 'window_28_load_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 109 [1/1] (0.00ns)   --->   "%window_29_load_1 = load i32 %window_29" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 109 'load' 'window_29_load_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 110 [1/1] (0.00ns)   --->   "%window_30_load_1 = load i32 %window_30" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 110 'load' 'window_30_load_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 111 [1/1] (0.00ns)   --->   "%window_31_load_1 = load i32 %window_31" [codes_lab5/HLS_sources_final/templatedFuncs.h:62]   --->   Operation 111 'load' 'window_31_load_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 112 [1/1] (0.00ns)   --->   "%window_32_load_1 = load i32 %window_32" [codes_lab5/HLS_sources_final/templatedFuncs.h:62]   --->   Operation 112 'load' 'window_32_load_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 113 [1/1] (0.00ns)   --->   "%window_33_load_1 = load i32 %window_33" [codes_lab5/HLS_sources_final/templatedFuncs.h:62]   --->   Operation 113 'load' 'window_33_load_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 114 [1/1] (0.00ns)   --->   "%specpipeline_ln59 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_9" [codes_lab5/HLS_sources_final/templatedFuncs.h:59]   --->   Operation 114 'specpipeline' 'specpipeline_ln59' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 115 [1/1] (0.00ns)   --->   "%specloopname_ln58 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [codes_lab5/HLS_sources_final/templatedFuncs.h:58]   --->   Operation 115 'specloopname' 'specloopname_ln58' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 116 [1/1] (1.70ns)   --->   "%window = mux i32 @_ssdm_op_Mux.ap_auto.3float.i2, i32 %window_28_load_1, i32 %window_29_load_1, i32 %window_30_load_1, i2 %wi_2" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 116 'mux' 'window' <Predicate = true> <Delay = 1.70> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 117 [1/2] (3.25ns)   --->   "%window_52 = load i12 %ifmap_addr" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 117 'load' 'window_52' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2704> <RAM>
+ST_5 : Operation 118 [1/1] (1.70ns)   --->   "%window_1 = mux i32 @_ssdm_op_Mux.ap_auto.3float.i2, i32 %window_31_load_1, i32 %window_32_load_1, i32 %window_33_load_1, i2 %wi_2" [codes_lab5/HLS_sources_final/templatedFuncs.h:62]   --->   Operation 118 'mux' 'window_1' <Predicate = true> <Delay = 1.70> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 119 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window_52, i32 %window_48" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 119 'store' 'store_ln61' <Predicate = (wi_2 == 1)> <Delay = 1.58>
+ST_5 : Operation 120 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window_1, i32 %window_47" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 120 'store' 'store_ln61' <Predicate = (wi_2 == 1)> <Delay = 1.58>
+ST_5 : Operation 121 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window, i32 %window_46" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 121 'store' 'store_ln61' <Predicate = (wi_2 == 1)> <Delay = 1.58>
+ST_5 : Operation 122 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window_52, i32 %window_36" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 122 'store' 'store_ln61' <Predicate = (wi_2 == 1)> <Delay = 1.58>
+ST_5 : Operation 123 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window, i32 %window_35" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 123 'store' 'store_ln61' <Predicate = (wi_2 == 1)> <Delay = 1.58>
+ST_5 : Operation 124 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window_1, i32 %window_34" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 124 'store' 'store_ln61' <Predicate = (wi_2 == 1)> <Delay = 1.58>
+ST_5 : Operation 125 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window_52, i32 %window_32" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 125 'store' 'store_ln61' <Predicate = (wi_2 == 1)> <Delay = 1.58>
+ST_5 : Operation 126 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window_1, i32 %window_29" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 126 'store' 'store_ln61' <Predicate = (wi_2 == 1)> <Delay = 1.58>
+ST_5 : Operation 127 [1/1] (0.00ns)   --->   "%br_ln61 = br void %arrayidx313.i13.exit" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 127 'br' 'br_ln61' <Predicate = (wi_2 == 1)> <Delay = 0.00>
+ST_5 : Operation 128 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window_52, i32 %window_45" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 128 'store' 'store_ln61' <Predicate = (wi_2 == 0)> <Delay = 1.58>
+ST_5 : Operation 129 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window_1, i32 %window_44" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 129 'store' 'store_ln61' <Predicate = (wi_2 == 0)> <Delay = 1.58>
+ST_5 : Operation 130 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window, i32 %window_43" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 130 'store' 'store_ln61' <Predicate = (wi_2 == 0)> <Delay = 1.58>
+ST_5 : Operation 131 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window_52, i32 %window_39" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 131 'store' 'store_ln61' <Predicate = (wi_2 == 0)> <Delay = 1.58>
+ST_5 : Operation 132 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window, i32 %window_38" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 132 'store' 'store_ln61' <Predicate = (wi_2 == 0)> <Delay = 1.58>
+ST_5 : Operation 133 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window_1, i32 %window_37" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 133 'store' 'store_ln61' <Predicate = (wi_2 == 0)> <Delay = 1.58>
+ST_5 : Operation 134 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window_52, i32 %window_31" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 134 'store' 'store_ln61' <Predicate = (wi_2 == 0)> <Delay = 1.58>
+ST_5 : Operation 135 [1/1] (1.58ns)   --->   "%store_ln61 = store i32 %window_1, i32 %window_28" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 135 'store' 'store_ln61' <Predicate = (wi_2 == 0)> <Delay = 1.58>
+ST_5 : Operation 136 [1/1] (0.00ns)   --->   "%br_ln61 = br void %arrayidx313.i13.exit" [codes_lab5/HLS_sources_final/templatedFuncs.h:61]   --->   Operation 136 'br' 'br_ln61' <Predicate = (wi_2 == 0)> <Delay = 0.00>
+ST_5 : Operation 137 [1/1] (1.58ns)   --->   "%store_ln66 = store i32 %window_52, i32 %window_51" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 137 'store' 'store_ln66' <Predicate = (wi_2 != 0 & wi_2 != 1)> <Delay = 1.58>
+ST_5 : Operation 138 [1/1] (1.58ns)   --->   "%store_ln66 = store i32 %window_1, i32 %window_50" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 138 'store' 'store_ln66' <Predicate = (wi_2 != 0 & wi_2 != 1)> <Delay = 1.58>
+ST_5 : Operation 139 [1/1] (1.58ns)   --->   "%store_ln66 = store i32 %window, i32 %window_49" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 139 'store' 'store_ln66' <Predicate = (wi_2 != 0 & wi_2 != 1)> <Delay = 1.58>
+ST_5 : Operation 140 [1/1] (1.58ns)   --->   "%store_ln66 = store i32 %window_52, i32 %window_42" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 140 'store' 'store_ln66' <Predicate = (wi_2 != 0 & wi_2 != 1)> <Delay = 1.58>
+ST_5 : Operation 141 [1/1] (1.58ns)   --->   "%store_ln66 = store i32 %window, i32 %window_41" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 141 'store' 'store_ln66' <Predicate = (wi_2 != 0 & wi_2 != 1)> <Delay = 1.58>
+ST_5 : Operation 142 [1/1] (1.58ns)   --->   "%store_ln66 = store i32 %window_1, i32 %window_40" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 142 'store' 'store_ln66' <Predicate = (wi_2 != 0 & wi_2 != 1)> <Delay = 1.58>
+ST_5 : Operation 143 [1/1] (1.58ns)   --->   "%store_ln66 = store i32 %window_52, i32 %window_33" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 143 'store' 'store_ln66' <Predicate = (wi_2 != 0 & wi_2 != 1)> <Delay = 1.58>
+ST_5 : Operation 144 [1/1] (1.58ns)   --->   "%store_ln66 = store i32 %window_1, i32 %window_30" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 144 'store' 'store_ln66' <Predicate = (wi_2 != 0 & wi_2 != 1)> <Delay = 1.58>
+ST_5 : Operation 145 [1/1] (0.00ns)   --->   "%br_ln66 = br void %arrayidx313.i13.exit" [codes_lab5/HLS_sources_final/templatedFuncs.h:66]   --->   Operation 145 'br' 'br_ln66' <Predicate = (wi_2 != 0 & wi_2 != 1)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 4.48ns
+The critical path consists of the following:
+	'alloca' operation ('wi') [53]  (0 ns)
+	'load' operation ('wi', codes_lab5/HLS_sources_final/templatedFuncs.h:58) on local variable 'wi' [133]  (0 ns)
+	'add' operation ('add_ln66', codes_lab5/HLS_sources_final/templatedFuncs.h:66) [149]  (1.78 ns)
+	'add' operation of DSP[154] ('add_ln66_1', codes_lab5/HLS_sources_final/templatedFuncs.h:66) [151]  (1.65 ns)
+	'mul' operation of DSP[154] ('mul_ln66', codes_lab5/HLS_sources_final/templatedFuncs.h:66) [153]  (1.05 ns)
+
+ <State 2>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[154] ('mul_ln66', codes_lab5/HLS_sources_final/templatedFuncs.h:66) [153]  (1.05 ns)
+
+ <State 3>: 2.1ns
+The critical path consists of the following:
+	'mul' operation of DSP[154] ('mul_ln66', codes_lab5/HLS_sources_final/templatedFuncs.h:66) [153]  (0 ns)
+	'add' operation of DSP[154] ('add_ln66_2', codes_lab5/HLS_sources_final/templatedFuncs.h:66) [154]  (2.1 ns)
+
+ <State 4>: 5.35ns
+The critical path consists of the following:
+	'add' operation of DSP[154] ('add_ln66_2', codes_lab5/HLS_sources_final/templatedFuncs.h:66) [154]  (2.1 ns)
+	'getelementptr' operation ('ifmap_addr', codes_lab5/HLS_sources_final/templatedFuncs.h:66) [156]  (0 ns)
+	'load' operation ('window', codes_lab5/HLS_sources_final/templatedFuncs.h:66) on array 'ifmap' [157]  (3.25 ns)
+
+ <State 5>: 4.84ns
+The critical path consists of the following:
+	'load' operation ('window', codes_lab5/HLS_sources_final/templatedFuncs.h:66) on array 'ifmap' [157]  (3.25 ns)
+	'store' operation ('store_ln66', codes_lab5/HLS_sources_final/templatedFuncs.h:66) of variable 'window', codes_lab5/HLS_sources_final/templatedFuncs.h:66 on local variable 'window' [181]  (1.59 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

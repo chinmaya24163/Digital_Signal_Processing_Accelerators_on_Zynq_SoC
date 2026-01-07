@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Dec 25 17:05:25 2025
+# Process ID: 15980
+# Current directory: C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/hellojio/.autopilot/db/ip_tmp
+# Command line: vivado.exe -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl
+# Log file: C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/hellojio/.autopilot/db/ip_tmp/vivado.log
+# Journal file: C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/hellojio/.autopilot/db/ip_tmp\vivado.jou
+# Running On: L617-PC17, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 16853 MB
+#-----------------------------------------------------------
+source run_vivado_gen_ip.tcl -notrace

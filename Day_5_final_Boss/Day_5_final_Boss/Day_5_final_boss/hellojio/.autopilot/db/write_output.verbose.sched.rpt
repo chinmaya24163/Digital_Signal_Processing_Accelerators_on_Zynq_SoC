@@ -1,0 +1,153 @@
+
+
+================================================================
+== Vitis HLS Report for 'write_output'
+================================================================
+* Date:           Thu Dec 25 17:04:42 2025
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        Day_5_final_boss
+* Solution:       hellojio (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.323 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       13|       13|  0.130 us|  0.130 us|   13|   13|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- write_col  |       11|       11|         3|          1|          1|    10|       yes|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.32>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%o_c = alloca i32 1"   --->   Operation 6 'alloca' 'o_c' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %outputPort_V_last_V, i4 %outputPort_V_strb_V, i4 %outputPort_V_keep_V, i32 %outputPort_V_data_V, void @empty_11, i32 1, i32 1, void @empty_12, i32 0, i32 0, void @empty_9, void @empty_9, void @empty_9, i32 0, i32 0, i32 0, i32 0, void @empty_9, void @empty_9, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.58ns)   --->   "%store_ln19 = store i4 0, i4 %o_c" [codes_lab5/HLS_sources_final/design.cpp:19]   --->   Operation 8 'store' 'store_ln19' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%br_ln19 = br void %for.inc" [codes_lab5/HLS_sources_final/design.cpp:19]   --->   Operation 9 'br' 'br_ln19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%o_c_1 = load i4 %o_c" [codes_lab5/HLS_sources_final/design.cpp:19]   --->   Operation 10 'load' 'o_c_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.30ns)   --->   "%icmp_ln19 = icmp_eq  i4 %o_c_1, i4 10" [codes_lab5/HLS_sources_final/design.cpp:19]   --->   Operation 11 'icmp' 'icmp_ln19' <Predicate = true> <Delay = 1.30> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 10, i64 10, i64 10"   --->   Operation 12 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.73ns)   --->   "%add_ln19 = add i4 %o_c_1, i4 1" [codes_lab5/HLS_sources_final/design.cpp:19]   --->   Operation 13 'add' 'add_ln19' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln19 = br i1 %icmp_ln19, void %for.inc.split, void %for.end" [codes_lab5/HLS_sources_final/design.cpp:19]   --->   Operation 14 'br' 'br_ln19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln19 = zext i4 %o_c_1" [codes_lab5/HLS_sources_final/design.cpp:19]   --->   Operation 15 'zext' 'zext_ln19' <Predicate = (!icmp_ln19)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%outputData_addr = getelementptr i32 %outputData, i64 0, i64 %zext_ln19" [codes_lab5/HLS_sources_final/design.cpp:21]   --->   Operation 16 'getelementptr' 'outputData_addr' <Predicate = (!icmp_ln19)> <Delay = 0.00>
+ST_1 : Operation 17 [2/2] (2.32ns)   --->   "%localWrite_data = load i4 %outputData_addr" [codes_lab5/HLS_sources_final/design.cpp:21]   --->   Operation 17 'load' 'localWrite_data' <Predicate = (!icmp_ln19)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 18 [1/1] (1.30ns)   --->   "%localWrite_last_V = icmp_eq  i4 %o_c_1, i4 9" [codes_lab5/HLS_sources_final/design.cpp:22]   --->   Operation 18 'icmp' 'localWrite_last_V' <Predicate = (!icmp_ln19)> <Delay = 1.30> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (1.58ns)   --->   "%store_ln19 = store i4 %add_ln19, i4 %o_c" [codes_lab5/HLS_sources_final/design.cpp:19]   --->   Operation 19 'store' 'store_ln19' <Predicate = (!icmp_ln19)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 2.32>
+ST_2 : Operation 20 [1/2] (2.32ns)   --->   "%localWrite_data = load i4 %outputData_addr" [codes_lab5/HLS_sources_final/design.cpp:21]   --->   Operation 20 'load' 'localWrite_data' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%bitcast_ln304 = bitcast i32 %localWrite_data"   --->   Operation 21 'bitcast' 'bitcast_ln304' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [2/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %outputPort_V_data_V, i4 %outputPort_V_keep_V, i4 %outputPort_V_strb_V, i1 %outputPort_V_last_V, i32 %bitcast_ln304, i4 15, i4 0, i1 %localWrite_last_V"   --->   Operation 22 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%ret_ln26 = ret" [codes_lab5/HLS_sources_final/design.cpp:26]   --->   Operation 27 'ret' 'ret_ln26' <Predicate = (icmp_ln19)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specpipeline_ln20 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_9" [codes_lab5/HLS_sources_final/design.cpp:20]   --->   Operation 23 'specpipeline' 'specpipeline_ln20' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%specloopname_ln19 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [codes_lab5/HLS_sources_final/design.cpp:19]   --->   Operation 24 'specloopname' 'specloopname_ln19' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %outputPort_V_data_V, i4 %outputPort_V_keep_V, i4 %outputPort_V_strb_V, i1 %outputPort_V_last_V, i32 %bitcast_ln304, i4 15, i4 0, i1 %localWrite_last_V"   --->   Operation 25 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln19 = br void %for.inc" [codes_lab5/HLS_sources_final/design.cpp:19]   --->   Operation 26 'br' 'br_ln19' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.32ns
+The critical path consists of the following:
+	'alloca' operation ('o_c') [6]  (0 ns)
+	'load' operation ('o_c', codes_lab5/HLS_sources_final/design.cpp:19) on local variable 'o_c' [11]  (0 ns)
+	'add' operation ('add_ln19', codes_lab5/HLS_sources_final/design.cpp:19) [14]  (1.74 ns)
+	'store' operation ('store_ln19', codes_lab5/HLS_sources_final/design.cpp:19) of variable 'add_ln19', codes_lab5/HLS_sources_final/design.cpp:19 on local variable 'o_c' [25]  (1.59 ns)
+
+ <State 2>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('localWrite.data', codes_lab5/HLS_sources_final/design.cpp:21) on array 'outputData' [21]  (2.32 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

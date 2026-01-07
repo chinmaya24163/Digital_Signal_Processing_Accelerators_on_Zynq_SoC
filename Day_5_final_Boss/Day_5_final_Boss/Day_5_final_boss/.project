@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Day_5_final_boss</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<triggers>clean,full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.ScannerConfigBuilder</name>
+			<triggers>full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.autoesl.autopilot.ui.AutopilotNature</nature>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>source</name>
+			<type>2</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/.apc/.src</location>
+		</link>
+		<link>
+			<name>testbench</name>
+			<type>2</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/.apc/.tb</location>
+		</link>
+		<link>
+			<name>hellojio/constraints</name>
+			<type>2</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/hellojio/.tcls</location>
+		</link>
+		<link>
+			<name>sol5/constraints</name>
+			<type>2</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/sol5/.tcls</location>
+		</link>
+		<link>
+			<name>source/cnn_weights.h</name>
+			<type>1</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/codes_lab5 - Copy/HLS_sources_final/cnn_weights.h</location>
+		</link>
+		<link>
+			<name>source/design.cpp</name>
+			<type>1</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/codes_lab5 - Copy/HLS_sources_final/design.cpp</location>
+		</link>
+		<link>
+			<name>source/header.h</name>
+			<type>1</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/codes_lab5 - Copy/HLS_sources_final/header.h</location>
+		</link>
+		<link>
+			<name>source/templatedFuncs.h</name>
+			<type>1</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/codes_lab5 - Copy/HLS_sources_final/templatedFuncs.h</location>
+		</link>
+		<link>
+			<name>testbench/f2_output.h</name>
+			<type>1</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/codes_lab5 - Copy/HLS_sources_final/f2_output.h</location>
+		</link>
+		<link>
+			<name>testbench/input_tensor.h</name>
+			<type>1</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/codes_lab5 - Copy/HLS_sources_final/input_tensor.h</location>
+		</link>
+		<link>
+			<name>testbench/tb.cpp</name>
+			<type>1</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/codes_lab5 - Copy/HLS_sources_final/tb.cpp</location>
+		</link>
+		<link>
+			<name>hellojio/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/hellojio/hellojio.directive</location>
+		</link>
+		<link>
+			<name>hellojio/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/hellojio/directives.tcl</location>
+		</link>
+		<link>
+			<name>hellojio/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/hellojio/script.tcl</location>
+		</link>
+		<link>
+			<name>sol5/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/sol5/sol5.directive</location>
+		</link>
+		<link>
+			<name>sol5/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/sol5/directives.tcl</location>
+		</link>
+		<link>
+			<name>sol5/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/sol5/script.tcl</location>
+		</link>
+	</linkedResources>
+</projectDescription>

@@ -1,0 +1,36 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'exam2' on host 'l617-pc17' (Windows NT_amd64 version 6.2) on Thu Dec 25 17:15:31 +0530 2025
+INFO: [HLS 200-10] In directory 'C:/Users/exam2/Desktop/Day_5_final_Boss'
+Sourcing Tcl script 'C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/hellojio/csim.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/hellojio/csim.tcl
+INFO: [HLS 200-1510] Running: open_project Day_5_final_boss 
+INFO: [HLS 200-10] Opening project 'C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss'.
+INFO: [HLS 200-1510] Running: set_top HW_accel 
+INFO: [HLS 200-1510] Running: add_files codes_lab5 - Copy/HLS_sources_final/cnn_weights.h 
+ERROR: [HLS 200-101] 'add_files': Too many positional arguments specified.
+SYNTAX 
+  add_files <src_files> [OPTIONS]
+    src_files :  <string>  (required)
+    -blackbox[=true|*false*]
+    -cflags <string> 
+    -csimflags <string> 
+    -tb[=true|*false*]
+
+SEE ALSO
+  www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=vitis+doc;d=rpg1583259720879.html
+
+command 'add_files' returned error code
+    while executing
+"add_files codes_lab5 - Copy/HLS_sources_final/cnn_weights.h"
+    (file "C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/hellojio/csim.tcl" line 8)
+    invoked from within
+"source C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/hellojio/csim.tcl"
+    invoked from within
+"hls::main C:/Users/exam2/Desktop/Day_5_final_Boss/Day_5_final_boss/hellojio/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.278 seconds; peak allocated memory: 0.977 MB.

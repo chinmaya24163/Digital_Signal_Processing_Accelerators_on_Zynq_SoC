@@ -1,0 +1,431 @@
+
+
+================================================================
+== Synthesis Summary Report of 'HW_accel'
+================================================================
++ General Information: 
+    * Date:           Thu Dec 25 15:19:42 2025
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        Day_5_final_boss
+    * Solution:       sol5 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+-----------+-------------+-------------+-----+
+    |                        Modules                        | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |          |           |             |             |     |
+    |                        & Loops                        | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP    |      FF     |     LUT     | URAM|
+    +-------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+-----------+-------------+-------------+-----+
+    |+ HW_accel*                                            |     -|  0.04|   547746|  5.477e+06|         -|   433326|     -|  dataflow|  88 (31%)|  202 (91%)|  35460 (33%)|  38757 (72%)|    -|
+    | + read_input                                          |     -|  0.32|      786|  7.860e+03|         -|      786|     -|        no|         -|          -|     65 (~0%)|    180 (~0%)|    -|
+    |  o readLoop_row_readLoop_col                          |     -|  7.30|      784|  7.840e+03|         2|        1|   784|       yes|         -|          -|            -|            -|    -|
+    | + conv1                                               |     -|  0.04|   113633|  1.136e+06|         -|   113633|     -|        no|   1 (~0%)|   46 (20%)|    5904 (5%)|   7399 (13%)|    -|
+    |  o C1_fil_load                                        |     -|  7.30|   113632|  1.136e+06|     28408|        -|     4|        no|         -|          -|            -|            -|    -|
+    |   + conv1_Pipeline_Fil_load_r_Fil_load_c              |     -|  0.39|       12|    120.000|         -|       12|     -|        no|   1 (~0%)|          -|    316 (~0%)|    285 (~0%)|    -|
+    |    o Fil_load_r_Fil_load_c                            |     -|  7.30|       10|    100.000|         3|        1|     9|       yes|         -|          -|            -|            -|    -|
+    |   o VS_HS                                             |     -|  7.30|    28392|  2.839e+05|        42|        -|   676|        no|         -|          -|            -|            -|    -|
+    |    + conv1_Pipeline_loadWin1_VITIS_LOOP_50_1          |     -|  0.32|       12|    120.000|         -|       12|     -|        no|         -|          -|    320 (~0%)|    273 (~0%)|    -|
+    |     o loadWin1_VITIS_LOOP_50_1                        |     -|  7.30|       10|    100.000|         3|        1|     9|       yes|         -|          -|            -|            -|    -|
+    |    + conv2D_1_s                                       |    II|  0.04|       23|    230.000|         -|        1|     -|       yes|         -|   45 (20%)|    4444 (4%)|   6463 (12%)|    -|
+    | + conv2                                               |     -|  0.04|   433325|  4.333e+06|         -|   433325|     -|        no|   1 (~0%)|   46 (20%)|    9362 (8%)|   8352 (15%)|    -|
+    |  o C1_fil_load                                        |     -|  7.30|   433324|  4.333e+06|    108331|        -|     4|        no|         -|          -|            -|            -|    -|
+    |   + conv2_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c  |     -|  0.31|       39|    390.000|         -|       39|     -|        no|   1 (~0%)|          -|    1205 (1%)|     703 (1%)|    -|
+    |    o Fil_load_ch_Fil_load_r_Fil_load_c                |     -|  7.30|       37|    370.000|         3|        1|    36|       yes|         -|          -|            -|            -|    -|
+    |   o inCh_VS_HS                                        |     -|  7.30|   108288|  1.083e+06|        47|        -|  2304|        no|         -|          -|            -|            -|    -|
+    |    + conv2_Pipeline_loadWin1_VITIS_LOOP_50_1          |     -|  0.26|       14|    140.000|         -|       14|     -|        no|         -|    1 (~0%)|    502 (~0%)|    349 (~0%)|    -|
+    |     o loadWin1_VITIS_LOOP_50_1                        |     -|  7.30|       12|    120.000|         5|        1|     9|       yes|         -|          -|            -|            -|    -|
+    |    + conv2D_4_s                                       |    II|  0.04|       24|    240.000|         -|        1|     -|       yes|         -|   45 (20%)|    5886 (5%)|   6643 (12%)|    -|
+    | + maxPool_4_24_12_s                                   |     -|  0.19|      585|  5.850e+03|         -|      585|     -|        no|         -|          -|    589 (~0%)|     716 (1%)|    -|
+    |  o MP_ch_MP_r_MP_c                                    |     -|  7.30|      583|  5.830e+03|         9|        1|   576|       yes|         -|          -|            -|            -|    -|
+    | + conv3                                               |     -|  0.04|    70573|  7.057e+05|         -|    70573|     -|        no|   1 (~0%)|   45 (20%)|    9173 (8%)|   8268 (15%)|    -|
+    |  o C1_fil_load                                        |     -|  7.30|    70572|  7.057e+05|     17643|        -|     4|        no|         -|          -|            -|            -|    -|
+    |   + conv3_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c  |     -|  0.31|       39|    390.000|         -|       39|     -|        no|   1 (~0%)|          -|    1205 (1%)|     703 (1%)|    -|
+    |    o Fil_load_ch_Fil_load_r_Fil_load_c                |     -|  7.30|       37|    370.000|         3|        1|    36|       yes|         -|          -|            -|            -|    -|
+    |   o inCh_VS_HS                                        |     -|  7.30|    17600|  1.760e+05|        44|        -|   400|        no|         -|          -|            -|            -|    -|
+    |    + conv3_Pipeline_loadWin1_VITIS_LOOP_50_1          |     -|  0.32|       12|    120.000|         -|       12|     -|        no|         -|          -|    328 (~0%)|    287 (~0%)|    -|
+    |     o loadWin1_VITIS_LOOP_50_1                        |     -|  7.30|       10|    100.000|         3|        1|     9|       yes|         -|          -|            -|            -|    -|
+    |    + conv2D_4_s                                       |    II|  0.04|       24|    240.000|         -|        1|     -|       yes|         -|   45 (20%)|    5886 (5%)|   6643 (12%)|    -|
+    | + maxPool_4_10_5_s                                    |     -|  0.19|      108|  1.080e+03|         -|      108|     -|        no|         -|          -|    559 (~0%)|     669 (1%)|    -|
+    |  o MP_ch_MP_r_MP_c                                    |     -|  7.30|      106|  1.060e+03|         8|        1|   100|       yes|         -|          -|            -|            -|    -|
+    | + fc_layer117                                         |     -|  0.04|     2210|  2.210e+04|         -|     2210|     -|        no|  28 (10%)|   40 (18%)|    5254 (4%)|   7581 (14%)|    -|
+    |  + FC_layer_100_16_true_s                             |     -|  0.04|     2209|  2.209e+04|         -|     2209|     -|        no|  28 (10%)|   40 (18%)|    5250 (4%)|   7556 (14%)|    -|
+    |   o out_loop                                          |     -|  7.30|     2208|  2.208e+04|      1104|        -|     2|        no|         -|          -|            -|            -|    -|
+    |    o VITIS_LOOP_216_1                                 |     -|  7.30|     1100|  1.100e+04|        11|        -|   100|        no|         -|          -|            -|            -|    -|
+    | + fc_layer2                                           |     -|  0.04|      363|  3.630e+03|         -|      363|     -|        no|    8 (2%)|   25 (11%)|    2812 (2%)|    4136 (7%)|    -|
+    |  o out_loop                                           |     -|  7.30|      362|  3.620e+03|       181|        -|     2|        no|         -|          -|            -|            -|    -|
+    |   o VITIS_LOOP_216_1                                  |     -|  7.30|      176|  1.760e+03|        11|        -|    16|        no|         -|          -|            -|            -|    -|
+    | + write_output                                        |     -|  3.98|       13|    130.000|         -|       13|     -|        no|         -|          -|     10 (~0%)|     86 (~0%)|    -|
+    |  o write_col                                          |     -|  7.30|       11|    110.000|         3|        1|    10|       yes|         -|          -|            -|            -|    -|
+    +-------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+-----------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++------------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface  | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++------------+---------------+-------+-------+-------+--------+-------+--------+
+| inputPort  | both          | 32    | 4     | 1     | 1      | 4     | 1      |
+| outputPort | both          | 32    | 4     | 1     | 1      | 4     | 1      |
++------------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+---------------------------------------+
+| Argument   | Direction | Datatype                              |
++------------+-----------+---------------------------------------+
+| inputPort  | in        | stream<hls::axis<float, 0, 0, 0>, 0>& |
+| outputPort | out       | stream<hls::axis<float, 0, 0, 0>, 0>& |
++------------+-----------+---------------------------------------+
+
+* SW-to-HW Mapping
++------------+--------------+-----------+
+| Argument   | HW Interface | HW Type   |
++------------+--------------+-----------+
+| inputPort  | inputPort    | interface |
+| outputPort | outputPort   | interface |
++------------+--------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------------------+-----+--------+----------------+------+---------+---------+
+| Name                                                 | DSP | Pragma | Variable       | Op   | Impl    | Latency |
++------------------------------------------------------+-----+--------+----------------+------+---------+---------+
+| + HW_accel                                           | 202 |        |                |      |         |         |
+|   fc1_output_U                                       | -   |        | fc1_output     | fifo | srl     | 0       |
+|   fc1_output_1_U                                     | -   |        | fc1_output_1   | fifo | srl     | 0       |
+|   fc1_output_2_U                                     | -   |        | fc1_output_2   | fifo | srl     | 0       |
+|   fc1_output_3_U                                     | -   |        | fc1_output_3   | fifo | srl     | 0       |
+|   fc1_output_4_U                                     | -   |        | fc1_output_4   | fifo | srl     | 0       |
+|   fc1_output_5_U                                     | -   |        | fc1_output_5   | fifo | srl     | 0       |
+|   fc1_output_6_U                                     | -   |        | fc1_output_6   | fifo | srl     | 0       |
+|   fc1_output_7_U                                     | -   |        | fc1_output_7   | fifo | srl     | 0       |
+|   fc1_output_8_U                                     | -   |        | fc1_output_8   | fifo | srl     | 0       |
+|   fc1_output_9_U                                     | -   |        | fc1_output_9   | fifo | srl     | 0       |
+|   fc1_output_10_U                                    | -   |        | fc1_output_10  | fifo | srl     | 0       |
+|   fc1_output_11_U                                    | -   |        | fc1_output_11  | fifo | srl     | 0       |
+|   fc1_output_12_U                                    | -   |        | fc1_output_12  | fifo | srl     | 0       |
+|   fc1_output_13_U                                    | -   |        | fc1_output_13  | fifo | srl     | 0       |
+|   fc1_output_14_U                                    | -   |        | fc1_output_14  | fifo | srl     | 0       |
+|   fc1_output_15_U                                    | -   |        | fc1_output_15  | fifo | srl     | 0       |
+|  + read_input                                        | 0   |        |                |      |         |         |
+|    add_ln7_1_fu_119_p2                               | -   |        | add_ln7_1      | add  | fabric  | 0       |
+|    add_ln7_fu_131_p2                                 | -   |        | add_ln7        | add  | fabric  | 0       |
+|    add_ln8_fu_163_p2                                 | -   |        | add_ln8        | add  | fabric  | 0       |
+|  + conv1                                             | 46  |        |                |      |         |         |
+|    add_ln144_1_fu_378_p2                             | -   |        | add_ln144_1    | add  | fabric  | 0       |
+|    add_ln144_fu_390_p2                               | -   |        | add_ln144      | add  | fabric  | 0       |
+|    add_ln150_3_fu_478_p2                             | -   |        | add_ln150_3    | add  | fabric  | 0       |
+|    add_ln150_fu_520_p2                               | -   |        | add_ln150      | add  | fabric  | 0       |
+|    ama_addmuladd_7ns_5ns_5ns_5ns_12_4_1_U91          | 1   |        | add_ln160      | add  | dsp48   | 3       |
+|    ama_addmuladd_7ns_5ns_5ns_5ns_12_4_1_U91          | 1   |        | mul_ln160      | mul  | dsp48   | 3       |
+|    ama_addmuladd_7ns_5ns_5ns_5ns_12_4_1_U91          | 1   |        | add_ln160_1    | add  | dsp48   | 3       |
+|    add_ln152_fu_554_p2                               | -   |        | add_ln152      | add  | fabric  | 0       |
+|   + conv1_Pipeline_Fil_load_r_Fil_load_c             | 0   |        |                |      |         |         |
+|     empty_146_fu_348_p2                              | -   |        | empty_146      | sub  | fabric  | 0       |
+|     add_ln23_3_fu_360_p2                             | -   |        | add_ln23_3     | add  | fabric  | 0       |
+|     add_ln23_fu_369_p2                               | -   |        | add_ln23       | add  | fabric  | 0       |
+|     p_mid1_fu_405_p2                                 | -   |        | p_mid1         | sub  | fabric  | 0       |
+|     add_ln29_fu_431_p2                               | -   |        | add_ln29       | add  | fabric  | 0       |
+|     add_ln30_fu_441_p2                               | -   |        | add_ln30       | add  | fabric  | 0       |
+|     add_ln26_fu_447_p2                               | -   |        | add_ln26       | add  | fabric  | 0       |
+|   + conv1_Pipeline_loadWin1_VITIS_LOOP_50_1          | 0   |        |                |      |         |         |
+|     add_ln49_6_fu_347_p2                             | -   |        | add_ln49_6     | add  | fabric  | 0       |
+|     add_ln49_fu_359_p2                               | -   |        | add_ln49       | add  | fabric  | 0       |
+|     add_ln49_5_fu_391_p2                             | -   |        | add_ln49_5     | add  | fabric  | 0       |
+|     add_ln52_fu_401_p2                               | -   |        | add_ln52       | add  | fabric  | 0       |
+|     add_ln50_fu_407_p2                               | -   |        | add_ln50       | add  | fabric  | 0       |
+|   + conv2D_1_s                                       | 45  |        |                |      |         |         |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U60                | 3   |        | mul            | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U61                | 3   |        | mul_s          | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U62                | 3   |        | mul_4          | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U63                | 3   |        | mul_1          | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U64                | 3   |        | mul_1_1        | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U65                | 3   |        | mul_1_2        | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U66                | 3   |        | mul_2          | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U67                | 3   |        | mul_2_1        | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U68                | 3   |        | mul_2_2        | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U51               | 2   |        | s0             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U52               | 2   |        | s1             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U53               | 2   |        | s2             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U54               | 2   |        | s3             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U55               | 2   |        | s4             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U56               | 2   |        | s5             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U57               | 2   |        | s6             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U58               | 2   |        | s7             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U59               | 2   |        | sum            | fadd | fulldsp | 4       |
+|  + conv2                                             | 46  |        |                |      |         |         |
+|    add_ln144_fu_736_p2                               | -   |        | add_ln144      | add  | fabric  | 0       |
+|    sub_ln156_fu_923_p2                               | -   |        | sub_ln156      | sub  | fabric  | 0       |
+|    add_ln148_2_fu_1047_p2                            | -   |        | add_ln148_2    | add  | fabric  | 0       |
+|    add_ln148_fu_1053_p2                              | -   |        | add_ln148      | add  | fabric  | 0       |
+|    mul_3ns_6ns_8_1_1_U271                            | -   |        | mul_ln52       | mul  | auto    | 0       |
+|    add_ln150_fu_1145_p2                              | -   |        | add_ln150      | add  | fabric  | 0       |
+|    add_ln156_fu_1359_p2                              | -   |        | add_ln156      | add  | fabric  | 0       |
+|    add_ln152_fu_1528_p2                              | -   |        | add_ln152      | add  | fabric  | 0       |
+|    add_ln150_2_fu_1533_p2                            | -   |        | add_ln150_2    | add  | fabric  | 0       |
+|   + conv2_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c | 0   |        |                |      |         |         |
+|     empty_124_fu_1088_p2                             | -   |        | empty_124      | sub  | fabric  | 0       |
+|     add_ln19_2_fu_1100_p2                            | -   |        | add_ln19_2     | add  | fabric  | 0       |
+|     add_ln19_fu_1115_p2                              | -   |        | add_ln19       | add  | fabric  | 0       |
+|     add_ln23_fu_1201_p2                              | -   |        | add_ln23       | add  | fabric  | 0       |
+|     p_mid1_fu_1237_p2                                | -   |        | p_mid1         | sub  | fabric  | 0       |
+|     add_ln29_2_fu_1255_p2                            | -   |        | add_ln29_2     | add  | fabric  | 0       |
+|     add_ln29_fu_1328_p2                              | -   |        | add_ln29       | add  | fabric  | 0       |
+|     add_ln30_fu_1338_p2                              | -   |        | add_ln30       | add  | fabric  | 0       |
+|     add_ln26_fu_1264_p2                              | -   |        | add_ln26       | add  | fabric  | 0       |
+|     add_ln23_2_fu_1270_p2                            | -   |        | add_ln23_2     | add  | fabric  | 0       |
+|   + conv2_Pipeline_loadWin1_VITIS_LOOP_50_1          | 1   |        |                |      |         |         |
+|     add_ln49_4_fu_353_p2                             | -   |        | add_ln49_4     | add  | fabric  | 0       |
+|     add_ln49_fu_365_p2                               | -   |        | add_ln49       | add  | fabric  | 0       |
+|     add_ln49_3_fu_397_p2                             | -   |        | add_ln49_3     | add  | fabric  | 0       |
+|     ama_addmuladd_8ns_5ns_5ns_5ns_12_4_1_U171        | 1   |        | add_ln52_3     | add  | dsp48   | 3       |
+|     ama_addmuladd_8ns_5ns_5ns_5ns_12_4_1_U171        | 1   |        | mul_ln50       | mul  | dsp48   | 3       |
+|     add_ln52_fu_431_p2                               | -   |        | add_ln52       | add  | fabric  | 0       |
+|     ama_addmuladd_8ns_5ns_5ns_5ns_12_4_1_U171        | 1   |        | add_ln52_4     | add  | dsp48   | 3       |
+|     add_ln50_fu_407_p2                               | -   |        | add_ln50       | add  | fabric  | 0       |
+|   + conv2D_4_s (grp_conv2D_4_s_fu_666)               | 45  |        |                |      |         |         |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U204               | 3   |        | mul            | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U205               | 3   |        | mul_s          | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U206               | 3   |        | mul_3          | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U207               | 3   |        | mul_1          | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U208               | 3   |        | mul_1_1        | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U209               | 3   |        | mul_1_2        | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U210               | 3   |        | mul_2          | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U211               | 3   |        | mul_2_1        | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U212               | 3   |        | mul_2_2        | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U195              | 2   |        | s0             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U196              | 2   |        | s1             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U197              | 2   |        | s2             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U198              | 2   |        | s3             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U199              | 2   |        | s4             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U200              | 2   |        | s5             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U201              | 2   |        | s6             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U202              | 2   |        | s7             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U203              | 2   |        | sum            | fadd | fulldsp | 4       |
+|  + maxPool_4_24_12_s                                 | 0   |        |                |      |         |         |
+|    add_ln181_1_fu_217_p2                             | -   |        | add_ln181_1    | add  | fabric  | 0       |
+|    add_ln181_fu_281_p2                               | -   |        | add_ln181      | add  | fabric  | 0       |
+|    sub_ln185_fu_332_p2                               | -   |        | sub_ln185      | sub  | fabric  | 0       |
+|    sub_ln188_fu_366_p2                               | -   |        | sub_ln188      | sub  | fabric  | 0       |
+|    add_ln182_fu_401_p2                               | -   |        | add_ln182      | add  | fabric  | 0       |
+|    add_ln185_fu_427_p2                               | -   |        | add_ln185      | add  | fabric  | 0       |
+|    add_ln186_fu_459_p2                               | -   |        | add_ln186      | add  | fabric  | 0       |
+|    add_ln188_fu_495_p2                               | -   |        | add_ln188      | add  | fabric  | 0       |
+|    add_ln183_fu_519_p2                               | -   |        | add_ln183      | add  | fabric  | 0       |
+|    add_ln182_1_fu_232_p2                             | -   |        | add_ln182_1    | add  | fabric  | 0       |
+|  + conv3                                             | 45  |        |                |      |         |         |
+|    add_ln144_fu_736_p2                               | -   |        | add_ln144      | add  | fabric  | 0       |
+|    add_ln156_fu_923_p2                               | -   |        | add_ln156      | add  | fabric  | 0       |
+|    add_ln148_1_fu_1043_p2                            | -   |        | add_ln148_1    | add  | fabric  | 0       |
+|    add_ln148_fu_1049_p2                              | -   |        | add_ln148      | add  | fabric  | 0       |
+|    sub_ln52_fu_1356_p2                               | -   |        | sub_ln52       | sub  | fabric  | 0       |
+|    add_ln150_fu_1087_p2                              | -   |        | add_ln150      | add  | fabric  | 0       |
+|    add_ln156_1_fu_1119_p2                            | -   |        | add_ln156_1    | add  | fabric  | 0       |
+|    add_ln152_fu_1532_p2                              | -   |        | add_ln152      | add  | fabric  | 0       |
+|    add_ln150_1_fu_1537_p2                            | -   |        | add_ln150_1    | add  | fabric  | 0       |
+|   + conv3_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c | 0   |        |                |      |         |         |
+|     empty_75_fu_1088_p2                              | -   |        | empty_75       | sub  | fabric  | 0       |
+|     add_ln19_1_fu_1100_p2                            | -   |        | add_ln19_1     | add  | fabric  | 0       |
+|     add_ln19_fu_1115_p2                              | -   |        | add_ln19       | add  | fabric  | 0       |
+|     add_ln23_fu_1201_p2                              | -   |        | add_ln23       | add  | fabric  | 0       |
+|     p_mid1_fu_1237_p2                                | -   |        | p_mid1         | sub  | fabric  | 0       |
+|     add_ln29_1_fu_1255_p2                            | -   |        | add_ln29_1     | add  | fabric  | 0       |
+|     add_ln29_fu_1328_p2                              | -   |        | add_ln29       | add  | fabric  | 0       |
+|     add_ln30_fu_1338_p2                              | -   |        | add_ln30       | add  | fabric  | 0       |
+|     add_ln26_fu_1264_p2                              | -   |        | add_ln26       | add  | fabric  | 0       |
+|     add_ln23_1_fu_1270_p2                            | -   |        | add_ln23_1     | add  | fabric  | 0       |
+|   + conv3_Pipeline_loadWin1_VITIS_LOOP_50_1          | 0   |        |                |      |         |         |
+|     add_ln49_2_fu_359_p2                             | -   |        | add_ln49_2     | add  | fabric  | 0       |
+|     add_ln49_fu_371_p2                               | -   |        | add_ln49       | add  | fabric  | 0       |
+|     add_ln49_1_fu_403_p2                             | -   |        | add_ln49_1     | add  | fabric  | 0       |
+|     add_ln52_1_fu_413_p2                             | -   |        | add_ln52_1     | add  | fabric  | 0       |
+|     add_ln52_fu_431_p2                               | -   |        | add_ln52       | add  | fabric  | 0       |
+|     add_ln50_fu_437_p2                               | -   |        | add_ln50       | add  | fabric  | 0       |
+|   + conv2D_4_s (grp_conv2D_4_s_fu_666)               | 45  |        |                |      |         |         |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U204               | 3   |        | mul            | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U205               | 3   |        | mul_s          | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U206               | 3   |        | mul_3          | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U207               | 3   |        | mul_1          | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U208               | 3   |        | mul_1_1        | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U209               | 3   |        | mul_1_2        | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U210               | 3   |        | mul_2          | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U211               | 3   |        | mul_2_1        | fmul | maxdsp  | 3       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U212               | 3   |        | mul_2_2        | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U195              | 2   |        | s0             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U196              | 2   |        | s1             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U197              | 2   |        | s2             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U198              | 2   |        | s3             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U199              | 2   |        | s4             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U200              | 2   |        | s5             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U201              | 2   |        | s6             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U202              | 2   |        | s7             | fadd | fulldsp | 4       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U203              | 2   |        | sum            | fadd | fulldsp | 4       |
+|  + maxPool_4_10_5_s                                  | 0   |        |                |      |         |         |
+|    add_ln181_2_fu_230_p2                             | -   |        | add_ln181_2    | add  | fabric  | 0       |
+|    add_ln181_fu_245_p2                               | -   |        | add_ln181      | add  | fabric  | 0       |
+|    add_ln185_fu_305_p2                               | -   |        | add_ln185      | add  | fabric  | 0       |
+|    add_ln182_fu_339_p2                               | -   |        | add_ln182      | add  | fabric  | 0       |
+|    add_ln185_2_fu_365_p2                             | -   |        | add_ln185_2    | add  | fabric  | 0       |
+|    add_ln186_fu_393_p2                               | -   |        | add_ln186      | add  | fabric  | 0       |
+|    add_ln183_fu_431_p2                               | -   |        | add_ln183      | add  | fabric  | 0       |
+|    add_ln182_2_fu_437_p2                             | -   |        | add_ln182_2    | add  | fabric  | 0       |
+|  + fc_layer117                                       | 40  |        |                |      |         |         |
+|   + FC_layer_100_16_true_s                           | 40  |        |                |      |         |         |
+|     add_ln213_fu_586_p2                              | -   |        | add_ln213      | add  | fabric  | 0       |
+|     mul_4ns_8ns_11_1_1_U417                          | -   |        | mul_ln230      | mul  | auto    | 0       |
+|     mul_4ns_8ns_11_1_1_U418                          | -   |        | mul_ln230_1    | mul  | auto    | 0       |
+|     mul_4ns_8ns_11_1_1_U419                          | -   |        | mul_ln230_2    | mul  | auto    | 0       |
+|     mul_4ns_8ns_11_1_1_U420                          | -   |        | mul_ln230_3    | mul  | auto    | 0       |
+|     mul_4ns_8ns_11_1_1_U421                          | -   |        | mul_ln230_4    | mul  | auto    | 0       |
+|     mul_4ns_8ns_11_1_1_U422                          | -   |        | mul_ln230_5    | mul  | auto    | 0       |
+|     mul_4ns_8ns_11_1_1_U423                          | -   |        | mul_ln230_6    | mul  | auto    | 0       |
+|     mul_4ns_8ns_11_1_1_U424                          | -   |        | mul_ln230_7    | mul  | auto    | 0       |
+|     add_ln230_fu_863_p2                              | -   |        | add_ln230      | add  | fabric  | 0       |
+|     add_ln230_5_fu_873_p2                            | -   |        | add_ln230_5    | add  | fabric  | 0       |
+|     add_ln230_6_fu_883_p2                            | -   |        | add_ln230_6    | add  | fabric  | 0       |
+|     add_ln230_7_fu_893_p2                            | -   |        | add_ln230_7    | add  | fabric  | 0       |
+|     add_ln230_8_fu_903_p2                            | -   |        | add_ln230_8    | add  | fabric  | 0       |
+|     add_ln230_9_fu_913_p2                            | -   |        | add_ln230_9    | add  | fabric  | 0       |
+|     add_ln230_10_fu_923_p2                           | -   |        | add_ln230_10   | add  | fabric  | 0       |
+|     add_ln230_11_fu_933_p2                           | -   |        | add_ln230_11   | add  | fabric  | 0       |
+|     add_ln216_fu_949_p2                              | -   |        | add_ln216      | add  | fabric  | 0       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U401               | 3   |        | mul            | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U393              | 2   |        | input_assign   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U402               | 3   |        | mul31_1        | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U394              | 2   |        | input_assign_1 | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U403               | 3   |        | mul31_2        | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U395              | 2   |        | input_assign_2 | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U404               | 3   |        | mul31_3        | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U396              | 2   |        | input_assign_3 | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U405               | 3   |        | mul31_4        | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U397              | 2   |        | input_assign_4 | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U406               | 3   |        | mul31_5        | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U398              | 2   |        | input_assign_5 | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U407               | 3   |        | mul31_6        | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U399              | 2   |        | input_assign_6 | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U408               | 3   |        | mul31_7        | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U400              | 2   |        | input_assign_7 | fadd | fulldsp | 4       |
+|  + fc_layer2                                         | 25  |        |                |      |         |         |
+|    add_ln213_fu_464_p2                               | -   |        | add_ln213      | add  | fabric  | 0       |
+|    empty_26_fu_491_p2                                | -   |        | empty_26       | add  | fabric  | 0       |
+|    empty_27_fu_502_p2                                | -   |        | empty_27       | add  | fabric  | 0       |
+|    empty_28_fu_513_p2                                | -   |        | empty_28       | add  | fabric  | 0       |
+|    empty_29_fu_524_p2                                | -   |        | empty_29       | add  | fabric  | 0       |
+|    add_ln230_fu_587_p2                               | -   |        | add_ln230      | add  | fabric  | 0       |
+|    add_ln230_1_fu_597_p2                             | -   |        | add_ln230_1    | add  | fabric  | 0       |
+|    add_ln230_2_fu_607_p2                             | -   |        | add_ln230_2    | add  | fabric  | 0       |
+|    add_ln230_3_fu_617_p2                             | -   |        | add_ln230_3    | add  | fabric  | 0       |
+|    add_ln230_4_fu_627_p2                             | -   |        | add_ln230_4    | add  | fabric  | 0       |
+|    add_ln216_fu_643_p2                               | -   |        | add_ln216      | add  | fabric  | 0       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U435                | 3   |        | mul31_i        | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U430               | 2   |        | add32_i        | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U436                | 3   |        | mul31_1_i      | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U431               | 2   |        | add32_1_i      | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U437                | 3   |        | mul31_2_i      | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U432               | 2   |        | add32_2_i      | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U438                | 3   |        | mul31_3_i      | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U433               | 2   |        | add32_3_i      | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U439                | 3   |        | mul31_4_i      | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U434               | 2   |        | add32_4_i      | fadd | fulldsp | 4       |
+|  + write_output                                      | 0   |        |                |      |         |         |
+|    add_ln19_fu_99_p2                                 | -   |        | add_ln19       | add  | fabric  | 0       |
++------------------------------------------------------+-----+--------+----------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++------------------------------------------------------+------+------+--------+--------------+---------+------+---------+
+| Name                                                 | BRAM | URAM | Pragma | Variable     | Storage | Impl | Latency |
++------------------------------------------------------+------+------+--------+--------------+---------+------+---------+
+| + HW_accel                                           | 88   | 0    |        |              |         |      |         |
+|   mem_1_0_U                                          | 4    | -    |        | mem_1_0      | ram_1p  | auto | 1       |
+|   mem_2_U                                            | 16   | -    |        | mem_2        | ram_1p  | auto | 1       |
+|   mem_3_U                                            | 8    | -    |        | mem_3        | ram_s2p | auto | 1       |
+|   mem_3_1_U                                          | 8    | -    |        | mem_3_1      | ram_s2p | auto | 1       |
+|   mem_4_U                                            | 4    | -    |        | mem_4        | ram_1p  | auto | 1       |
+|   mem_5_U                                            | 2    | -    |        | mem_5        | ram_s2p | auto | 1       |
+|   mem_5_1_U                                          | 2    | -    |        | mem_5_1      | ram_s2p | auto | 1       |
+|   mem_6_U                                            | 2    | -    |        | mem_6        | ram_1p  | auto | 1       |
+|   fc2_output_U                                       | -    | -    |        | fc2_output   | ram_t2p | auto | 1       |
+|  + conv1                                             | 1    | 0    |        |              |         |      |         |
+|    conv1_bias_U                                      | -    | -    |        | conv1_bias   | rom_1p  | auto | 1       |
+|   + conv1_Pipeline_Fil_load_r_Fil_load_c             | 1    | 0    |        |              |         |      |         |
+|     conv1_weight_U                                   | 1    | -    |        | conv1_weight | rom_1p  | auto | 1       |
+|  + conv2                                             | 1    | 0    |        |              |         |      |         |
+|    conv2_bias_U                                      | -    | -    |        | conv2_bias   | rom_1p  | auto | 1       |
+|   + conv2_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c | 1    | 0    |        |              |         |      |         |
+|     conv2_weight_U                                   | 1    | -    |        | conv2_weight | rom_1p  | auto | 1       |
+|  + conv3                                             | 1    | 0    |        |              |         |      |         |
+|    conv3_bias_U                                      | -    | -    |        | conv3_bias   | rom_1p  | auto | 1       |
+|   + conv3_Pipeline_Fil_load_ch_Fil_load_r_Fil_load_c | 1    | 0    |        |              |         |      |         |
+|     conv3_weight_U                                   | 1    | -    |        | conv3_weight | rom_1p  | auto | 1       |
+|  + fc_layer117                                       | 28   | 0    |        |              |         |      |         |
+|   + FC_layer_100_16_true_s                           | 28   | 0    |        |              |         |      |         |
+|     fc1_bias_U                                       | -    | -    |        | fc1_bias     | rom_np  | auto | 1       |
+|     fc1_weight_U                                     | 28   | -    |        | fc1_weight   | rom_np  | auto | 1       |
+|  + fc_layer2                                         | 8    | 0    |        |              |         |      |         |
+|    fc2_bias_U                                        | -    | -    |        | fc2_bias     | rom_np  | auto | 1       |
+|    fc2_weight_U                                      | 8    | -    |        | fc2_weight   | rom_np  | auto | 1       |
++------------------------------------------------------+------+------+--------+--------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+--------------------------------------+--------------------------------------------------------------------------+
+| Type            | Options                              | Location                                                                 |
++-----------------+--------------------------------------+--------------------------------------------------------------------------+
+| pipeline        |                                      | codes_lab5/HLS_sources_final/design.cpp:9 in read_input                  |
+| pipeline        |                                      | codes_lab5/HLS_sources_final/design.cpp:20 in write_output               |
+| interface       | ap_ctrl_none port=return             | codes_lab5/HLS_sources_final/design.cpp:48 in hw_accel, return           |
+| interface       | axis register both port=outputPort   | codes_lab5/HLS_sources_final/design.cpp:49 in hw_accel, outputPort       |
+| interface       | axis register both port=inputPort    | codes_lab5/HLS_sources_final/design.cpp:50 in hw_accel, inputPort        |
+| dataflow        |                                      | codes_lab5/HLS_sources_final/design.cpp:52 in hw_accel                   |
+| array_partition | variable=mem_3 cyclic factor=2 dim=3 | codes_lab5/HLS_sources_final/design.cpp:57 in hw_accel, mem_3            |
+| array_partition | variable=mem_5 cyclic factor=2 dim=3 | codes_lab5/HLS_sources_final/design.cpp:60 in hw_accel, mem_5            |
+| array_partition | variable=fc1_output complete         | codes_lab5/HLS_sources_final/design.cpp:63 in hw_accel, fc1_output       |
+| array_partition | variable=fc1_output complete         | codes_lab5/HLS_sources_final/design.cpp:65 in hw_accel, fc1_output       |
+| pipeline        |                                      | codes_lab5/HLS_sources_final/templatedFuncs.h:28 in load_filters         |
+| pipeline        |                                      | codes_lab5/HLS_sources_final/templatedFuncs.h:51 in load_input_window    |
+| array_partition | variable=pmul complete dim=0         | codes_lab5/HLS_sources_final/templatedFuncs.h:87 in conv2d, pmul         |
+| pipeline        |                                      | codes_lab5/HLS_sources_final/templatedFuncs.h:89 in conv2d               |
+| array_partition | variable=kernel complete dim=0       | codes_lab5/HLS_sources_final/templatedFuncs.h:136 in conv_func, kernel   |
+| array_partition | variable=window complete dim=0       | codes_lab5/HLS_sources_final/templatedFuncs.h:139 in conv_func, window   |
+| pipeline        |                                      | codes_lab5/HLS_sources_final/templatedFuncs.h:184 in maxpool             |
+| array_partition | variable=pmul complete               | codes_lab5/HLS_sources_final/templatedFuncs.h:209 in fc_layer, pmul      |
+| array_partition | variable=pmul_prev complete          | codes_lab5/HLS_sources_final/templatedFuncs.h:211 in fc_layer, pmul_prev |
+| pipeline        | off                                  | codes_lab5/HLS_sources_final/templatedFuncs.h:214 in fc_layer            |
+| unroll          |                                      | codes_lab5/HLS_sources_final/templatedFuncs.h:219 in fc_layer            |
+| unroll          |                                      | codes_lab5/HLS_sources_final/templatedFuncs.h:229 in fc_layer            |
+| unroll          |                                      | codes_lab5/HLS_sources_final/templatedFuncs.h:234 in fc_layer            |
++-----------------+--------------------------------------+--------------------------------------------------------------------------+
+
+

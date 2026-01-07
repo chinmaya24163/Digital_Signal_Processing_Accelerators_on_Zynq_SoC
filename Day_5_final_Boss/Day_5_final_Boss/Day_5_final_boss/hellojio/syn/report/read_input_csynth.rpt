@@ -1,0 +1,166 @@
+
+
+================================================================
+== Vitis HLS Report for 'read_input'
+================================================================
+* Date:           Thu Dec 25 17:04:43 2025
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        Day_5_final_boss
+* Solution:       hellojio (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.982 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      786|      786|  7.860 us|  7.860 us|  786|  786|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |          Loop Name          |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- readLoop_row_readLoop_col  |      784|      784|         2|          1|          1|   784|       yes|
+        +-----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     97|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     81|    -|
+|Register         |        -|    -|      65|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      65|    178|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln11_fu_211_p2                |         +|   0|  0|  10|          10|          10|
+    |add_ln7_1_fu_119_p2               |         +|   0|  0|  13|          10|           1|
+    |add_ln7_fu_131_p2                 |         +|   0|  0|  13|           5|           1|
+    |add_ln8_fu_163_p2                 |         +|   0|  0|  13|           5|           1|
+    |sub_ln11_fu_202_p2                |         -|   0|  0|  10|          10|          10|
+    |ap_condition_101                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln7_fu_113_p2                |      icmp|   0|  0|  11|          10|           9|
+    |icmp_ln8_fu_137_p2                |      icmp|   0|  0|   9|           5|           4|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |select_ln7_1_fu_151_p3            |    select|   0|  0|   5|           1|           5|
+    |select_ln7_fu_143_p3              |    select|   0|  0|   5|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  97|          61|          47|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                           |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1               |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_c_load             |   9|          2|    5|         10|
+    |ap_sig_allocacmp_i_r_load             |   9|          2|    5|         10|
+    |ap_sig_allocacmp_indvar_flatten_load  |   9|          2|   10|         20|
+    |i_c_fu_58                             |   9|          2|    5|         10|
+    |i_r_fu_62                             |   9|          2|    5|         10|
+    |indvar_flatten_fu_66                  |   9|          2|   10|         20|
+    |inputPort_TDATA_blk_n                 |   9|          2|    1|          2|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 |  81|         18|   43|         86|
+    +--------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_c_fu_58                |   5|   0|    5|          0|
+    |i_r_fu_62                |   5|   0|    5|          0|
+    |indvar_flatten_fu_66     |  10|   0|   10|          0|
+    |p_0_reg_261              |  32|   0|   32|          0|
+    |select_ln7_1_reg_255     |   5|   0|    5|          0|
+    |select_ln7_reg_250       |   5|   0|    5|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  65|   0|   65|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+--------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++------------------+-----+-----+------------+--------------------+--------------+
+|ap_clk            |   in|    1|  ap_ctrl_hs|          read_input|  return value|
+|ap_rst            |   in|    1|  ap_ctrl_hs|          read_input|  return value|
+|ap_start          |   in|    1|  ap_ctrl_hs|          read_input|  return value|
+|ap_done           |  out|    1|  ap_ctrl_hs|          read_input|  return value|
+|ap_continue       |   in|    1|  ap_ctrl_hs|          read_input|  return value|
+|ap_idle           |  out|    1|  ap_ctrl_hs|          read_input|  return value|
+|ap_ready          |  out|    1|  ap_ctrl_hs|          read_input|  return value|
+|inputPort_TVALID  |   in|    1|        axis|  inputPort_V_last_V|       pointer|
+|inputPort_TREADY  |  out|    1|        axis|  inputPort_V_last_V|       pointer|
+|inputPort_TLAST   |   in|    1|        axis|  inputPort_V_last_V|       pointer|
+|inputPort_TDATA   |   in|   32|        axis|  inputPort_V_data_V|       pointer|
+|inputPort_TKEEP   |   in|    4|        axis|  inputPort_V_keep_V|       pointer|
+|inputPort_TSTRB   |   in|    4|        axis|  inputPort_V_strb_V|       pointer|
+|mem1_0_address0   |  out|   10|   ap_memory|              mem1_0|         array|
+|mem1_0_ce0        |  out|    1|   ap_memory|              mem1_0|         array|
+|mem1_0_we0        |  out|    1|   ap_memory|              mem1_0|         array|
+|mem1_0_d0         |  out|   32|   ap_memory|              mem1_0|         array|
++------------------+-----+-----+------------+--------------------+--------------+
+

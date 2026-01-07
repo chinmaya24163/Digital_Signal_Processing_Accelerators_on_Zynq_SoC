@@ -1,0 +1,275 @@
+
+
+================================================================
+== Vitis HLS Report for 'HW_accel'
+================================================================
+* Date:           Thu Dec 25 17:04:51 2025
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        Day_5_final_boss
+* Solution:       hellojio (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.290 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+----------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline |
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type   |
+    +---------+---------+----------+----------+--------+--------+----------+
+    |   493555|   574291|  4.936 ms|  5.743 ms|  387247|  451759|  dataflow|
+    +---------+---------+----------+----------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------+-------------------+---------+---------+-----------+-----------+--------+--------+---------+
+        |                    |                   |  Latency (cycles) |   Latency (absolute)  |     Interval    | Pipeline|
+        |      Instance      |       Module      |   min   |   max   |    min    |    max    |   min  |   max  |   Type  |
+        +--------------------+-------------------+---------+---------+-----------+-----------+--------+--------+---------+
+        |read_input_U0       |read_input         |      786|      786|   7.860 us|   7.860 us|     786|     786|       no|
+        |conv1_U0            |conv1              |   105521|   121745|   1.055 ms|   1.217 ms|  105521|  121745|       no|
+        |conv2_U0            |conv2              |   387246|   451758|   3.872 ms|   4.518 ms|  387246|  451758|       no|
+        |maxPool_4_24_12_U0  |maxPool_4_24_12_s  |      585|      585|   5.850 us|   5.850 us|     585|     585|       no|
+        |conv3_U0            |conv3              |    62574|    73774|   0.626 ms|   0.738 ms|   62574|   73774|       no|
+        |maxPool_4_10_5_U0   |maxPool_4_10_5_s   |      108|      108|   1.080 us|   1.080 us|     108|     108|       no|
+        |fc_layer119_U0      |fc_layer119        |     2210|     2210|  22.100 us|  22.100 us|    2210|    2210|       no|
+        |fc_layer2_U0        |fc_layer2          |      363|      363|   3.630 us|   3.630 us|     363|     363|       no|
+        |write_output_U0     |write_output       |       13|       13|   0.130 us|   0.130 us|      13|      13|       no|
+        +--------------------+-------------------+---------+---------+-----------+-----------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     92|    -|
+|FIFO             |        -|    -|    1584|   1088|    -|
+|Instance         |       39|  203|   40282|  39546|    -|
+|Memory           |       49|    -|     128|     10|    0|
+|Multiplexer      |        -|    -|       -|    180|    -|
+|Register         |        -|    -|      20|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       88|  203|   42014|  40916|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       31|   92|      39|     76|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------+-------------------+---------+----+-------+------+-----+
+    |      Instance      |       Module      | BRAM_18K| DSP|   FF  |  LUT | URAM|
+    +--------------------+-------------------+---------+----+-------+------+-----+
+    |conv1_U0            |conv1              |        1|  46|   7847|  8095|    0|
+    |conv2_U0            |conv2              |        1|  47|  11732|  9071|    0|
+    |conv3_U0            |conv3              |        1|  45|  11414|  9016|    0|
+    |fc_layer119_U0      |fc_layer119        |       28|  40|   5254|  7581|    0|
+    |fc_layer2_U0        |fc_layer2          |        8|  25|   2812|  4136|    0|
+    |maxPool_4_10_5_U0   |maxPool_4_10_5_s   |        0|   0|    559|   669|    0|
+    |maxPool_4_24_12_U0  |maxPool_4_24_12_s  |        0|   0|    589|   716|    0|
+    |read_input_U0       |read_input         |        0|   0|     65|   178|    0|
+    |write_output_U0     |write_output       |        0|   0|     10|    84|    0|
+    +--------------------+-------------------+---------+----+-------+------+-----+
+    |Total               |                   |       39| 203|  40282| 39546|    0|
+    +--------------------+-------------------+---------+----+-------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +--------------+--------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |    Memory    |          Module          | BRAM_18K|  FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +--------------+--------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |fc2_output_U  |fc2_output_RAM_AUTO_1R1W  |        0|  128|  10|    0|    10|   32|     1|          320|
+    |mem_1_0_U     |mem_1_0_RAM_AUTO_1R1W     |        4|    0|   0|    0|   784|   32|     1|        25088|
+    |mem_2_U       |mem_2_RAM_AUTO_1R1W       |       16|    0|   0|    0|  2704|   32|     1|        86528|
+    |mem_3_U       |mem_3_RAM_AUTO_1R1W       |        8|    0|   0|    0|  1152|   32|     1|        36864|
+    |mem_3_1_U     |mem_3_RAM_AUTO_1R1W       |        8|    0|   0|    0|  1152|   32|     1|        36864|
+    |mem_4_U       |mem_4_RAM_AUTO_1R1W       |        4|    0|   0|    0|   576|   32|     1|        18432|
+    |mem_5_U       |mem_5_RAM_AUTO_1R1W       |        4|    0|   0|    0|   200|   32|     1|         6400|
+    |mem_5_1_U     |mem_5_RAM_AUTO_1R1W       |        4|    0|   0|    0|   200|   32|     1|         6400|
+    |mem_6_U       |mem_6_RAM_AUTO_1R1W       |        1|    0|   0|    0|   100|   32|     1|         3200|
+    +--------------+--------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |Total         |                          |       49|  128|  10|    0|  6878|  288|     9|       220096|
+    +--------------+--------------------------+---------+-----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    +-----------------+---------+----+----+-----+------+-----+---------+
+    |       Name      | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +-----------------+---------+----+----+-----+------+-----+---------+
+    |fc1_output_10_U  |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_11_U  |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_12_U  |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_13_U  |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_14_U  |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_15_U  |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_1_U   |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_2_U   |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_3_U   |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_4_U   |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_5_U   |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_6_U   |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_7_U   |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_8_U   |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_9_U   |        0|  99|   0|    -|     2|   32|       64|
+    |fc1_output_U     |        0|  99|   0|    -|     2|   32|       64|
+    +-----------------+---------+----+----+-----+------+-----+---------+
+    |Total            |        0|1584|   0|    0|    32|  512|     1024|
+    +-----------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |            Variable Name            | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |ap_channel_done_fc1_output           |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_1         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_10        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_11        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_12        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_13        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_14        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_15        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_2         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_3         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_4         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_5         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_6         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_7         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_8         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_fc1_output_9         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_mem_3                |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_mem_3_1              |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_mem_5                |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_mem_5_1              |       and|   0|  0|   2|           1|           1|
+    |conv2_U0_ap_continue                 |       and|   0|  0|   2|           1|           1|
+    |conv3_U0_ap_continue                 |       and|   0|  0|   2|           1|           1|
+    |fc_layer119_U0_ap_continue           |       and|   0|  0|   2|           1|           1|
+    |fc_layer2_U0_ap_start                |       and|   0|  0|   2|           1|           1|
+    |maxPool_4_10_5_U0_ap_start           |       and|   0|  0|   2|           1|           1|
+    |maxPool_4_24_12_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output     |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_1   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_10  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_11  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_12  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_13  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_14  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_15  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_2   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_3   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_4   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_5   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_6   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_7   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_8   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_fc1_output_9   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_mem_3          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_mem_3_1        |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_mem_5          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_mem_5_1        |        or|   0|  0|   2|           1|           1|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                |          |   0|  0|  92|          46|          46|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |                   Name                  | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_fc1_output     |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_1   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_10  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_11  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_12  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_13  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_14  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_15  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_2   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_3   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_4   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_5   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_6   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_7   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_8   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_fc1_output_9   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_mem_3          |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_mem_3_1        |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_mem_5          |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_mem_5_1        |   9|          2|    1|          2|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |Total                                    | 180|         40|   20|         40|
+    +-----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------+---+----+-----+-----------+
+    |                   Name                  | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_fc1_output     |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_1   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_10  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_11  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_12  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_13  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_14  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_15  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_2   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_3   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_4   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_5   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_6   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_7   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_8   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_fc1_output_9   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_mem_3          |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_mem_3_1        |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_mem_5          |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_mem_5_1        |  1|   0|    1|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+    |Total                                    | 20|   0|   20|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+--------------+---------------------+--------------+
+|     RTL Ports     | Dir | Bits|   Protocol   |    Source Object    |    C Type    |
++-------------------+-----+-----+--------------+---------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_none|             HW_accel|  return value|
+|ap_rst_n           |   in|    1|  ap_ctrl_none|             HW_accel|  return value|
+|inputPort_TDATA    |   in|   32|          axis|   inputPort_V_data_V|       pointer|
+|inputPort_TKEEP    |   in|    4|          axis|   inputPort_V_keep_V|       pointer|
+|inputPort_TSTRB    |   in|    4|          axis|   inputPort_V_strb_V|       pointer|
+|inputPort_TLAST    |   in|    1|          axis|   inputPort_V_last_V|       pointer|
+|inputPort_TVALID   |   in|    1|          axis|   inputPort_V_last_V|       pointer|
+|inputPort_TREADY   |  out|    1|          axis|   inputPort_V_last_V|       pointer|
+|outputPort_TDATA   |  out|   32|          axis|  outputPort_V_data_V|       pointer|
+|outputPort_TKEEP   |  out|    4|          axis|  outputPort_V_keep_V|       pointer|
+|outputPort_TSTRB   |  out|    4|          axis|  outputPort_V_strb_V|       pointer|
+|outputPort_TLAST   |  out|    1|          axis|  outputPort_V_last_V|       pointer|
+|outputPort_TVALID  |  out|    1|          axis|  outputPort_V_last_V|       pointer|
+|outputPort_TREADY  |   in|    1|          axis|  outputPort_V_last_V|       pointer|
++-------------------+-----+-----+--------------+---------------------+--------------+
+

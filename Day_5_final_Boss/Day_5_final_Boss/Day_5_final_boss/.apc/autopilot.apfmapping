@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="cnn_weights.h" path="C:\Users\exam2\Desktop\Day_5_final_Boss\codes_lab5 - Copy\HLS_sources_final\cnn_weights.h"/>
+    <originFiles name="design.cpp" path="C:\Users\exam2\Desktop\Day_5_final_Boss\codes_lab5 - Copy\HLS_sources_final\design.cpp"/>
+    <originFiles name="header.h" path="C:\Users\exam2\Desktop\Day_5_final_Boss\codes_lab5 - Copy\HLS_sources_final\header.h"/>
+    <originFiles name="templatedFuncs.h" path="C:\Users\exam2\Desktop\Day_5_final_Boss\codes_lab5 - Copy\HLS_sources_final\templatedFuncs.h"/>
+  </source>
+  <testbench>
+    <originFiles name="f2_output.h" path="C:\Users\exam2\Desktop\Day_5_final_Boss\codes_lab5 - Copy\HLS_sources_final\f2_output.h"/>
+    <originFiles name="input_tensor.h" path="C:\Users\exam2\Desktop\Day_5_final_Boss\codes_lab5 - Copy\HLS_sources_final\input_tensor.h"/>
+    <originFiles name="tb.cpp" path="C:\Users\exam2\Desktop\Day_5_final_Boss\codes_lab5 - Copy\HLS_sources_final\tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

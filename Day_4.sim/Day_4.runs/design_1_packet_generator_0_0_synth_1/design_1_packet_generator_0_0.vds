@@ -1,0 +1,314 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Dec 24 16:16:50 2025
+# Process ID: 24688
+# Current directory: C:/Users/exam2/Day_4/Day_4.runs/design_1_packet_generator_0_0_synth_1
+# Command line: vivado.exe -log design_1_packet_generator_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_packet_generator_0_0.tcl
+# Log file: C:/Users/exam2/Day_4/Day_4.runs/design_1_packet_generator_0_0_synth_1/design_1_packet_generator_0_0.vds
+# Journal file: C:/Users/exam2/Day_4/Day_4.runs/design_1_packet_generator_0_0_synth_1\vivado.jou
+# Running On: L617-PC16, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 16853 MB
+#-----------------------------------------------------------
+source design_1_packet_generator_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1396.949 ; gain = 97.848
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/exam2/Desktop/RFSoC-PYNQ-master'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_packet_generator_0_0 -part xczu48dr-ffvg1517-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu48dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu48dr'
+INFO: [Common 17-1540] The version limit for your license is '2023.09' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+INFO: [Device 21-403] Loading part xczu48dr-ffvg1517-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21408
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1758.008 ; gain = 271.789
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_packet_generator_0_0' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ip/design_1_packet_generator_0_0/synth/design_1_packet_generator_0_0.vhd:96]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXIS_DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'AXI_Packet_Generator' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/AXI_Packet_Generator.vhd:58' bound to instance 'U0' of component 'AXI_Packet_Generator' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ip/design_1_packet_generator_0_0/synth/design_1_packet_generator_0_0.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'AXI_Packet_Generator' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/AXI_Packet_Generator.vhd:104]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'S_AXI_Lite' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/S_AXI_Lite.vhd:35' bound to instance 'AXI_LITE_CORE' of component 'S_AXI_Lite' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/AXI_Packet_Generator.vhd:178]
+INFO: [Synth 8-638] synthesizing module 'S_AXI_Lite' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/S_AXI_Lite.vhd:117]
+INFO: [Synth 8-226] default block is never used [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/S_AXI_Lite.vhd:255]
+INFO: [Synth 8-226] default block is never used [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/S_AXI_Lite.vhd:385]
+INFO: [Synth 8-256] done synthesizing module 'S_AXI_Lite' (0#1) [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/S_AXI_Lite.vhd:117]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'Packet_Generator' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Generator.vhd:56' bound to instance 'PGEN_RE' of component 'Packet_Generator' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/AXI_Packet_Generator.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'Packet_Generator' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Generator.vhd:68]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_tvalid_in' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Generator.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'D_Type' (0#1) [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:65]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_tdata_in' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Generator.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'D_Type__parameterized1' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'D_Type__parameterized1' (0#1) [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:65]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_packetsize_in' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Generator.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'D_Type__parameterized3' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'D_Type__parameterized3' (0#1) [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:65]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_tvalid_out' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Generator.vhd:131]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_tdata_out' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Generator.vhd:139]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_tlast_out' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Generator.vhd:147]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_tuser_out' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Generator.vhd:155]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_en_packetsize' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Generator.vhd:163]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Free_Counter' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Free_Counter.vhd:58' bound to instance 'free_counter_packetsize' of component 'Free_Counter' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Generator.vhd:171]
+INFO: [Synth 8-638] synthesizing module 'Free_Counter' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Free_Counter.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'Free_Counter' (0#1) [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Free_Counter.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'Packet_Generator' (0#1) [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Generator.vhd:68]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'Packet_Generator' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Generator.vhd:56' bound to instance 'PGEN_IM' of component 'Packet_Generator' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/AXI_Packet_Generator.vhd:220]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'Packet_Inspector' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Inspector.vhd:56' bound to instance 'PINS_RE' of component 'Packet_Inspector' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/AXI_Packet_Generator.vhd:231]
+INFO: [Synth 8-638] synthesizing module 'Packet_Inspector' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Inspector.vhd:69]
+INFO: [Synth 8-3491] module 'Falling_Edge_Detector' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Falling_Edge_Detector.vhd:57' bound to instance 'fed_transfer' of component 'Falling_Edge_Detector' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Inspector.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'Falling_Edge_Detector' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Falling_Edge_Detector.vhd:63]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_0' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Falling_Edge_Detector.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'Falling_Edge_Detector' (0#1) [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Falling_Edge_Detector.vhd:63]
+INFO: [Synth 8-3491] module 'SR_Latch' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/SR_Latch.vhd:57' bound to instance 'srlatch_transfer' of component 'SR_Latch' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Inspector.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'SR_Latch' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/SR_Latch.vhd:64]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_0' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/SR_Latch.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'SR_Latch' (0#1) [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/SR_Latch.vhd:64]
+INFO: [Synth 8-3491] module 'Rising_Edge_Detector' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Rising Edge Detector.vhd:57' bound to instance 'red_transfer' of component 'Rising_Edge_Detector' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Inspector.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'Rising_Edge_Detector' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Rising Edge Detector.vhd:63]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_0' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Rising Edge Detector.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'Rising_Edge_Detector' (0#1) [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Rising Edge Detector.vhd:63]
+INFO: [Synth 8-3491] module 'Rising_Edge_Detector' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Rising Edge Detector.vhd:57' bound to instance 'red_last' of component 'Rising_Edge_Detector' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Inspector.vhd:134]
+INFO: [Synth 8-3491] module 'SR_Latch' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/SR_Latch.vhd:57' bound to instance 'srlatch_last' of component 'SR_Latch' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Inspector.vhd:139]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_tvalid_out' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Inspector.vhd:145]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_tdata_out' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Inspector.vhd:153]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'D_Type' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/D_Type.vhd:56' bound to instance 'reg_tlast_out' of component 'D_Type' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Inspector.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'Packet_Inspector' (0#1) [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Inspector.vhd:69]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'Packet_Inspector' declared at 'c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/Packet_Inspector.vhd:56' bound to instance 'PINS_IM' of component 'Packet_Inspector' [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/AXI_Packet_Generator.vhd:243]
+INFO: [Synth 8-256] done synthesizing module 'AXI_Packet_Generator' (0#1) [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ipshared/351f/hdl/AXI_Packet_Generator.vhd:104]
+INFO: [Synth 8-256] done synthesizing module 'design_1_packet_generator_0_0' (0#1) [c:/Users/exam2/Day_4/Day_4.gen/sources_1/bd/design_1/ip/design_1_packet_generator_0_0/synth/design_1_packet_generator_0_0.vhd:96]
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module S_AXI_Lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module S_AXI_Lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module S_AXI_Lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module S_AXI_Lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module S_AXI_Lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module S_AXI_Lite is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1823.445 ; gain = 337.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1846.332 ; gain = 360.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1846.332 ; gain = 360.113
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1846.332 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1953.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.218 . Memory (MB): peak = 1971.465 ; gain = 17.879
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1971.465 ; gain = 485.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu48dr-ffvg1517-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1971.465 ; gain = 485.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1971.465 ; gain = 485.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1971.465 ; gain = 485.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 9     
+	               16 Bit    Registers := 6     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 28    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 4     
+	   4 Input   32 Bit        Muxes := 5     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port s_axi_awprot[2] in module design_1_packet_generator_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[1] in module design_1_packet_generator_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[0] in module design_1_packet_generator_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[2] in module design_1_packet_generator_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[1] in module design_1_packet_generator_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[0] in module design_1_packet_generator_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 1971.465 ; gain = 485.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 2342.836 ; gain = 856.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:35 . Memory (MB): peak = 2343.547 ; gain = 857.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:35 . Memory (MB): peak = 2362.648 ; gain = 876.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 2371.879 ; gain = 885.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 2371.879 ; gain = 885.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 2371.879 ; gain = 885.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 2371.879 ; gain = 885.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 2371.879 ; gain = 885.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 2371.879 ; gain = 885.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |    12|
+|2     |LUT1   |     5|
+|3     |LUT2   |     3|
+|4     |LUT3   |     3|
+|5     |LUT4   |   106|
+|6     |LUT5   |    10|
+|7     |LUT6   |    44|
+|8     |FDRE   |   442|
+|9     |FDSE   |     5|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 2371.879 ; gain = 885.660
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 2371.879 ; gain = 760.527
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 2371.879 ; gain = 885.660
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2383.941 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2424.055 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: aae12e28
+INFO: [Common 17-83] Releasing license: Synthesis
+72 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:01:11 . Memory (MB): peak = 2424.055 ; gain = 967.598
+INFO: [Common 17-1381] The checkpoint 'C:/Users/exam2/Day_4/Day_4.runs/design_1_packet_generator_0_0_synth_1/design_1_packet_generator_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_packet_generator_0_0, cache-ID = 8e1830c3243813a1
+INFO: [Coretcl 2-1174] Renamed 47 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/exam2/Day_4/Day_4.runs/design_1_packet_generator_0_0_synth_1/design_1_packet_generator_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_packet_generator_0_0_utilization_synth.rpt -pb design_1_packet_generator_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 24 16:18:30 2025...

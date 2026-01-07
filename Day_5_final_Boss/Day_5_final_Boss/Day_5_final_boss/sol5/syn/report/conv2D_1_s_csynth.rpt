@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vitis HLS Report for 'conv2D_1_s'
+================================================================
+* Date:           Thu Dec 25 15:19:35 2025
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        Day_5_final_boss
+* Solution:       sol5 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.256 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       23|       23|  0.230 us|  0.230 us|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       -|      -|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|   45|    3132|   6399|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|      -|    -|
+|Register         |        -|    -|    1312|     64|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|   45|    4444|   6463|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|   20|       4|     12|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+    |              Instance              |             Module             | BRAM_18K| DSP|  FF | LUT | URAM|
+    +------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+    |fadd_32ns_32ns_32_5_full_dsp_1_U51  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  390|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U52  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  390|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U53  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  390|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U54  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  390|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U55  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  390|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U56  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  390|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U57  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  390|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U58  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  390|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U59  |fadd_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|  390|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U60   |fmul_32ns_32ns_32_4_max_dsp_1   |        0|   3|  143|  321|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U61   |fmul_32ns_32ns_32_4_max_dsp_1   |        0|   3|  143|  321|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U62   |fmul_32ns_32ns_32_4_max_dsp_1   |        0|   3|  143|  321|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U63   |fmul_32ns_32ns_32_4_max_dsp_1   |        0|   3|  143|  321|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U64   |fmul_32ns_32ns_32_4_max_dsp_1   |        0|   3|  143|  321|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U65   |fmul_32ns_32ns_32_4_max_dsp_1   |        0|   3|  143|  321|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U66   |fmul_32ns_32ns_32_4_max_dsp_1   |        0|   3|  143|  321|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U67   |fmul_32ns_32ns_32_4_max_dsp_1   |        0|   3|  143|  321|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U68   |fmul_32ns_32ns_32_4_max_dsp_1   |        0|   3|  143|  321|    0|
+    +------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+    |Total                               |                                |        0|  45| 3132| 6399|    0|
+    +------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +-----------------------+----+----+-----+-----------+
+    |          Name         | FF | LUT| Bits| Const Bits|
+    +-----------------------+----+----+-----+-----------+
+    |mul_1_1_reg_367        |  32|   0|   32|          0|
+    |mul_1_2_reg_372        |  32|   0|   32|          0|
+    |mul_1_reg_362          |  32|   0|   32|          0|
+    |mul_2_1_reg_382        |  32|   0|   32|          0|
+    |mul_2_2_reg_387        |  32|   0|   32|          0|
+    |mul_2_reg_377          |  32|   0|   32|          0|
+    |mul_4_reg_357          |  32|   0|   32|          0|
+    |mul_reg_347            |  32|   0|   32|          0|
+    |mul_s_reg_352          |  32|   0|   32|          0|
+    |p_read10_int_reg       |  32|   0|   32|          0|
+    |p_read11_int_reg       |  32|   0|   32|          0|
+    |p_read12_int_reg       |  32|   0|   32|          0|
+    |p_read13_int_reg       |  32|   0|   32|          0|
+    |p_read14_int_reg       |  32|   0|   32|          0|
+    |p_read15_int_reg       |  32|   0|   32|          0|
+    |p_read16_int_reg       |  32|   0|   32|          0|
+    |p_read17_int_reg       |  32|   0|   32|          0|
+    |p_read1_int_reg        |  32|   0|   32|          0|
+    |p_read2_int_reg        |  32|   0|   32|          0|
+    |p_read3_int_reg        |  32|   0|   32|          0|
+    |p_read4_int_reg        |  32|   0|   32|          0|
+    |p_read5_int_reg        |  32|   0|   32|          0|
+    |p_read6_int_reg        |  32|   0|   32|          0|
+    |p_read7_int_reg        |  32|   0|   32|          0|
+    |p_read8_int_reg        |  32|   0|   32|          0|
+    |p_read9_int_reg        |  32|   0|   32|          0|
+    |p_read_int_reg         |  32|   0|   32|          0|
+    |prev_sum_int_reg       |  32|   0|   32|          0|
+    |prev_sum_read_reg_252  |  32|   0|   32|          0|
+    |s0_reg_392             |  32|   0|   32|          0|
+    |s1_reg_397             |  32|   0|   32|          0|
+    |s2_reg_402             |  32|   0|   32|          0|
+    |s3_reg_407             |  32|   0|   32|          0|
+    |s4_reg_412             |  32|   0|   32|          0|
+    |s5_reg_417             |  32|   0|   32|          0|
+    |s6_reg_422             |  32|   0|   32|          0|
+    |s7_reg_427             |  32|   0|   32|          0|
+    |prev_sum_read_reg_252  |  64|  32|   32|          0|
+    |s4_reg_412             |  64|  32|   32|          0|
+    +-----------------------+----+----+-----+-----------+
+    |Total                  |1312|  64| 1248|          0|
+    +-----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------+-----+-----+------------+--------------+--------------+
+| RTL Ports | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------+-----+-----+------------+--------------+--------------+
+|ap_clk     |   in|    1|  ap_ctrl_hs|     conv2D<1>|  return value|
+|ap_rst     |   in|    1|  ap_ctrl_hs|     conv2D<1>|  return value|
+|ap_return  |  out|   32|  ap_ctrl_hs|     conv2D<1>|  return value|
+|p_read     |   in|   32|     ap_none|        p_read|        scalar|
+|p_read1    |   in|   32|     ap_none|       p_read1|        scalar|
+|p_read2    |   in|   32|     ap_none|       p_read2|        scalar|
+|p_read3    |   in|   32|     ap_none|       p_read3|        scalar|
+|p_read4    |   in|   32|     ap_none|       p_read4|        scalar|
+|p_read5    |   in|   32|     ap_none|       p_read5|        scalar|
+|p_read6    |   in|   32|     ap_none|       p_read6|        scalar|
+|p_read7    |   in|   32|     ap_none|       p_read7|        scalar|
+|p_read8    |   in|   32|     ap_none|       p_read8|        scalar|
+|p_read9    |   in|   32|     ap_none|       p_read9|        scalar|
+|p_read10   |   in|   32|     ap_none|      p_read10|        scalar|
+|p_read11   |   in|   32|     ap_none|      p_read11|        scalar|
+|p_read12   |   in|   32|     ap_none|      p_read12|        scalar|
+|p_read13   |   in|   32|     ap_none|      p_read13|        scalar|
+|p_read14   |   in|   32|     ap_none|      p_read14|        scalar|
+|p_read15   |   in|   32|     ap_none|      p_read15|        scalar|
+|p_read16   |   in|   32|     ap_none|      p_read16|        scalar|
+|p_read17   |   in|   32|     ap_none|      p_read17|        scalar|
+|prev_sum   |   in|   32|     ap_none|      prev_sum|        scalar|
++-----------+-----+-----+------------+--------------+--------------+
+

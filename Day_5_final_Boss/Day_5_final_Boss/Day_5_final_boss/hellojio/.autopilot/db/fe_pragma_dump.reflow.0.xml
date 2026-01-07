@@ -1,0 +1,66 @@
+<pragmas>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="41" pragmaType="inline" parentfunction="load_input_window" off="0" region="0" recursive="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="51" pragmaType="pipeline" parentfunction="load_input_window" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="59" pragmaType="pipeline" parentfunction="load_input_window" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="codes_lab5/HLS_sources_final/design.cpp" line="9" pragmaType="pipeline" parentfunction="read_input" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h" line="333" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="260" pragmaType="inline" parentfunction="ap_int_base<4, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="codes_lab5/HLS_sources_final/design.cpp" line="20" pragmaType="pipeline" parentfunction="write_output" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="125" pragmaType="array_partition" parentfunction="Conv_func" dim="0" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="128" pragmaType="array_partition" parentfunction="Conv_func" dim="0" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="24" pragmaType="pipeline" parentfunction="load_filters" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h" line="230" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint()" off="0" region="0" recursive="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="125" pragmaType="array_partition" parentfunction="Conv_func" dim="0" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="128" pragmaType="array_partition" parentfunction="Conv_func" dim="0" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="196" pragmaType="pipeline" parentfunction="FC_layer" off="1" ii="0" rewind="0" style=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="201" pragmaType="unroll" parentfunction="FC_layer" factor="-1" skip_exit_check="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="211" pragmaType="unroll" parentfunction="FC_layer" factor="-1" skip_exit_check="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="216" pragmaType="unroll" parentfunction="FC_layer" factor="-1" skip_exit_check="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="191" pragmaType="array_partition" parentfunction="FC_layer" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="193" pragmaType="array_partition" parentfunction="FC_layer" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" line="291" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="41" pragmaType="inline" parentfunction="load_input_window" off="0" region="0" recursive="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="51" pragmaType="pipeline" parentfunction="load_input_window" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="59" pragmaType="pipeline" parentfunction="load_input_window" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_common.h" line="567" pragmaType="inline" parentfunction="_ZN8ssdm_intILi1ELb0EEC2EDq1_j" off="0" region="0" recursive="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="173" pragmaType="pipeline" parentfunction="maxPool" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="173" pragmaType="pipeline" parentfunction="maxPool" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="221" pragmaType="inline" parentfunction="ap_int_base<4, false>::ap_int_base()" off="0" region="0" recursive="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="125" pragmaType="array_partition" parentfunction="Conv_func" dim="0" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="128" pragmaType="array_partition" parentfunction="Conv_func" dim="0" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h" line="333" pragmaType="inline" parentfunction="ap_uint<4>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="260" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="24" pragmaType="pipeline" parentfunction="load_filters" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_common.h" line="567" pragmaType="inline" parentfunction="_ZN8ssdm_intILi4ELb0EEC2EDq4_j" off="0" region="0" recursive="0"/>
+<pragma file="codes_lab5/HLS_sources_final/design.cpp" line="52" pragmaType="dataflow" parentfunction="HW_accel" disable_start_propagation="0"/>
+<pragma file="codes_lab5/HLS_sources_final/design.cpp" line="48" pragmaType="interface" parentfunction="HW_accel" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="codes_lab5/HLS_sources_final/design.cpp" line="49" pragmaType="interface" parentfunction="HW_accel" mode="axis" port="outputPort" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="codes_lab5/HLS_sources_final/design.cpp" line="50" pragmaType="interface" parentfunction="HW_accel" mode="axis" port="inputPort" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="codes_lab5/HLS_sources_final/design.cpp" line="57" pragmaType="array_partition" parentfunction="HW_accel" dim="3" factor="2" mode="cyclic" dynamic="0" variable=""/>
+<pragma file="codes_lab5/HLS_sources_final/design.cpp" line="60" pragmaType="array_partition" parentfunction="HW_accel" dim="3" factor="2" mode="cyclic" dynamic="0" variable=""/>
+<pragma file="codes_lab5/HLS_sources_final/design.cpp" line="63" pragmaType="array_partition" parentfunction="HW_accel" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="codes_lab5/HLS_sources_final/design.cpp" line="65" pragmaType="array_partition" parentfunction="HW_accel" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="41" pragmaType="inline" parentfunction="load_input_window" off="0" region="0" recursive="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="51" pragmaType="pipeline" parentfunction="load_input_window" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="59" pragmaType="pipeline" parentfunction="load_input_window" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="221" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base()" off="0" region="0" recursive="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="196" pragmaType="pipeline" parentfunction="FC_layer" off="1" ii="0" rewind="0" style=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="201" pragmaType="unroll" parentfunction="FC_layer" factor="-1" skip_exit_check="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="211" pragmaType="unroll" parentfunction="FC_layer" factor="-1" skip_exit_check="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="216" pragmaType="unroll" parentfunction="FC_layer" factor="-1" skip_exit_check="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="191" pragmaType="array_partition" parentfunction="FC_layer" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="193" pragmaType="array_partition" parentfunction="FC_layer" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h" line="230" pragmaType="inline" parentfunction="ap_uint<4>::ap_uint()" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" line="302" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="0" pragmaType="pipeline" parentfunction="conv2D" off="0" ii="-1" style=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="89" pragmaType="array_partition" parentfunction="conv2D" dim="0" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<4, false>::ssdm_int()" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<1, false>::ssdm_int()" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" line="0" pragmaType="inline" parentfunction="get_user_ptr" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" line="0" pragmaType="inline" parentfunction="get_dest_ptr" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" line="0" pragmaType="inline" parentfunction="get_id_ptr" off="0" region="0" recursive="0"/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="0" pragmaType="pipeline" parentfunction="conv2D" off="0" ii="-1" style=""/>
+<pragma file="codes_lab5/HLS_sources_final/templatedFuncs.h" line="89" pragmaType="array_partition" parentfunction="conv2D" dim="0" factor="0" mode="complete" dynamic="0" variable=""/>
+</pragmas>

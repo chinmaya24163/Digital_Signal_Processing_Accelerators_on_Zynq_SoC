@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1766656182846">
+  <ports id="1" name="inputPort_V_data_V" type="PortType" originalName="inputPort" coreId="1953391988" bitwidth="32">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="inputPort_V_keep_V" type="PortType" originalName="inputPort" coreId="1769496871" bitwidth="4">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="inputPort_V_strb_V" type="PortType" originalName="inputPort" coreId="1953391988" bitwidth="4">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="inputPort_V_last_V" type="PortType" originalName="inputPort" coreId="0" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="5" name="outputPort_V_data_V" type="PortType" originalName="outputPort" coreId="0" bitwidth="32" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="6" name="outputPort_V_keep_V" type="PortType" originalName="outputPort" coreId="544698220" bitwidth="4" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="7" name="outputPort_V_strb_V" type="PortType" originalName="outputPort" coreId="1818770291" bitwidth="4" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="8" name="outputPort_V_last_V" type="PortType" originalName="outputPort" coreId="1713399662" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="80" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="81" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="82" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="83" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="84" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="87" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="88" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="91" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="92" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="93" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="96" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="97" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="98" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="101" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="102" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="103" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="106" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="107" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="108" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="111" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="112" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="113" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="114" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="115" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="116" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="117" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="119" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="120" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.24"/>
+  <edges id="121" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.25"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.26"/>
+  <edges id="123" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="124" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="125" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="127" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="130" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="131" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="132" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="133" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="134" source_obj="//@regions.0/@basic_blocks.0/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.0/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="136" source_obj="//@regions.0/@basic_blocks.0/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="137" source_obj="//@regions.0/@basic_blocks.0/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.0/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="139" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="140" source_obj="//@regions.0/@basic_blocks.0/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="141" source_obj="//@regions.0/@basic_blocks.0/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="142" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="143" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="144" source_obj="//@regions.0/@basic_blocks.0/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="145" source_obj="//@regions.0/@basic_blocks.0/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="146" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="149" source_obj="//@regions.0/@basic_blocks.0/@node_objs.33" sink_obj="//@ports.4"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.0/@node_objs.33" sink_obj="//@ports.5"/>
+  <edges id="151" source_obj="//@regions.0/@basic_blocks.0/@node_objs.33" sink_obj="//@ports.6"/>
+  <edges id="152" source_obj="//@regions.0/@basic_blocks.0/@node_objs.33" sink_obj="//@ports.7"/>
+  <edges id="153" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="154" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="155" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="156" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="157" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="158" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="159" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="160" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="161" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="162" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="163" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="261" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="262" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="263" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="264" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="265" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="266" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="267" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="268" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="269" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="270" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="271" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="272" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="273" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="419" RegionName="HW_accel">
+    <basic_blocks id="67" name="HW_accel" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="mem_1_0" lineNumber="54" originalName="mem_1[0]" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="mem_1_0_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" contextFuncName="HW_accel" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="54" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="mem_2" lineNumber="55" originalName="mem_2" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="mem_2_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" contextFuncName="HW_accel" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="55" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="mem_3" lineNumber="56" originalName="mem_3" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="mem_3_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="82" contextFuncName="HW_accel" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="56" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="mem_3_1" lineNumber="56" originalName="mem_3" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="mem_3_1_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="82" contextFuncName="HW_accel" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="56" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="mem_4" lineNumber="58" originalName="mem_4" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="mem_4_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" contextFuncName="HW_accel" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="58" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="mem_5" lineNumber="59" originalName="mem_5" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="mem_5_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="82" contextFuncName="HW_accel" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="59" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="mem_5_1" lineNumber="59" originalName="mem_5" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="mem_5_1_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="82" contextFuncName="HW_accel" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="59" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="mem_6" lineNumber="61" originalName="mem_6" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="mem_6_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" contextFuncName="HW_accel" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="61" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="fc2_output" lineNumber="64" originalName="fc2_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc2_output_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="82" contextFuncName="HW_accel" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="64" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="_ln67" lineNumber="67" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="read_input_U0" coreId="1694243648" contextFuncName="HW_accel" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="67" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>inputPort_V_data_V</dataInputObjs>
+        <dataInputObjs>inputPort_V_keep_V</dataInputObjs>
+        <dataInputObjs>inputPort_V_strb_V</dataInputObjs>
+        <dataInputObjs>inputPort_V_last_V</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>read_input</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="_ln69" lineNumber="69" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="conv1_U0" coreId="1691536768" contextFuncName="HW_accel" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="69" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>conv1</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="_ln70" lineNumber="70" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="conv2_U0" coreId="0" contextFuncName="HW_accel" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="70" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>conv2</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="_ln71" lineNumber="71" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="maxPool_4_24_12_U0" coreId="0" contextFuncName="HW_accel" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="71" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>maxPool_4_24_12_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="_ln72" lineNumber="72" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="conv3_U0" coreId="1697995264" contextFuncName="HW_accel" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="72" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>conv3</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="_ln73" lineNumber="73" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="maxPool_4_10_5_U0" coreId="1529494528" contextFuncName="HW_accel" opcode="call" nodeLabel="11.0" nodeLatency="1" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="73" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>maxPool_4_10_5_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="call_ret1" lineNumber="75" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc_layer117_U0" coreId="0" contextFuncName="HW_accel" bitwidth="512" opcode="call" nodeLabel="13.0" nodeLatency="1" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <constName>fc_layer117</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="fc1_output" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="fc1_output_1" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_1_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="fc1_output_2" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_2_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="fc1_output_3" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_3_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="fc1_output_4" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_4_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="fc1_output_5" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_5_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="fc1_output_6" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_6_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="fc1_output_7" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_7_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="fc1_output_8" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_8_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="fc1_output_9" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_9_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="fc1_output_10" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_10_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="fc1_output_11" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_11_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="fc1_output_12" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_12_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="fc1_output_13" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_13_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="fc1_output_14" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_14_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="fc1_output_15" lineNumber="75" originalName="fc1_output" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc1_output_15_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="HW_accel" bitwidth="32" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="75" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="_ln76" lineNumber="76" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="fc_layer2_U0" coreId="1599294464" contextFuncName="HW_accel" opcode="call" nodeLabel="14.0" nodeLatency="1" m_display="0" m_delay="3.63" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="76" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>fc_layer2</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="_ln78" lineNumber="78" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." rtlName="write_output_U0" coreId="0" contextFuncName="HW_accel" opcode="call" nodeLabel="16.0" nodeLatency="1" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="78" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>outputPort_V_data_V</dataOutputObjs>
+        <dataOutputObjs>outputPort_V_keep_V</dataOutputObjs>
+        <dataOutputObjs>outputPort_V_strb_V</dataOutputObjs>
+        <dataOutputObjs>outputPort_V_last_V</dataOutputObjs>
+        <constName>write_output</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln79" lineNumber="79" fileName="codes_lab5/HLS_sources_final/design.cpp" fileDirectory=".." coreId="1695263888" contextFuncName="HW_accel" opcode="ret" nodeLabel="18.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="codes_lab5/HLS_sources_final/design.cpp" linenumber="79" fileDirectory="C:\Users\exam2\Desktop\Day_5_final_Boss" functionName="HW_accel"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="codes_lab5/HLS_sources_final/design.cpp">
+        <validLinenumbers>54</validLinenumbers>
+        <validLinenumbers>55</validLinenumbers>
+        <validLinenumbers>56</validLinenumbers>
+        <validLinenumbers>58</validLinenumbers>
+        <validLinenumbers>59</validLinenumbers>
+        <validLinenumbers>61</validLinenumbers>
+        <validLinenumbers>64</validLinenumbers>
+        <validLinenumbers>67</validLinenumbers>
+        <validLinenumbers>69</validLinenumbers>
+        <validLinenumbers>70</validLinenumbers>
+        <validLinenumbers>71</validLinenumbers>
+        <validLinenumbers>72</validLinenumbers>
+        <validLinenumbers>73</validLinenumbers>
+        <validLinenumbers>75</validLinenumbers>
+        <validLinenumbers>76</validLinenumbers>
+        <validLinenumbers>78</validLinenumbers>
+        <validLinenumbers>79</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <regnodes realName="fc1_output_5_reg_327">
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_11_reg_357">
+    <nodeIds>59</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_12_reg_362">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_3_reg_317">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_4_reg_322">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_7_reg_337">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_reg_302">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_2_reg_312">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_15_reg_377">
+    <nodeIds>63</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_10_reg_352">
+    <nodeIds>58</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_1_reg_307">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_14_reg_372">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_8_reg_342">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_9_reg_347">
+    <nodeIds>57</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_13_reg_367">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="fc1_output_6_reg_332">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <expressionNodes realName="fc1_output_fu_222">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mem_5_1_alloca_fu_104">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_12_fu_282">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_7_fu_257">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_6_fu_252">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mem_3_1_alloca_fu_92">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mem_1_0_alloca_fu_80">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_5_fu_247">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_1_fu_227">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mem_6_alloca_fu_108">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_13_fu_287">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mem_2_alloca_fu_84">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mem_3_alloca_fu_88">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_11_fu_277">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_8_fu_262">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_9_fu_267">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mem_4_alloca_fu_96">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_10_fu_272">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_4_fu_242">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_2_fu_232">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_14_fu_292">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc2_output_alloca_fu_112">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_3_fu_237">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mem_5_alloca_fu_100">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fc1_output_15_fu_297">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_conv1_fu_129">
+    <nodeIds>42</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fc_layer2_fu_184">
+    <nodeIds>64</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_maxPool_4_10_5_s_fu_168">
+    <nodeIds>46</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_conv3_fu_157">
+    <nodeIds>45</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_read_input_fu_116">
+    <nodeIds>41</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_maxPool_4_24_12_s_fu_150">
+    <nodeIds>44</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_write_output_fu_209">
+    <nodeIds>65</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_conv2_fu_139">
+    <nodeIds>43</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fc_layer117_fu_175">
+    <nodeIds>47</nodeIds>
+  </moduleNodes>
+  <memoryPorts dataString="conv1_bias" portID="100">
+    <nodeIds>42</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="conv1_weight" portID="100">
+    <nodeIds>42</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="conv2_bias" portID="100">
+    <nodeIds>43</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="conv2_weight" portID="100">
+    <nodeIds>43</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="conv3_bias" portID="100">
+    <nodeIds>45</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="conv3_weight" portID="100">
+    <nodeIds>45</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fc1_bias" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fc1_weight" portID="100">
+    <nodeIds>47</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fc2_bias" portID="100">
+    <nodeIds>64</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fc2_weight" portID="100">
+    <nodeIds>64</nodeIds>
+  </memoryPorts>
+  <ioPorts name="inputPort_V_data_V">
+    <contents name="call">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inputPort_V_keep_V">
+    <contents name="call">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inputPort_V_last_V">
+    <contents name="call">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inputPort_V_strb_V">
+    <contents name="call">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="outputPort_V_data_V">
+    <contents name="call">
+      <nodeIds>65</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="outputPort_V_keep_V">
+    <contents name="call">
+      <nodeIds>65</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="outputPort_V_last_V">
+    <contents name="call">
+      <nodeIds>65</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="outputPort_V_strb_V">
+    <contents name="call">
+      <nodeIds>65</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="41" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="41" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="42" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="42" stage="1" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="43" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="43" stage="1" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="44" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="44" stage="1" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="45" stage="2" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="45" stage="1" latency="2"/>
+    </states>
+    <states id="12">
+      <operations id="46" stage="2" latency="2"/>
+    </states>
+    <states id="13">
+      <operations id="46" stage="1" latency="2"/>
+    </states>
+    <states id="14">
+      <operations id="47" stage="2" latency="2"/>
+    </states>
+    <states id="15">
+      <operations id="47" stage="1" latency="2"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="2" latency="2"/>
+    </states>
+    <states id="16">
+      <operations id="64" stage="1" latency="2"/>
+    </states>
+    <states id="17">
+      <operations id="65" stage="2" latency="2"/>
+    </states>
+    <states id="18">
+      <operations id="65" stage="1" latency="2"/>
+    </states>
+    <states id="19">
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="HW_accel" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="538530" mMaxLatency="547746" mIsDfPipe="true">
+      <basicBlocks>67</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.8/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.0/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.1/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.2/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.4/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.5/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.7/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.8/@sink.0/@inst">
+        <processe_list name="read_input_U0" ssdmobj_id="41">
+          <pins>
+            <port name="inputPort_V_data_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_156" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="read_input_U0" ssdmobj_id="41" object_id="_167"/>
+          </pins>
+          <pins>
+            <port name="inputPort_V_keep_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_157" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="read_input_U0" ssdmobj_id="41" object_id="_167"/>
+          </pins>
+          <pins>
+            <port name="inputPort_V_strb_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_158" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="read_input_U0" ssdmobj_id="41" object_id="_167"/>
+          </pins>
+          <pins>
+            <port name="inputPort_V_last_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_159" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="read_input_U0" ssdmobj_id="41" object_id="_167"/>
+          </pins>
+        </processe_list>
+        <processe_list name="conv1_U0" ssdmobj_id="42"/>
+        <processe_list name="conv2_U0" ssdmobj_id="43"/>
+        <processe_list name="maxPool_4_24_12_U0" ssdmobj_id="44"/>
+        <processe_list name="conv3_U0" ssdmobj_id="45"/>
+        <processe_list name="maxPool_4_10_5_U0" ssdmobj_id="46"/>
+        <processe_list name="fc_layer117_U0" ssdmobj_id="47"/>
+        <processe_list name="fc_layer2_U0" ssdmobj_id="64"/>
+        <processe_list name="write_output_U0" ssdmobj_id="65">
+          <pins>
+            <port name="outputPort_V_data_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_160" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="write_output_U0" ssdmobj_id="65" object_id="_184"/>
+          </pins>
+          <pins>
+            <port name="outputPort_V_keep_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_161" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="write_output_U0" ssdmobj_id="65" object_id="_184"/>
+          </pins>
+          <pins>
+            <port name="outputPort_V_strb_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_162" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="write_output_U0" ssdmobj_id="65" object_id="_184"/>
+          </pins>
+          <pins>
+            <port name="outputPort_V_last_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_163" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="write_output_U0" ssdmobj_id="65" object_id="_184"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="mem_1_0" ssdmobj_id="32">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="read_input_U0" ssdmobj_id="41" object_id="_167"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="conv1_U0" ssdmobj_id="42" object_id="_196"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="mem_2" ssdmobj_id="33">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="conv1_U0" ssdmobj_id="42" object_id="_196"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="conv2_U0" ssdmobj_id="43" object_id="_202"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="mem_3" ssdmobj_id="34">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="conv2_U0" ssdmobj_id="43" object_id="_202"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="maxPool_4_24_12_U0" ssdmobj_id="44" object_id="_208"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="mem_3_1" ssdmobj_id="35">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="conv2_U0" ssdmobj_id="43" object_id="_202"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="maxPool_4_24_12_U0" ssdmobj_id="44" object_id="_208"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="mem_4" ssdmobj_id="36">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="maxPool_4_24_12_U0" ssdmobj_id="44" object_id="_208"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="conv3_U0" ssdmobj_id="45" object_id="_219"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="mem_5" ssdmobj_id="37">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="conv3_U0" ssdmobj_id="45" object_id="_219"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="maxPool_4_10_5_U0" ssdmobj_id="46" object_id="_225"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="mem_5_1" ssdmobj_id="38">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="conv3_U0" ssdmobj_id="45" object_id="_219"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="maxPool_4_10_5_U0" ssdmobj_id="46" object_id="_225"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="mem_6" ssdmobj_id="39">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="maxPool_4_10_5_U0" ssdmobj_id="46" object_id="_225"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output" ssdmobj_id="48">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_1" ssdmobj_id="49">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_2" ssdmobj_id="50">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_3" ssdmobj_id="51">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_4" ssdmobj_id="52">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_5" ssdmobj_id="53">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_6" ssdmobj_id="54">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_7" ssdmobj_id="55">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_8" ssdmobj_id="56">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_9" ssdmobj_id="57">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_10" ssdmobj_id="58">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_11" ssdmobj_id="59">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_12" ssdmobj_id="60">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_13" ssdmobj_id="61">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_14" ssdmobj_id="62">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="32" suggested_type="1" suggested_depth="2" name="fc1_output_15" ssdmobj_id="63">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer117_U0" ssdmobj_id="47" object_id="_236"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" suggested_type="0" suggested_depth="2" name="fc2_output" ssdmobj_id="40">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="fc_layer2_U0" ssdmobj_id="64" object_id="_242"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="write_output_U0" ssdmobj_id="65" object_id="_184"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

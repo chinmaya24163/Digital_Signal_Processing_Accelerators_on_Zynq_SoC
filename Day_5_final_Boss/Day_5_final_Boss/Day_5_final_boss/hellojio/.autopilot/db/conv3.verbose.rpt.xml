@@ -1,0 +1,128 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'conv3'" level="0">
+<item name = "Date">Thu Dec 25 17:04:48 2025
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
+<item name = "Project">Day_5_final_boss</item>
+<item name = "Solution">hellojio (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.256 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">62574, 73774, 0.626 ms, 0.738 ms, 62574, 73774, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_Conv_func_4_12_4_10_s_fu_12">Conv_func_4_12_4_10_s, 62573, 73773, 0.626 ms, 0.738 ms, 62573, 73773, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">1, 45, 11410, 8991, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 23, -</column>
+<column name="Register">-, -, 4, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, 20, 10, 16, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_Conv_func_4_12_4_10_s_fu_12">Conv_func_4_12_4_10_s, 1, 45, 11410, 8991, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">14, 3, 1, 3</column>
+<column name="ap_done">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="grp_Conv_func_4_12_4_10_s_fu_12_ap_start_reg">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, conv3, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, conv3, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, conv3, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, conv3, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, conv3, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, conv3, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, conv3, return value</column>
+<column name="mem_4_address0">out, 10, ap_memory, mem_4, array</column>
+<column name="mem_4_ce0">out, 1, ap_memory, mem_4, array</column>
+<column name="mem_4_q0">in, 32, ap_memory, mem_4, array</column>
+<column name="mem_5_0_address0">out, 8, ap_memory, mem_5_0, array</column>
+<column name="mem_5_0_ce0">out, 1, ap_memory, mem_5_0, array</column>
+<column name="mem_5_0_we0">out, 1, ap_memory, mem_5_0, array</column>
+<column name="mem_5_0_d0">out, 32, ap_memory, mem_5_0, array</column>
+<column name="mem_5_0_q0">in, 32, ap_memory, mem_5_0, array</column>
+<column name="mem_5_1_address0">out, 8, ap_memory, mem_5_1, array</column>
+<column name="mem_5_1_ce0">out, 1, ap_memory, mem_5_1, array</column>
+<column name="mem_5_1_we0">out, 1, ap_memory, mem_5_1, array</column>
+<column name="mem_5_1_d0">out, 32, ap_memory, mem_5_1, array</column>
+<column name="mem_5_1_q0">in, 32, ap_memory, mem_5_1, array</column>
+</table>
+</item>
+</section>
+</profile>
